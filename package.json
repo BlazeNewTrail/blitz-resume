@@ -1,0 +1,16 @@
+{
+  "name": "gridsome-starter-slds-resume",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.11.6",
+    "gridsome": "^0.7.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "typeface-inter": "^3.12.0"
+  }
+}

@@ -1,0 +1,13 @@
+$slds-load-webfonts: false;
+
+$font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+@import '@salesforce-ux/design-system/scss';
+
+.content {
+  top: 50px;
+  position: absolute;
+  overflow: visible;
+  width: 100%;
+  z-index: 0;
+}
