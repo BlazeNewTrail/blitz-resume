@@ -1,0 +1,49 @@
+:root {
+    --lwc-colorBackground: #323232;
+    --lwc-colorBackgroundAlt: #323232;
+    --lwc-colorBorder: #494949;
+
+    /* backgrounds */
+    --darkmode-verydark-background: #1A1A1A;
+    --darkmode-primary-background: #323232;
+    --darkmode-primary-background-soft: #2D2E2F;
+    --darkmode-active-background: #242424;
+    --darkmode-active-tab-background: #2D2E2F;
+    --darkmode-input-background: #242424;
+    --darkmode-form-section-title-background: #494949;
+    --darkmode-inline-edit-undo-background: rgba(255, 240, 63, .2);
+    --darkmode-tooltip-background: #1B5297;
+    --darkmode-notification-popup-background: #09263e;
+    --darkmode-email-background: #FFFFFF;
+
+    /* dev console */
+    --darkmode-code-highlight-background: rgb(132, 76, 16);
+    --darkmode-code-coverage-covered: #083c66;
+    --darkmode-code-coverage-not-covered: #700000;
+    --darkmode-code-cursor: white;
+
+    /* text */
+    --darkmode-active-text-color: rgba(255, 255, 255, .9);
+    --darkmode-default-text-color: rgba(255, 255, 255, .7);
+    --darkmode-weak-text-color: rgba(255, 255, 255, .4);
+    --darkmode-link-text-color: #5EB4FF;
+
+    /* icons */
+    --darkmode-active-icon-color: rgba(255, 255, 255, .7);
+    --darkmode-default-icon-color: rgba(255, 255, 255, .5);
+    --darkmode-weak-icon-color:  rgba(255, 255, 255, .1);
+    --darkmode-default-icon-opacity: .5;
+    --darkmode-weak-icon-opacity: .1;
+
+    /* borders */
+    --darkmode-default-border-color: #494949;
+    --darkmode-checkbox-border-color: rgba(255, 255, 255, .3);
+
+    /* misc */
+    --darkmode-primary-highlight: #1B5297;
+    --darkmode-bright-highlight: #0070D2;/* #2C7DE2; */
+
+    /* sales path */
+    --darkmode-sales-path-complete: #0070D2;
+    --darkmode-sales-path-incomplete: rgb(36,39,41);
+}

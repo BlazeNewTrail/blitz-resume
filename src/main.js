@@ -4,9 +4,13 @@
 import DefaultLayout from '~/layouts/Default.vue'
 
 import 'typeface-inter';
-import '~/assets/styles.scss';
+import '@/assets/styles.scss';
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+
+  // Add attributes to BODY tag
+  // slds darkmode looks better with this
+  head.bodyAttrs = { class: 'setupTab' }
 }

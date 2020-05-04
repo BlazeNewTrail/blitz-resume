@@ -1,8 +1,22 @@
+// set variables
 $slds-load-webfonts: false;
-
 $font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 @import '@salesforce-ux/design-system/scss';
+
+@import './darkmode_variables.scss';
+
+// scope dark-mode in class
+html.dark-mode {
+  @import './darkmode_overrides.scss';
+  background: #2D2E2F;
+}
+
+// extra big avatar for sidebar
+.slds-avatar_xlarge, .slds-avatar--xlarge {
+  width: 10rem;
+  height: 10rem;
+}
 
 .content {
   top: 50px;
@@ -10,4 +24,175 @@ $font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', R
   overflow: visible;
   width: 100%;
   z-index: 0;
+}
+
+html {
+  background-color: #fff
+}
+
+.site-page-wrapper>div {
+  display: flex;
+  flex-direction: column
+}
+
+@media (min-width: 48em) {
+  .site-page-wrapper>div {
+    min-height:100vh
+  }
+}
+
+.site-sidebar-menu {
+  padding-bottom: 2rem
+}
+
+@media (min-width: 64em) {
+  .site-sidebar-menu {
+    padding:0 1rem
+  }
+}
+
+.site-sidebar {
+  border-right: 1px solid #d8dee6
+}
+
+@media (min-width: 48em) {
+  .site-sidebar {
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 16rem
+  }
+}
+
+.site-sidebar a,.site-sidebar button {
+  // display: block;
+  padding: .875rem 2rem .8125rem;
+  // line-height: 1.25;
+  // color: #4f6a92;
+  // width: 100%
+}
+
+.site-sidebar a:focus,.site-sidebar a:hover,.site-sidebar button:focus,.site-sidebar button:hover {
+  text-decoration: none
+}
+
+@media (max-width: 47.9375em) {
+  .site-sidebar {
+    padding-top:1.5rem;
+    padding-bottom: 1.5rem
+  }
+}
+
+.site-skip-content {
+  position: relative;
+  z-index: 10001
+}
+
+.site-skip-content a {
+  display: block;
+  background: #fff;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-align: center
+}
+
+.site-skip-content.site-skip-content a {
+  padding-top: .75rem!important;
+  padding-bottom: .75rem!important;
+  width: 100%!important
+}
+
+.site-skip-content_navigation {
+  display: none
+}
+
+@media (max-width: 47.9375em) {
+  .site-skip-content_navigation {
+    margin-top:6rem;
+    display: block
+  }
+}
+
+.site-logo {
+  text-align: center;
+  font-size: 1.125rem;
+  margin-top: .5rem
+}
+
+.site-logo a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  color: #16325c
+}
+
+.site-logo .site-logo__graphic {
+  display: inline-block;
+  margin-bottom: .625rem;
+  width: 100%;
+  height: 3rem;
+  background: url("/assets/images/logo.svg") 50% 50% no-repeat
+}
+
+@media (min-width: 48em) {
+  .site-logo {
+    margin-top:0;
+    padding-top: 1.5rem
+  }
+
+  .site-logo a {
+    margin-bottom: 1.75rem
+  }
+
+  .site-logo .site-logo__graphic {
+    height: 4.25rem
+  }
+}
+
+@media (max-width: 47.9375em) {
+  .site-logo {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0
+  }
+}
+
+.site-navigation {
+  margin-top: 1rem;
+  overflow: hidden;
+  overflow-y: auto
+}
+
+.site-main,.site-main_inner {
+  background: #fff
+}
+
+@media (min-width: 48em) {
+  .site-main,.site-main_inner {
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 auto
+  }
+}
+
+@media (min-width: 48em) {
+  .site-main {
+    margin-left:16rem;
+    min-height: calc(100vh - 8rem)
+  }
+}
+
+@media (min-width: 64em) {
+  .site-main {
+    min-height:calc(100vh - 4.5rem)
+  }
+}
+
+.site-main:focus {
+  outline: none;
+  // box-shadow: inset 0 0 2px #0070d2
 }
