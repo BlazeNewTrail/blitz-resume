@@ -21,7 +21,7 @@
 import About from '@/components/About.vue';
 import Education from '@/components/Education.vue';
 import Skills from '@/components/Skills.vue';
-import Work from '@/components/Work.vue';
+import Work from '@/components/WorkExperience.vue';
 import ScrollActiveNavContainer from '@/directives/scroll-active-nav-container';
 
 export default {
