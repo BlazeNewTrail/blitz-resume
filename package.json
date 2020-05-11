@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "@salesforce-ux/design-system": "^2.11.9",
-    "typeface-inter": "^3.12.0"
+    "typedi": "^0.8.0",
+    "typeface-inter": "^3.12.0",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "gridsome": "^0.7.14",

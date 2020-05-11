@@ -1,3 +1,13 @@
+const defaultOptions = {
+  intersection: {
+    // root: ...,
+    // rootMargin: ...,
+    threshold: [0, 0.25, 0.5, 0.75, 1],
+  },
+  throttle: 1000,
+  sectionKeyAttribute: "id",
+};
+
 export default class ScrollActiveNav {
   /**
    * @type {HTMLElement[]}
@@ -9,25 +19,17 @@ export default class ScrollActiveNav {
    */
   activeElement;
 
+  /**
+   * @type {Function[]}
+   */
+  callbacks;
+
   constructor(options) {
-    this.options = Object.assign(
-      {
-        callback: null,
-        intersection: {
-          // root: ...,
-          // rootMargin: ...,
-          threshold: [0, 0.25, 0.5, 0.75, 1],
-        },
-        throttle: 1000,
-        sectionKeyAttribute: "id",
-      },
-      options
-    );
+    this.options = Object.assign(defaultOptions, options);
 
     this.sectionElements = [];
+    this.callbacks = [];
     this.intersectionRatios = new WeakMap();
-
-    this.createObserver();
   }
 
   /**
@@ -36,13 +38,15 @@ export default class ScrollActiveNav {
   intersectionCallback(entries) {
     entries.forEach((entry) => {
       this.intersectionRatios.set(entry.target, entry.intersectionRatio);
-      console.log('entry in callback');
+      console.log("entry in callback");
     });
     this.calcActiveEntry();
   }
 
   elementRatio(el) {
-    return (this.intersectionRatios.has(el) && this.intersectionRatios.get(el)) || 0;
+    return (
+      (this.intersectionRatios.has(el) && this.intersectionRatios.get(el)) || 0
+    );
   }
 
   calcActiveEntry() {
@@ -58,33 +62,41 @@ export default class ScrollActiveNav {
       return;
     }
 
-    const maxItems = this.sectionElements.filter((el) => this.elementRatio(el) === maxRatio);
+    const maxItems = this.sectionElements.filter(
+      (el) => this.elementRatio(el) === maxRatio
+    );
 
     let active;
-
-    // for now use element later in doc if multiple entries have same ratio
     if (maxItems.length === 1) {
       active = maxItems[0];
     } else {
-      console.log('two with same ratio');
+      const rootEl = this.observer.root || document.documentElement;
+      const scrollPercentage =
+        (rootEl.scrollTop + rootEl.clientHeight / 2) / rootEl.scrollHeight;
+
+      const compareBitMask =
+        scrollPercentage > 0.5
+          ? Node.DOCUMENT_POSITION_FOLLOWING
+          : Node.DOCUMENT_POSITION_PRECEDING;
+
       active = maxItems.sort((a, b) =>
-        a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING
-          ? 1
-          : -1
+        a.compareDocumentPosition(b) & compareBitMask ? 1 : -1
       )[0];
     }
 
     if (this.activeElement !== active) {
-      console.log('activeChange');
       this.activeElement = active;
       const returnValue = this.options.sectionKeyAttribute
         ? this.activeElement.getAttribute(this.options.sectionKeyAttribute)
         : this.activeElement;
-      this.options.callback(returnValue);
+      if (this.callbacks.length > 0)
+        this.callbacks.forEach((fn) => fn(returnValue));
     }
   }
 
-  createObserver() {
+  createObserver(options) {
+    this.options = Object.assign(defaultOptions, options);
+
     if (this.observer) {
       this.destroyObserver();
     }
@@ -110,5 +122,9 @@ export default class ScrollActiveNav {
       this.sectionElements.findIndex((sEl) => sEl === el)
     );
     this.observer.unobserve(el);
+  }
+
+  registerCallback(fn) {
+    this.callbacks.push(fn);
   }
 }

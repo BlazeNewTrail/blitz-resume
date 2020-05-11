@@ -1,32 +1,57 @@
-import Vue from 'vue';
-
-export const eventbus = new Vue();
+import { Container } from "typedi";
+import ScrollActiveClass from "@/directives/scroll-active-nav-core";
 
 const defaultOptions = {
-  selector: 'article[id]'
-}
+  selector: "article[id]",
+};
 
 export default {
-    bind(el, binding, vnode) {
-      const options = Object.assign(defaultOptions, binding.value);
+  inserted(el, binding, vnode) {
+    const options = Object.assign(defaultOptions, binding.value);
+    const scrollActive = Container.get(ScrollActiveClass);
+
+    // find scrollable parent
+    const getScrollParent = (node) => {
+      if (node === null) {
+        return null;
+      } else if (node.scrollHeight > node.clientHeight) {
+        return node;
+      } else {
+        return getScrollParent(node.parentNode);
+      }
+    };
+
+    if (window && "IntersectionObserver" in window) {
+      scrollActive.createObserver({
+        intersection: {
+          root: getScrollParent(el),
+          threshold: [0, 0.25, 0.5, 0.75, 1],
+        },
+      });
 
       vnode.context.$nextTick(() => {
         const sections = el.querySelectorAll(options.selector);
-        eventbus.$emit('sa-nav-sections-register', sections);
-      })
-    },
-    componentUpdated(el, binding, vnode){
-      // TODO handle all the cases...
-      const options = Object.assign(defaultOptions, binding.value);
-
-      vnode.context.$nextTick(() => {
-        const sections = el.querySelectorAll(options.selector);
-        eventbus.$emit('sa-nav-sections-register', sections);
-      })
-    },
-    unbind(el, binding) {
-      const options = Object.assign(defaultOptions, binding.value);
-      const sections = el.querySelectorAll(options.selector);
-      eventbus.$emit('sa-nav-sections-unregister', sections);
+        sections.forEach((el) => scrollActive.registerSection(el));
+      });
     }
-}
+  },
+  componentUpdated(el, binding, vnode) {
+    // TODO handle all the cases...
+    const options = Object.assign(defaultOptions, binding.value);
+    const scrollActive = Container.get(ScrollActiveClass);
+
+    if (window && "IntersectionObserver" in window) {
+      scrollActive.createObserver();
+
+      vnode.context.$nextTick(() => {
+        const sections = el.querySelectorAll(options.selector);
+        sections.forEach((el) => scrollActive.registerSection(el));
+      });
+    }
+  },
+  unbind(el, binding) {
+    // const options = Object.assign(defaultOptions, binding.value);
+    // const sections = el.querySelectorAll(options.selector);
+    // eventbus.$emit('sa-nav-sections-unregister', sections);
+  },
+};

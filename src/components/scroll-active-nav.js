@@ -1,5 +1,5 @@
+import { Container } from "typedi";
 import ScrollActiveClass from "@/directives/scroll-active-nav-core";
-import { eventbus } from "@/directives/scroll-active-nav-container";
 
 export default {
   props: {
@@ -34,22 +34,16 @@ export default {
     },
   },
   mounted() {
-    if (window && "IntersectionObserver" in window) {
-      this.scrollActive = new ScrollActiveClass({
-        callback: this.activeChange,
-      });
-      eventbus.$on("sa-nav-sections-register", (elements) => {
-        this.scrollActive.createObserver();
-        elements.forEach((el) => this.scrollActive.registerSection(el));
-      });
-    }
+    Container.get(ScrollActiveClass).registerCallback(
+      this.activeChange.bind(this)
+    );
     this.findLinks();
   },
   updated() {
     this.findLinks();
   },
   beforeDestroy() {
-    this.scrollActive.destroyObserver();
+    // this.scrollActive.destroyObserver();
   },
   render: function(createElement) {
     return createElement(
