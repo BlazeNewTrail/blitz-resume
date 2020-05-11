@@ -1,5 +1,5 @@
 <template>
-  <section class="site site-sidebar slds-grid_align-center slds-order_2">
+  <section class="site-sidebar slds-grid slds-grid_vertical slds-grid_align-center">
     <div class="slds-grid slds-grid_align-center">
       <div class="site-skip-content">
         <a
@@ -23,9 +23,9 @@
         <button type="submit" class="slds-assistive-text" tabindex="-1">Submit your search query</button></div>
       </form>-->
     </div>
+    <!--  -->
     <div
-      id="site-navigation"
-      class="site site-navigation site-navigation--has-search"
+      class="site-navigation"
     >
       <!-- <nav
         class="slds-nav-vertical"
@@ -39,26 +39,30 @@
           <ul>
             <li data-navkey="about" class="slds-nav-vertical__item">
               <a
-                href="#about"
+                href="#"
+                v-scroll-to="'#about'"
                 class="slds-nav-vertical__action"
                 aria-current="true"
               >About</a>
             </li>
             <li data-navkey="education" class="slds-nav-vertical__item">
               <a
-                href="#education"
+                href="#"
+                v-scroll-to="'#education'"
                 class="slds-nav-vertical__action"
               >Education</a>
             </li>
             <li data-navkey="work" class="slds-nav-vertical__item">
               <a
-                href="#work"
+                href="#"
+                v-scroll-to="'#work'"
                 class="slds-nav-vertical__action"
               >Work</a>
             </li>
             <li data-navkey="skills" class="slds-nav-vertical__item">
               <a
-                href="#skills"
+                href="#"
+                v-scroll-to="'#skills'"
                 class="slds-nav-vertical__action"
               >Skills</a>
             </li>
