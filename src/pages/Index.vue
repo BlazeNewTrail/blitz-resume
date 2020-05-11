@@ -2,16 +2,16 @@
   <Layout>
     <div class="slds-grid slds-grid_vertical slds-gutters" v-scroll-active-nav-container>
       <div class="slds-col slds-p-bottom_small">
-        <about />
+        <about id="about" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <education />
+        <education id="education" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <work />
+        <work id="work" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <skills />
+        <skills id="skills" />
       </div>
     </div>
   </Layout>
