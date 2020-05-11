@@ -5,8 +5,12 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const jsonresume = require('./resume.json');
+
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
+  api.loadSource(({ addCollection, addMetadata }) => {
+    addMetadata('useTopbar', true);
+    addMetadata('resume', jsonresume);
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   })
 
