@@ -1,11 +1,11 @@
 {
   "basics": {
-    "name": "John Doe",
-    "label": "Programmer",
+    "name": "Ankit Taneja",
+    "label": "Freelance Salesforce Consultant",
     "picture": "",
-    "email": "john@gmail.com",
-    "phone": "(912) 555-4321",
-    "website": "http://johndoe.com",
+    "email": "info@ankittaneja.net",
+    "phone": "+49 151 6102 6618",
+    "website": "http://forcepreneur.com",
     "summary": "A summary of John Doe...",
     "location": {
       "address": "2712 Broadway St",
@@ -17,8 +17,8 @@
     "profiles": [
       {
         "network": "Twitter",
-        "username": "john",
-        "url": "http://twitter.com/john"
+        "username": "NkitTaneja",
+        "url": "http://twitter.com/NkitTaneja"
       }
     ]
   },
@@ -56,6 +56,18 @@
     }
   ],
   "awards": [
+    {
+      "title": "Platform Developer 1",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    },
+    {
+      "title": "Sharing and Visibility",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    },
     {
       "title": "Award",
       "date": "2014-11-01",

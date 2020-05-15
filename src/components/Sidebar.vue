@@ -66,6 +66,16 @@
                 class="slds-nav-vertical__action"
               >Skills</a>
             </li>
+            <li data-navkey="Awards" class="slds-nav-vertical__item">
+              <a
+                href="#"
+                v-scroll-to="'#awards'"
+                class="slds-nav-vertical__action"
+              >Awards</a>
+            </li>
+            <li class="slds-nav-vertical__item theme-switcher">
+              <theme-switcher />
+            </li>
           </ul>
         </div>
         <!-- </nav> -->
@@ -76,10 +86,17 @@
 
 <script>
 import ScrollActiveNav from "@/components/scroll-active-nav";
+import ThemeSwitcher from "@/components/ThemeSwitcher.vue";
 
 export default {
   components: {
-    ScrollActiveNav
+    ScrollActiveNav,
+    ThemeSwitcher
   }
 };
 </script>
+<style scoped>
+.theme-switcher {
+	left: 1.2em;
+}
+</style>

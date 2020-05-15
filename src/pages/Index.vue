@@ -13,6 +13,9 @@
       <div class="slds-col slds-p-bottom_small">
         <skills id="skills" />
       </div>
+      <div class="slds-col slds-p-bottom_small">
+        <awards id="awards" />
+      </div>
     </div>
   </Layout>
 </template>
@@ -22,6 +25,7 @@ import About from '@/components/About.vue';
 import Education from '@/components/Education.vue';
 import Skills from '@/components/Skills.vue';
 import Work from '@/components/WorkExperience.vue';
+import Awards from '@/components/Awards.vue';
 import ScrollActiveNavContainer from '@/directives/scroll-active-nav-container';
 
 export default {
@@ -30,12 +34,13 @@ export default {
     Education,
     Skills,
     Work,
+    Awards,
   },
   directives: {
     ScrollActiveNavContainer,
   },
   metaInfo: {
-    title: "Hello, world!"
+    title: "Blitz Resumé"
   }
 };
 </script>
