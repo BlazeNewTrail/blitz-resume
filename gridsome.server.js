@@ -7,14 +7,14 @@
 
 const jsonresume = require('./resume.json');
 
-module.exports = function (api) {
-  api.loadSource(({ addCollection, addMetadata }) => {
+module.exports = (api) => {
+  api.loadSource(({ addMetadata }) => {
     addMetadata('useTopbar', true);
     addMetadata('resume', jsonresume);
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
+  });
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-}
+  // api.createPages(({ createPage }) => {
+  //   // Use the Pages API here: https://gridsome.org/docs/pages-api/
+  // });
+};

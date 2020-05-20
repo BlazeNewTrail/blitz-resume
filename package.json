@@ -14,9 +14,10 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@salesforce-ux/design-system": "^2.11.9",
     "gsap": "^3.2.6",
-    "sal.js": "^0.7.5",
+    "lodash.throttle": "^4.1.1",
     "typedi": "^0.8.0",
     "typeface-inter": "^3.12.0",
+    "vue-intersect": "^1.1.6",
     "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {

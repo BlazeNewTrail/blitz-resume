@@ -12,9 +12,9 @@ module.exports = {
           ['@', './src'],
           ['~', './src'],
         ],
-        extensions: ['.vue', '.ts', '.js', '.jsx', '.json']
-      }
-    }
+        extensions: ['.vue', '.ts', '.js', '.jsx', '.json'],
+      },
+    },
   },
   rules: {
     'import/extensions': [
@@ -40,31 +40,38 @@ module.exports = {
       },
     ],
     // prettier html formatter compatibility
-    "vue/html-self-closing": ["error", {
-      "html": {
-        "void": "always",
-        "normal": "never",
-        "component": "always"
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'always',
+          normal: 'never',
+          component: 'always',
+        },
+        svg: 'always',
+        math: 'always',
       },
-      "svg": "always",
-      "math": "always"
-    }],
+    ],
+    'operator-linebreak': 0,
     // reenable once https://github.com/prettier/prettier/pull/6644 is released
-    "vue/max-attributes-per-line": 0,
+    'vue/max-attributes-per-line': 0,
     // replace max len with vue compatible rule
-    "max-len": 0,
-    "vue/max-len": ["error", {
-      "code": 100,
-      "template": 100,
-      "tabWidth": 2,
-      "ignoreComments": true,
-      "ignoreTrailingComments": true,
-      "ignoreUrls": true,
-      "ignoreStrings": true,
-      "ignoreTemplateLiterals": true,
-      "ignoreRegExpLiterals": true,
-      "ignoreHTMLAttributeValues": true,
-      "ignoreHTMLTextContents": true,
-  }]
+    'max-len': 0,
+    'vue/max-len': [
+      'error',
+      {
+        code: 100,
+        template: 100,
+        tabWidth: 2,
+        ignoreComments: true,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+        ignoreHTMLAttributeValues: true,
+        ignoreHTMLTextContents: true,
+      },
+    ],
   },
 };
