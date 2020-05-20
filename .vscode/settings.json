@@ -1,0 +1,11 @@
+{
+  "eslint.validate": [ "javascript", "typescript", "vue" ],
+  "vetur.validation.template": false,
+  "vetur.validation.script": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

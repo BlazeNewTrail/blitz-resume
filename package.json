@@ -4,7 +4,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "lint": "eslint --ext js,ts,vue ./src"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -17,8 +18,15 @@
     "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-gridsome": "^1.4.11",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
     "gridsome": "^0.7.14",
     "node-sass": "^4.14.0",
+    "prettier": "^2.0.5",
     "resolve-url-loader": "^4.0.0-alpha.1",
     "sass-loader": "^8.0.2"
   }
