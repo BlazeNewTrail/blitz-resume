@@ -49,7 +49,7 @@
 	</article>
 </template>
 <static-query>
-# Write your query or mutation here
+
 query {
   metadata {
     resume{

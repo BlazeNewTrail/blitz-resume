@@ -57,7 +57,7 @@
 query {
   metadata {
     resume{
-      skills {
+      awards {
         title
         date
         awarder
