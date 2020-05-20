@@ -29,7 +29,7 @@
                 <span class="slds-r8"></span>
                 <span class="slds-r9"></span>
               </span>
-              <span class="slds-assistive-text">Open App Launcher</span>
+              <span class="slds-assistive-text">Can be removed</span>
             </button>
           </div>
           <span class="slds-context-bar__label-action slds-context-bar__app-name">
@@ -106,6 +106,25 @@
               >Skills</span>
             </a>
           </li>
+          <li
+            data-navkey="awards"
+            class="slds-context-bar__item"
+          >
+            <a
+              href="#"
+              v-scroll-to="'#awards'"
+              class="slds-context-bar__label-action"
+              title="Awards"
+            >
+              <span
+                class="slds-truncate"
+                title="Awards"
+              >Awards</span>
+            </a>
+          </li>
+          <li class="slds-context-bar__item">
+            <theme-switcher />
+          </li>
         </ul>
         <!-- </nav> -->
       </scroll-active-nav>
@@ -127,10 +146,12 @@ query {
 
 <script>
 import ScrollActiveNav from "@/components/scroll-active-nav";
+import ThemeSwitcher from "@/components/ThemeSwitcher.vue";
 
 export default {
   components: {
-    ScrollActiveNav
+    ScrollActiveNav,
+    ThemeSwitcher
   }
 };
 </script>

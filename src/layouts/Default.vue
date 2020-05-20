@@ -1,6 +1,6 @@
 <template>
   <div class="slds-scope site-page-wrapper">
-    <theme-switcher />
+    <!-- <theme-switcher /> -->
     <top-bar class="site-header" :class="[$static.metadata.useTopbar ? '' : 'slds-hide_medium']" />
     <div class="site-main-wrapper">
       <sidebar :class="[$static.metadata.useTopbar ? 'slds-hide' : 'slds-show_medium']" />
@@ -33,13 +33,12 @@ query {
 <script>
 import TopBar from "@/components/TopBar.vue";
 import Sidebar from "@/components/Sidebar.vue";
-import ThemeSwitcher from "@/components/ThemeSwitcher.vue";
+
 
 export default {
   components: {
     TopBar,
     Sidebar,
-    ThemeSwitcher
   }
 };
 </script>

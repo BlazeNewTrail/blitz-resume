@@ -1,5 +1,5 @@
 <template>
-  <button
+	<!-- <button
     class="theme-switcher slds-button slds-icon-waffle_container"
     title="Description of the icon when needed"
     @click="toggleDarkMode"
@@ -16,29 +16,43 @@
       <span class="slds-r9"></span>
     </span>
     <span class="slds-assistive-text">Open App Launcher</span>
-  </button>
+    
+	</button>-->
+	<div class="slds-form-element theme-switcher">
+		<label class="slds-checkbox_toggle slds-grid">
+			
+			<input
+				type="checkbox"
+				name="checkbox-toggle-17"
+				value="checkbox-toggle-17"
+				aria-describedby="checkbox-toggle-17"
+				checked
+        @click="toggleDarkMode"
+			/>
+			<span id="checkbox-toggle-17" class="slds-checkbox_faux_container" aria-live="assertive">
+				<span class="slds-checkbox_faux"></span>
+				<span class="slds-checkbox_on">Light Mode</span>
+				<span class="slds-checkbox_off">Dark Mode</span>
+			</span>
+		</label>
+	</div>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    darkMode: true
-  }),
-  methods: {
-    toggleDarkMode() {
-      this.darkMode = !this.darkMode;
+	data: () => ({
+		darkMode: true
+	}),
+	methods: {
+		toggleDarkMode() {
+			this.darkMode = !this.darkMode;
 
-      document.documentElement.classList.toggle("dark-mode");
-    }
-  }
+			document.documentElement.classList.toggle("dark-mode");
+		}
+	}
 };
 </script>
 
 <style>
-.theme-switcher {
-  display: block;
-  position: fixed !important;
-  left: 0;
-  bottom: 0;
-}
+
 </style>
