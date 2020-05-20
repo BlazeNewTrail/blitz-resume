@@ -35,6 +35,8 @@ import {
 
 import DefaultLayout from '@/layouts/Default.vue';
 
+import SldsIcon from '@/components/slds-icon.vue';
+
 library.add(
   faGithub,
   faTwitter,
@@ -62,6 +64,9 @@ export default function (Vue, { head }) {
   Vue.use(VueScrollTo, {
     container: 'main',
   });
+
+  // add slds-icon component
+  Vue.component('slds-icon', SldsIcon);
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
