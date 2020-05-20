@@ -17,7 +17,7 @@
 						<a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
 							<span>Skills</span>
 						</a>
-						<!-- <button @click="animate">Animate</button> -->
+						<button @click="animate">Animate</button>
 					</h2>
 				</div>
 			</header>
@@ -26,6 +26,8 @@
 			<div class="slds-text-heading_small slds-p-bottom_small">Programming Languages & Tools</div>
 			<div class="slds-grid slds-wrap">
 				<div
+        data-sal
+        ref="icons"
 					v-for="tool in $static.metadata.resume.skills.tools"
 					:key="tool.title"
 					class="sld-col card"
@@ -68,6 +70,8 @@ query {
 
 <script>
 import gsap from "gsap";
+import sal from "sal.js";
+
 
 export default {
 	data() {
@@ -75,6 +79,13 @@ export default {
 		};
 	},
 	mounted() {
+    sal();
+    const element = this.$refs.icons;
+    console.log(element);
+    element.addEventListener('sal:in', ({ detail }) => {
+      console.log('entering', detail.target);
+      animate();
+    });
 		gsap.from(".card", {
 			duration: 0.5,
 			opacity: 0,
