@@ -32,22 +32,37 @@
       </header>
     </div>
     <div class="slds-card__body slds-card__body_inner">
-      Anything can go into the card body
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-    </div>
-    <footer class="slds-card__footer">
-      <a
-        class="slds-card__footer-action"
-        href="javascript:void(0);"
-      >
-        View All
-        <span class="slds-assistive-text">Accounts</span>
-      </a>
-    </footer>
+      
+<div class="slds-text-longform">
+  <h3 class="slds-text-heading_medium">{{ $static.metadata.resume.basics.name }}</h3>
+<h3 class="slds-text-heading_medium">{{ $static.metadata.resume.basics.label }}</h3>
+</div>
+</div>
+     
+     
+      <p>{{ $static.metadata.resume.basics.summary }}</p>
+      
+  
+    
   </article>
 </template>
+<static-query>
+# Write your query or mutation here
+query {
+  metadata {
+    resume{
+      basics{
+        name
+        label
+        summary
+        
+      }
+      
+    }
+  }
+}
 
+</static-query>
 <script>
 export default {
     
