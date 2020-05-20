@@ -45,6 +45,29 @@ module.exports = {
       })
       .before('sass-loader');
 
+    // copy slds icon sprites to assets
+    config.plugin('copy').use(require.resolve('copy-webpack-plugin'), [
+      {
+        patterns: [
+          {
+            from: path.posix.join(
+              path
+                .resolve(
+                  __dirname,
+                  './node_modules/@salesforce-ux/design-system',
+                )
+                .replace(/\\/g, '/'),
+              '/assets/icons/**/svg/symbols.svg',
+            ),
+            transformPath(targetPath) {
+              const [, category] = targetPath.match(/\/(\w+)-sprite\//) || [];
+              return path.join('assets/img/slds-icons', category, 'symbols.svg');
+            },
+          },
+        ],
+      },
+    ]);
+
     // console.log(config.toString());
   },
 };
