@@ -1,8 +1,8 @@
-import { Container } from "typedi";
-import ScrollActiveClass from "@/directives/scroll-active-nav-core";
+import { Container } from 'typedi';
+import ScrollActiveClass from '@/directives/scroll-active-nav-core';
 
 const defaultOptions = {
-  selector: "article[id]",
+  selector: 'article[id]',
 };
 
 export default {
@@ -14,14 +14,14 @@ export default {
     const getScrollParent = (node) => {
       if (node === null) {
         return null;
-      } else if (node.scrollHeight > node.clientHeight) {
-        return node;
-      } else {
-        return getScrollParent(node.parentNode);
       }
+      if (node.scrollHeight > node.clientHeight) {
+        return node;
+      }
+      return getScrollParent(node.parentNode);
     };
 
-    if (window && "IntersectionObserver" in window) {
+    if (window && 'IntersectionObserver' in window) {
       scrollActive.createObserver({
         intersection: {
           root: getScrollParent(el),
@@ -31,7 +31,7 @@ export default {
 
       vnode.context.$nextTick(() => {
         const sections = el.querySelectorAll(options.selector);
-        sections.forEach((el) => scrollActive.registerSection(el));
+        sections.forEach((s) => scrollActive.registerSection(s));
       });
     }
   },
@@ -40,16 +40,16 @@ export default {
     const options = Object.assign(defaultOptions, binding.value);
     const scrollActive = Container.get(ScrollActiveClass);
 
-    if (window && "IntersectionObserver" in window) {
+    if (window && 'IntersectionObserver' in window) {
       scrollActive.createObserver();
 
       vnode.context.$nextTick(() => {
         const sections = el.querySelectorAll(options.selector);
-        sections.forEach((el) => scrollActive.registerSection(el));
+        sections.forEach((s) => scrollActive.registerSection(s));
       });
     }
   },
-  unbind(el, binding) {
+  unbind() {
     // const options = Object.assign(defaultOptions, binding.value);
     // const sections = el.querySelectorAll(options.selector);
     // eventbus.$emit('sa-nav-sections-unregister', sections);

@@ -3,11 +3,15 @@
     <a
       href="javascript:void(0);"
       class="slds-assistive-text slds-assistive-text_focus"
-    >Skip to Navigation</a>
+    >
+      Skip to Navigation
+    </a>
     <a
       href="javascript:void(0);"
       class="slds-assistive-text slds-assistive-text_focus"
-    >Skip to Main Content</a>
+    >
+      Skip to Main Content
+    </a>
     <div class="slds-context-bar">
       <div class="slds-context-bar__primary">
         <div
@@ -32,94 +36,65 @@
               <span class="slds-assistive-text">Can be removed</span>
             </button>
           </div>
-          <span class="slds-context-bar__label-action slds-context-bar__app-name">
-            <span
-              class="slds-truncate"
-              title="App Name"
-            >{{ $static.metadata.resume.basics.name }}</span>
+          <span
+            class="slds-context-bar__label-action slds-context-bar__app-name"
+          >
+            <span class="slds-truncate" title="App Name">{{
+              $static.metadata.resume.basics.name
+            }}</span>
           </span>
         </div>
       </div>
       <scroll-active-nav class="slds-context-bar__secondary slds-show_medium">
         <ul class="slds-grid">
-          <li
-            data-navkey="about"
-            class="slds-context-bar__item slds-is-active"
-          >
+          <li data-navkey="about" class="slds-context-bar__item slds-is-active">
             <a
-              href="#"
               v-scroll-to="'#about'"
+              href="#"
               class="slds-context-bar__label-action"
               title="About"
             >
-              <span
-                class="slds-truncate"
-                title="About"
-              >About</span>
+              <span class="slds-truncate" title="About">About</span>
             </a>
           </li>
-          <li
-            data-navkey="education"
-            class="slds-context-bar__item"
-          >
+          <li data-navkey="education" class="slds-context-bar__item">
             <a
-              href="#"
               v-scroll-to="'#education'"
+              href="#"
               class="slds-context-bar__label-action"
               title="Education"
             >
-              <span
-                class="slds-truncate"
-                title="Education"
-              >Education</span>
+              <span class="slds-truncate" title="Education">Education</span>
             </a>
           </li>
-          <li
-            data-navkey="work"
-            class="slds-context-bar__item"
-          >
+          <li data-navkey="work" class="slds-context-bar__item">
             <a
-              href="#"
               v-scroll-to="'#work'"
+              href="#"
               class="slds-context-bar__label-action"
               title="Work"
             >
-              <span
-                class="slds-truncate"
-                title="Work"
-              >Work</span>
+              <span class="slds-truncate" title="Work">Work</span>
             </a>
           </li>
-          <li
-            data-navkey="skills"
-            class="slds-context-bar__item"
-          >
+          <li data-navkey="skills" class="slds-context-bar__item">
             <a
-              href="#"
               v-scroll-to="'#skills'"
+              href="#"
               class="slds-context-bar__label-action"
               title="Skills"
             >
-              <span
-                class="slds-truncate"
-                title="Skills"
-              >Skills</span>
+              <span class="slds-truncate" title="Skills">Skills</span>
             </a>
           </li>
-          <li
-            data-navkey="awards"
-            class="slds-context-bar__item"
-          >
+          <li data-navkey="awards" class="slds-context-bar__item">
             <a
-              href="#"
               v-scroll-to="'#awards'"
+              href="#"
               class="slds-context-bar__label-action"
               title="Awards"
             >
-              <span
-                class="slds-truncate"
-                title="Awards"
-              >Awards</span>
+              <span class="slds-truncate" title="Awards">Awards</span>
             </a>
           </li>
           <li class="slds-context-bar__item">
@@ -133,25 +108,25 @@
 </template>
 
 <static-query>
-query {
-  metadata {
-    resume{
-      basics{
-        name
+  query {
+    metadata {
+      resume {
+        basics {
+          name
+        }
       }
     }
   }
-}
 </static-query>
 
 <script>
-import ScrollActiveNav from "@/components/scroll-active-nav";
-import ThemeSwitcher from "@/components/ThemeSwitcher.vue";
+import ScrollActiveNav from '@/components/scroll-active-nav';
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 
 export default {
   components: {
     ScrollActiveNav,
-    ThemeSwitcher
-  }
+    ThemeSwitcher,
+  },
 };
 </script>

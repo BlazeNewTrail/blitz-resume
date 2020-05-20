@@ -1,11 +1,11 @@
-import { Container } from "typedi";
-import ScrollActiveClass from "@/directives/scroll-active-nav-core";
+import { Container } from 'typedi';
+import ScrollActiveClass from '@/directives/scroll-active-nav-core';
 
 export default {
   props: {
     tag: {
       type: String,
-      default: "nav",
+      default: 'nav',
     },
   },
   data() {
@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     findLinks() {
-      this.links = this.$el.querySelectorAll("li[data-navkey]");
+      this.links = this.$el.querySelectorAll('li[data-navkey]');
     },
     activeChange(activeKey) {
       this.activeKey = activeKey;
@@ -26,16 +26,16 @@ export default {
     setActiveItem() {
       this.links.forEach((el) => {
         if (el.dataset.navkey === this.activeKey) {
-          el.classList.add("slds-is-active");
+          el.classList.add('slds-is-active');
         } else {
-          el.classList.remove("slds-is-active");
+          el.classList.remove('slds-is-active');
         }
       });
     },
   },
   mounted() {
     Container.get(ScrollActiveClass).registerCallback(
-      this.activeChange.bind(this)
+      this.activeChange.bind(this),
     );
     this.findLinks();
   },
@@ -45,10 +45,10 @@ export default {
   beforeDestroy() {
     // this.scrollActive.destroyObserver();
   },
-  render: function(createElement) {
+  render(createElement) {
     return createElement(
       this.tag, // tag name
-      this.$slots.default // array of children
+      this.$slots.default, // array of children
     );
   },
 };

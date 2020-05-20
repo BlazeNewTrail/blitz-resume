@@ -5,30 +5,24 @@ const defaultOptions = {
     threshold: [0, 0.25, 0.5, 0.75, 1],
   },
   throttle: 1000,
-  sectionKeyAttribute: "id",
+  sectionKeyAttribute: 'id',
 };
 
 export default class ScrollActiveNav {
-  /**
-   * @type {HTMLElement[]}
-   */
-  sectionElements;
-
-  /**
-   * @type {HTMLElement}
-   */
-  activeElement;
-
-  /**
-   * @type {Function[]}
-   */
-  callbacks;
-
   constructor(options) {
     this.options = Object.assign(defaultOptions, options);
-
+    /**
+     * @type {HTMLElement[]}
+     */
     this.sectionElements = [];
+    /**
+     * @type {Function[]}
+     */
     this.callbacks = [];
+    /**
+     * @type {HTMLElement}
+     */
+    this.activeElement = null;
     this.intersectionRatios = new WeakMap();
   }
 
@@ -38,7 +32,6 @@ export default class ScrollActiveNav {
   intersectionCallback(entries) {
     entries.forEach((entry) => {
       this.intersectionRatios.set(entry.target, entry.intersectionRatio);
-      console.log("entry in callback");
     });
     this.calcActiveEntry();
   }
@@ -63,12 +56,12 @@ export default class ScrollActiveNav {
     }
 
     const maxItems = this.sectionElements.filter(
-      (el) => this.elementRatio(el) === maxRatio
+      (el) => this.elementRatio(el) === maxRatio,
     );
 
     let active;
     if (maxItems.length === 1) {
-      active = maxItems[0];
+      [active] = maxItems;
     } else {
       const rootEl = this.observer.root || document.documentElement;
       const scrollPercentage =
@@ -79,9 +72,10 @@ export default class ScrollActiveNav {
           ? Node.DOCUMENT_POSITION_FOLLOWING
           : Node.DOCUMENT_POSITION_PRECEDING;
 
-      active = maxItems.sort((a, b) =>
-        a.compareDocumentPosition(b) & compareBitMask ? 1 : -1
-      )[0];
+      [active] = maxItems.sort(
+        // eslint-disable-next-line no-bitwise
+        (a, b) => (a.compareDocumentPosition(b) & compareBitMask) - 0.5,
+      );
     }
 
     if (this.activeElement !== active) {
@@ -89,8 +83,9 @@ export default class ScrollActiveNav {
       const returnValue = this.options.sectionKeyAttribute
         ? this.activeElement.getAttribute(this.options.sectionKeyAttribute)
         : this.activeElement;
-      if (this.callbacks.length > 0)
+      if (this.callbacks.length > 0) {
         this.callbacks.forEach((fn) => fn(returnValue));
+      }
     }
   }
 
@@ -103,7 +98,7 @@ export default class ScrollActiveNav {
 
     this.observer = new IntersectionObserver(
       this.intersectionCallback.bind(this),
-      this.options.intersection
+      this.options.intersection,
     );
   }
 
@@ -119,7 +114,7 @@ export default class ScrollActiveNav {
 
   unregisterSection(el) {
     this.sectionElements.splice(
-      this.sectionElements.findIndex((sEl) => sEl === el)
+      this.sectionElements.findIndex((sEl) => sEl === el),
     );
     this.observer.unobserve(el);
   }

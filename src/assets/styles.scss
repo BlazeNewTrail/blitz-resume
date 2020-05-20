@@ -1,6 +1,8 @@
 // set variables
 $slds-load-webfonts: false;
-$font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 @import '@salesforce-ux/design-system/scss';
 
@@ -10,20 +12,22 @@ $font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', R
 // scope dark-mode in class
 html.dark-mode {
   @import './darkmode_overrides.scss';
-  background: #2D2E2F;
+  background: #2d2e2f;
 }
 
 // extra big avatar for sidebar
-.slds-avatar_xlarge, .slds-avatar--xlarge {
+.slds-avatar_xlarge,
+.slds-avatar--xlarge {
   width: 10rem;
   height: 10rem;
 }
 
 html {
-  background-color: #fff
+  background-color: #fff;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -45,24 +49,28 @@ html, body {
 
 .site-sidebar {
   min-width: 16rem;
-  border-right: 1px solid #d8dee6
+  border-right: 1px solid #d8dee6;
 }
 
-.site-sidebar a,.site-sidebar button {
+.site-sidebar a,
+.site-sidebar button {
   // display: block;
-  padding: .875rem 2rem .8125rem;
+  padding: 0.875rem 2rem 0.8125rem;
   // line-height: 1.25;
   // color: #4f6a92;
   // width: 100%
 }
 
-.site-sidebar a:focus,.site-sidebar a:hover,.site-sidebar button:focus,.site-sidebar button:hover {
-  text-decoration: none
+.site-sidebar a:focus,
+.site-sidebar a:hover,
+.site-sidebar button:focus,
+.site-sidebar button:hover {
+  text-decoration: none;
 }
 
 .site-skip-content {
   position: relative;
-  z-index: 10001
+  z-index: 10001;
 }
 
 .site-skip-content a {
@@ -70,13 +78,13 @@ html, body {
   background: #fff;
   padding-right: 1rem;
   padding-left: 1rem;
-  text-align: center
+  text-align: center;
 }
 
 .site-skip-content.site-skip-content a {
-  padding-top: .75rem!important;
-  padding-bottom: .75rem!important;
-  width: 100%!important
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  width: 100% !important;
 }
 
 .site-skip-content_navigation {
@@ -85,7 +93,7 @@ html, body {
 
 @media (max-width: 47.9375em) {
   .site-skip-content_navigation {
-    margin-top:6rem;
+    margin-top: 6rem;
     display: block;
   }
 }
@@ -93,56 +101,57 @@ html, body {
 .site-logo {
   text-align: center;
   font-size: 1.125rem;
-  margin-top: .5rem
+  margin-top: 0.5rem;
 }
 
 .site-logo a {
   display: inline-block;
   vertical-align: middle;
   padding: 0;
-  color: #16325c
+  color: #16325c;
 }
 
 .site-logo .site-logo__graphic {
   display: inline-block;
-  margin-bottom: .625rem;
+  margin-bottom: 0.625rem;
   width: 100%;
   height: 3rem;
-  background: url("/assets/images/logo.svg") 50% 50% no-repeat
+  background: url('/assets/images/logo.svg') 50% 50% no-repeat;
 }
 
 @media (min-width: 48em) {
   .site-logo {
-    margin-top:0;
-    padding-top: 1.5rem
+    margin-top: 0;
+    padding-top: 1.5rem;
   }
 
   .site-logo a {
-    margin-bottom: 1.75rem
+    margin-bottom: 1.75rem;
   }
 
   .site-logo .site-logo__graphic {
-    height: 4.25rem
+    height: 4.25rem;
   }
 }
 
 @media (max-width: 47.9375em) {
   .site-logo {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0
+    right: 0;
   }
 }
 
 .site-navigation {
   margin-top: 1rem;
   overflow: hidden;
-  overflow-y: auto
+  overflow-y: auto;
 }
 
-.site-main,.site-main_inner {
-  background: #fff
+.site-main,
+.site-main_inner {
+  background: #fff;
 }
 
 .site-main:focus {

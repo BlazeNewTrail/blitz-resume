@@ -7,10 +7,7 @@
             class="slds-icon_container slds-icon-standard-account"
             title="account"
           >
-            <svg
-              class="slds-icon slds-icon_small"
-              aria-hidden="true"
-            >
+            <svg class="slds-icon slds-icon_small" aria-hidden="true">
               <use
                 xlink:href="@salesforce-ux/design-system/assets/icons/standard/account.svg"
               />
@@ -32,51 +29,51 @@
       </header>
     </div>
     <div class="slds-card__body slds-card__body_inner">
-     <ol>
-							<li v-for="award in $static.metadata.resume.awards" :key="award.title">
-								<div class="slds-grid slds-wrap slds-border_bottom slds-p-around_medium">
-									<div class="slds-col slds-size_2-of-12 ">
-										<font-awesome class="icon" :icon="['fas', 'award']" />
-									</div>
-									<div class="slds-col slds-size_9-of-12">
-                                        {{ award.awarder }} <br />
-                                        {{ award.title }} <br />
-                                        {{ award.date }} <br />
-                                        {{ award.summary }}
-                                        
-                                        </div>
-								</div>
-							</li> <br>
-						</ol>
+      <ol>
+        <li v-for="award in $static.metadata.resume.awards" :key="award.title">
+          <div
+            class="slds-grid slds-wrap slds-border_bottom slds-p-around_medium"
+          >
+            <div class="slds-col slds-size_2-of-12">
+              <font-awesome class="icon" :icon="['fas', 'award']" />
+            </div>
+            <div class="slds-col slds-size_9-of-12">
+              {{ award.awarder }} <br />
+              {{ award.title }} <br />
+              {{ award.date }} <br />
+              {{ award.summary }}
+            </div>
+          </div>
+        </li>
+        <br />
+      </ol>
     </div>
-   
   </article>
 </template>
 
 <static-query>
-query {
-  metadata {
-    resume{
-      awards {
-        title
-        date
-        awarder
-        summary
+  query {
+    metadata {
+      resume {
+        awards {
+          title
+          date
+          awarder
+          summary
+        }
       }
     }
   }
-}
 </static-query>
 
 <script>
-export default {}	
-
+export default {};
 </script>
 
 <style scoped>
 .icon {
-	height: 4.5em;
-	width: 4.5em;
-	color: goldenrod;
+  height: 4.5em;
+  width: 4.5em;
+  color: goldenrod;
 }
 </style>
