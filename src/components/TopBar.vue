@@ -107,12 +107,12 @@
             </a>
           </li>
           <li
-            data-navkey="Awards"
+            data-navkey="awards"
             class="slds-context-bar__item"
           >
             <a
               href="#"
-              v-scroll-to="'#Awards'"
+              v-scroll-to="'#awards'"
               class="slds-context-bar__label-action"
               title="Awards"
             >
