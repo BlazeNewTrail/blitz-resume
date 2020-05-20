@@ -13,7 +13,7 @@
 			<div data-sal="fade" class="slds-col slds-p-bottom_small">
 				<skills id="skills" />
 			</div>
-			<div data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-back">Helo World</div>
+			
 			<div class="slds-col slds-p-bottom_small">
 				<awards id="awards" />
 			</div>

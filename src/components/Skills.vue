@@ -80,9 +80,8 @@ export default {
 	},
 	mounted() {
     sal();
-    const element = this.$refs.icons;
-    console.log(element);
-    element.addEventListener('sal:in', ({ detail }) => {
+    
+    this.$refs.icons.focus().addEventListener('sal:in', ({ detail }) => {
       console.log('entering', detail.target);
       animate();
     });
