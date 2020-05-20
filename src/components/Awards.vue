@@ -33,10 +33,10 @@
     </div>
     <div class="slds-card__body slds-card__body_inner">
      <ol>
-							<li v-for="award in $static.metadata.resume.awards " :key="award.title">
-								<div class="slds-grid slds-border_bottom slds-p-around_medium">
+							<li v-for="award in $static.metadata.resume.awards" :key="award.title">
+								<div class="slds-grid slds-wrap slds-border_bottom slds-p-around_medium">
 									<div class="slds-col slds-size_2-of-12 ">
-										<font-awesome class="icon" :icon="['fas', 'university']" />
+										<font-awesome class="icon" :icon="['fas', 'award']" />
 									</div>
 									<div class="slds-col slds-size_9-of-12">
                                         {{ award.awarder }} <br />
@@ -69,32 +69,8 @@ query {
 </static-query>
 
 <script>
-export default {
-	data() {
-		return {
-			awards: [
-				// {
-				// 	title: "Platform Developer 1",
-				// 	date: "2014-11-01",
-				// 	awarder: "Company",
-				// 	summary: "There is no spoon."
-				// },
-				// {
-				// 	title: "Sharing and Visibility",
-				// 	date: "2014-11-01",
-				// 	awarder: "Company",
-				// 	summary: "There is no spoon."
-				// },
-				// {
-				// 	title: "Award",
-				// 	date: "2014-11-01",
-				// 	awarder: "Company",
-				// 	summary: "There is no spoon."
-				// }
-			]
-		};
-	}
-};
+export default {}	
+
 </script>
 
 <style scoped>

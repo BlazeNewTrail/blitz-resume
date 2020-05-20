@@ -4597,6 +4597,11 @@ gridsome@^0.7.14:
     webpack-merge "^4.2.1"
     yaml-loader "^0.5.0"
 
+gsap@^3.2.6:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.2.6.tgz#fbaddab30c8c2fb029d61ef56f667b42f99c932f"
+  integrity sha512-QX7WQWZUAooS9tOCYg4kKLcnjBreA4Xyu11EVx6zp4BbKijnMK+NtzkB47las/E0luFE84hGscOZm5vd13KzZA==
+
 har-schema@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/har-schema/-/har-schema-2.0.0.tgz#a94c2224ebcac04782a0d9035521f24735b7ec92"
@@ -8018,6 +8023,11 @@ safe-regex@^1.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+
+sal.js@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/sal.js/-/sal.js-0.7.5.tgz#caae0cbac7e1f82f9c090639b1b937d6c8d4873f"
+  integrity sha512-65osUe8p26i8mAuZIpKp4hPmTNumkFNpOviRjzjs+Hq+et341a/qDCU/AuVV8+MTK4YbTAjZDiR5Ax0U6odgRA==
 
 sass-graph@^2.2.4:
   version "2.2.6"

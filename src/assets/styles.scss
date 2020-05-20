@@ -6,6 +6,7 @@ $font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', R
 
 @import './darkmode_variables.scss';
 
+@import '~sal.js/dist/sal.css';
 // scope dark-mode in class
 html.dark-mode {
   @import './darkmode_overrides.scss';
