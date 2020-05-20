@@ -31,7 +31,7 @@ import {
   faNpm,
 } from '@fortawesome/free-brands-svg-icons'
 
-import { faAward, faUniversity, faPeopleCarry } from '@fortawesome/free-solid-svg-icons'
+import { faAward, faUniversity, faPeopleCarry, faCheck } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   faGithub,
@@ -51,7 +51,8 @@ library.add(
   faNpm,
   faAward,
   faUniversity,
-  faPeopleCarry
+  faPeopleCarry, 
+  faCheck
 )
 
 

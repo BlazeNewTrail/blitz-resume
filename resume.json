@@ -46,32 +46,31 @@
   ],
   "education": [
     {
-      "institution": "University",
-      "area": "Software Development",
+      "institution": "Delhi University",
+      "area": "Commerce",
       "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "gpa": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
+      "startDate": "2006-04-01",
+      "endDate": "2009-03-31"
+    },
+    {
+      "institution": "Sikkim Manipal University",
+      "area": "Information Technology",
+      "studyType": "Masters",
+      "startDate": "2009-04-01",
+      "endDate": "2011-03-31"
     }
   ],
   "awards": [
     {
-      "title": "Oscar for Best Actor",
+      "title": "Platform Developer I",
       "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
+      "awarder": "Salesforce",
+      "summary": "Some text about PD1"
     },
     {
-      "title": "Sharing and Visibility",
+      "title": "Sharing and Visibility Designer",
       "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    },
-    {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
+      "awarder": "Salesforce",
       "summary": "There is no spoon."
     }
   ],
@@ -84,13 +83,48 @@
       "summary": "Description..."
     }
   ],
-  "skills": [
-    {
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "Javascript"]
-    }
-  ],
+  "skills": {
+    "tools" : [
+      {
+        "title": "Javascript",
+        "package" : "fab",
+        "icon": "js-square"
+
+      },
+      {
+        "title": "Node Js",
+        "package" : "fab",
+        "icon": "node-js"
+
+      },
+      {
+        "title": "VueJs 💛",
+        "package" : "fab",
+        "icon": "vuejs"
+
+      },
+      {
+        "title": "HTML 5",
+        "package" : "fab",
+        "icon": "html5"
+
+      },
+      {
+        "title": "CSS 3",
+        "package" : "fab",
+        "icon": "css3-alt"
+
+      },
+      {
+        "title": "NPM",
+        "package" : "fab",
+        "icon": "npm"
+
+      }
+    ],
+    "workflow" : ["Mobile-First, Responsive Design", "Cross Browser Testing & Debugging", "Cross Functional teams", "Agile Developement & Scrum", "Cutting edge Javascript frameworks"]
+  },
+  
   "languages": [
     {
       "language": "English",
