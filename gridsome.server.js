@@ -9,7 +9,6 @@ const jsonresume = require('./resume.json');
 
 module.exports = (api) => {
   api.loadSource(({ addMetadata }) => {
-    addMetadata('useTopbar', true);
     addMetadata('resume', jsonresume);
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   });

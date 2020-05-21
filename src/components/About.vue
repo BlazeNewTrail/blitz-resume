@@ -19,14 +19,14 @@
       </header>
     </div>
     <div class="slds-card__body slds-card__body_inner slds-grid slds-wrap">
-      <div class="slds-grid slds-grid_align-center slds-size_1-of-1 slds-medium-size_3-of-12 slds-p-right_large" :class="[$static.metadata.useTopbar ? '' : 'slds-hide_medium']">
+      <div class="slds-grid slds-grid_align-center slds-size_1-of-1 slds-medium-size_3-of-12" :class="[$sidebar ? 'slds-hide_medium' : '']">
         <span
           class="slds-avatar slds-avatar_circle slds-avatar_xlarge slds-avatar_profile-image-large"
         >
           <span class="slds-assistive-text">Person name</span>
         </span>
       </div>
-      <div class="slds-text-longform slds-size_1-of-1" :class="[$static.metadata.useTopbar ? 'slds-medium-size_9-of-12' : '']">
+      <div class="slds-text-longform slds-size_1-of-1" :class="[$sidebar ? '' : 'slds-medium-size_9-of-12']">
         <h3 class="slds-text-heading_medium">
           {{ $static.metadata.resume.basics.name }}
         </h3>
@@ -42,7 +42,6 @@
 <static-query>
   query {
     metadata {
-      useTopbar
       resume {
         basics {
           name
