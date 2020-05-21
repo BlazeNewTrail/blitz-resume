@@ -6,7 +6,7 @@
     "email": "info@ankittaneja.net",
     "phone": "+49 151 6102 6618",
     "website": "http://forcepreneur.com",
-    "summary": "I am an experienced Salesforce Developer / Consultant. My goal is to help your business units (sales/service/marketing/etc.) achieve highest level of success by improving and automating as many business process' as possible. I produce high quality code / solutions for my clients that are both well performing and well tested.",
+    "summary": "I am an experienced Salesforce Developer / Consultant. My goal is to help your business units (sales/service/marketing/etc.) achieve highest level of success by improving and automating your business process'. I produce high quality code / solutions for my clients that are both well performing and well tested.",
     "location": {
       "address": "Kinzigstraße 41",
       "postalCode": "10247",
@@ -19,15 +19,15 @@
         "network": "Twitter",
         "username": "NkitTaneja",
         "url": "http://twitter.com/NkitTaneja",
-        "icon": "",
-        "package": ""
+        "icon": "linkedin",
+        "package": "fab"
       },
       {
         "network": "Github",
-        "username": "NkitTaneja",
-        "url": "http://twitter.com/NkitTaneja",
-        "icon": "",
-        "package": ""
+        "username": "ankittaneja",
+        "url": "https://github.com/ankittaneja",
+        "icon": "github",
+        "package": "fab"
       }
     ]
   },
