@@ -19,7 +19,7 @@
       </header>
     </div>
     <div class="slds-card__body slds-card__body_inner">
-      <div class="slds-text-heading_small slds-p-bottom_small">
+      <div class="slds-text-heading_small slds-p-bottom_xx-small">
         Programming Languages & Tools
       </div>
       <intersect @enter="animate">
@@ -27,8 +27,9 @@
           <div
             v-for="tool in $static.metadata.resume.skills.tools"
             :key="tool.title"
-            class="sld-col card"
+            class="card"
           >
+            <!-- TODO: Need to add slds-col above -->
             <span class="title">{{ tool.title }}</span>
             <font-awesome class="skillIcon" :icon="[tool.package, tool.icon]" />
           </div>

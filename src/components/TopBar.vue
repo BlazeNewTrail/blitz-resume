@@ -36,13 +36,13 @@
               <span class="slds-assistive-text">Can be removed</span>
             </button>
           </div>
-          <span
+          <!-- <span
             class="slds-context-bar__label-action slds-context-bar__app-name"
           >
             <span class="slds-truncate" title="App Name">{{
               $static.metadata.resume.basics.name
             }}</span>
-          </span>
+          </span> -->
         </div>
       </div>
       <scroll-active-nav class="slds-context-bar__secondary slds-show_medium">
