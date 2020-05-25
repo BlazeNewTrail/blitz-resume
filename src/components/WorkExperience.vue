@@ -22,7 +22,7 @@
       <div class="slds-progress slds-progress_vertical">
         <ol class="slds-progress__list">
           <li
-            v-for="work in works"
+            v-for="work in $static.metadata.resume.work"
             :key="work.company"
             class="slds-progress__item"
           >
@@ -37,8 +37,15 @@
                   </div>
                   <div>
                     <!-- Add Salesforce icons -->
-                    <font-awesome class="icon" :icon="['fab', 'html5']" />
+                    <slds-icon icon-name="utility:company" size="x-small" variant="base" />
+                    <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
                     {{ work.company }}
+                  </div>
+                  <div>
+                    <!-- Add Salesforce icons -->
+                    <slds-icon icon-name="utility:location" size="x-small" variant="inverse" />
+                    <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
+                    {{ work.location }}
                   </div>
                   <ol class="slds-list_ordered">
                     <li v-for="(point, index) in work.highlights" :key="index">
@@ -104,54 +111,25 @@
     </div>
   </article>
 </template>
+<static-query>
+  query {
+    metadata {
+      resume {
+        work {
+          company
+          position
+          location
+          startDate
+          endDate
+          highlights
+        }
+      }
+    }
+  }
+</static-query>
 
 <script>
 export default {
-  data() {
-    return {
-      works: [
-        {
-          company: 'Company',
-          position: 'President',
-          website: 'http://company.com',
-          startDate: '2013-01-01',
-          endDate: '2014-01-01',
-          summary: 'Description...',
-          highlights: [
-            'Started the company',
-            'Grown to 20 people',
-            'Had an exit',
-          ],
-        },
-        {
-          company: 'Company1',
-          position: 'President',
-          website: 'http://company.com',
-          startDate: '2013-01-01',
-          endDate: '2014-01-01',
-          summary: 'Description...',
-          highlights: [
-            'Started the company',
-            'Grown to 20 people',
-            'Had an exit',
-          ],
-        },
-        {
-          company: 'Company2',
-          position: 'President',
-          website: 'http://company.com',
-          startDate: '2013-01-01',
-          endDate: '2014-01-01',
-          summary: 'Description...',
-          highlights: [
-            'Started the company',
-            'Grown to 20 people',
-            'Had an exit',
-          ],
-        },
-      ],
-    };
-  },
 };
 </script>
 
