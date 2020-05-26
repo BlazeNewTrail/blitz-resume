@@ -74,6 +74,15 @@
                 Awards
               </a>
             </li>
+            <li data-navkey="talks" class="slds-nav-vertical__item">
+              <a
+                v-scroll-to="'#talks'"
+                href="#"
+                class="slds-nav-vertical__action"
+              >
+                Talks
+              </a>
+            </li>
             <li class="slds-nav-vertical__item theme-switcher">
               <theme-switcher />
             </li>

@@ -24,9 +24,9 @@
           <li
             v-for="work in $static.metadata.resume.work"
             :key="work.company"
-            class="slds-progress__item"
+            class="slds-progress__item slds-is-completed"
           >
-            <!-- Apply slds-is-active to first element -->
+            <!-- Apply slds-is-active to first element class="" -->
 
             <div class="slds-progress__marker"></div>
             <div class="slds-progress__item_content slds-border_bottom">
@@ -37,7 +37,7 @@
                   </div>
                   <div>
                     <!-- Add Salesforce icons -->
-                    <slds-icon icon-name="utility:company" size="x-small" variant="base" />
+                    <slds-icon icon-name="utility:company" size="x-small" variant="base" class="icon"/>
                     <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
                     {{ work.company }}
                   </div>
@@ -47,7 +47,7 @@
                     <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
                     {{ work.location }}
                   </div>
-                  <ol class="slds-list_ordered">
+                  <ol class="slds-list_dotted">
                     <li v-for="(point, index) in work.highlights" :key="index">
                       {{ point }}
                     </li>
@@ -136,5 +136,8 @@ export default {
 <style scoped>
 .title {
   font-weight: bold;
+}
+.icon {
+  color: black;
 }
 </style>

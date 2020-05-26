@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
   faGithub,
   faTwitter,
-  faFacebook,
+  faXing,
   faLinkedin,
   faHtml5,
   faJsSquare,
@@ -31,6 +31,7 @@ import {
   faUniversity,
   faPeopleCarry,
   faCheck,
+  faChalkboardTeacher,
 } from '@fortawesome/free-solid-svg-icons';
 
 import DefaultLayout from '@/layouts/Default.vue';
@@ -40,7 +41,7 @@ import SldsIcon from '@/components/slds-icon.vue';
 library.add(
   faGithub,
   faTwitter,
-  faFacebook,
+  faXing,
   faLinkedin,
   faHtml5,
   faCss3Alt,
@@ -57,6 +58,7 @@ library.add(
   faUniversity,
   faPeopleCarry,
   faCheck,
+  faChalkboardTeacher,
 );
 
 

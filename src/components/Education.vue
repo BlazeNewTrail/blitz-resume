@@ -10,7 +10,7 @@
             <a
               href="javascript:void(0);"
               class="slds-card__header-link slds-truncate"
-              title="Accounts"
+              title="Education"
             >
               <span>Education</span>
             </a>
@@ -21,19 +21,33 @@
     <div class="slds-card__body slds-card__body_inner">
       <ol>
         <li
-          v-for="award in $static.metadata.resume.education"
-          :key="award.title"
+          v-for="(education, index) in $static.metadata.resume.education"
+          :key="education.title"
         >
-          <div class="slds-grid slds-border_bottom slds-p-around_medium">
-            <div class="slds-col slds-size_2-of-12">
+          <div
+            v-if="index != $static.metadata.resume.education.length - 1"
+            class="slds-grid slds-border_bottom slds-p-around_medium"
+          >
+            <div>
               <font-awesome class="icon" :icon="['fas', 'university']" />
             </div>
             <div class="slds-col slds-size_3-of-4">
-              {{ award.institution }}
+              <div class="title">{{ education.studyType }} In {{ education.area }}</div>
+              {{ education.institution }}
               <br />
-              {{ award.studyType }} In {{ award.area }}
+              {{ education.endDate }}
               <br />
-              {{ award.endDate }}
+            </div>
+          </div>
+          <div v-else class="slds-grid slds-p-around_medium">
+            <div>
+              <font-awesome class="icon" :icon="['fas', 'university']" />
+            </div>
+            <div class="slds-col slds-size_3-of-4">
+              <div class="title">{{ education.studyType }} In {{ education.area }}</div>
+              {{ education.institution }}
+              <br />
+              {{ education.endDate }}
               <br />
             </div>
           </div>
@@ -75,5 +89,8 @@ export default {
   height: 4.5em;
   width: 4.5em;
   color: goldenrod;
+}
+.title {
+  font-weight: bold;
 }
 </style>
