@@ -3,11 +3,11 @@
     <!-- <theme-switcher /> -->
     <top-bar
       class="site-header"
-      :class="[$static.metadata.useTopbar ? '' : 'slds-hide_medium']"
+      :class="[$sidebar ? 'slds-hide_medium' : '']"
     />
     <div class="site-main-wrapper">
       <sidebar
-        :class="[$static.metadata.useTopbar ? 'slds-hide' : 'slds-show_medium']"
+        :class="[$sidebar ? 'slds-show_medium' : 'slds-hide']"
       />
       <main
         class="site-main slds-scrollable_y"
@@ -29,7 +29,6 @@
   query {
     metadata {
       siteName
-      useTopbar
     }
   }
 </static-query>

@@ -3,6 +3,7 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import VueScrollTo from 'vue-scrollto';
+import VueC from 'vue';
 
 import 'typeface-inter';
 import '@/assets/styles.scss';
@@ -61,6 +62,7 @@ library.add(
   faChalkboardTeacher,
 );
 
+VueC.prototype.$sidebar = false;
 
 export default function (Vue, { head }) {
   Vue.use(VueScrollTo, {

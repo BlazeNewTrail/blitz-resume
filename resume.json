@@ -7,6 +7,7 @@
     "phone": "+49 151 6102 6618",
     "website": "http://forcepreneur.com",
     "summary": "I am an experienced Salesforce Developer / Consultant. My goal is to help your business units (sales/service/marketing/etc.) achieve highest level of success by improving and automating your business process'. I produce high quality code / solutions for my clients that are both well performing and well tested. Lately, I work more in a Product Owner role where I am responsible for gathering requirements, designing soutions and ensuring timely delivery of the projects.",
+
     "location": {
       "address": "Kinzigstraße 41",
       "postalCode": "10247",
@@ -26,7 +27,6 @@
         "network": "Twitter",
         "username": "NkitTaneja",
         "url": "http://twitter.com/NkitTaneja",
-        "icon": "twitter",
         "package": "fab"
       },
       {
@@ -67,7 +67,7 @@
       "highlights": ["Led teams across broad technical and business disciplines. Focused technical teams on business objectives and tracked progress to ensure project milestones were completed on time, on budget and with the desired results.", "Mitigated risk factors through careful analysis of statistical data. Anticipated and managed change effectively in rapidly evolving global business environments.", "Defined processes and tools best suited to each project after careful analysis of available technologies.", "Created detailed project road maps, release schedules, etc.", "Managing the IT Budget and resource planning. Negotiating deals with vendors.", "Contributed to the development team by writing code in Apex, Visualforce and JavaScript."]
     },
     {
-      "company": "Fraunhofer Institut für Sichere Informationstechnologie",
+      "company": "Fraunhofer Institut für Sichere Informationstechnologie",
       "position": "Research Assistent",
       "website": "https://www.sit.fraunhofer.de/en/",
       "location": "Darmstadt, Germany",
