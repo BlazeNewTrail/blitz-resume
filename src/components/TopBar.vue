@@ -97,6 +97,16 @@
               <span class="slds-truncate" title="Awards">Awards</span>
             </a>
           </li>
+          <li data-navkey="talks" class="slds-context-bar__item">
+            <a
+              v-scroll-to="'#talks'"
+              href="#"
+              class="slds-context-bar__label-action"
+              title="Talks"
+            >
+              <span class="slds-truncate" title="Talks">Talks</span>
+            </a>
+          </li>
           <li class="slds-context-bar__item">
             <theme-switcher />
           </li>

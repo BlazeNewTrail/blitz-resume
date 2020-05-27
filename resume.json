@@ -6,7 +6,8 @@
     "email": "info@ankittaneja.net",
     "phone": "+49 151 6102 6618",
     "website": "http://forcepreneur.com",
-    "summary": "I am an experienced Salesforce Developer / Consultant. My goal is to help your business units (sales/service/marketing/etc.) achieve highest level of success by improving and automating your business process'. I produce high quality code / solutions for my clients that are both well performing and well tested.",
+    "summary": "I am an experienced Salesforce Developer / Consultant. My goal is to help your business units (sales/service/marketing/etc.) achieve highest level of success by improving and automating your business process'. I produce high quality code / solutions for my clients that are both well performing and well tested. Lately, I work more in a Product Owner role where I am responsible for gathering requirements, designing soutions and ensuring timely delivery of the projects.",
+
     "location": {
       "address": "Kinzigstraße 41",
       "postalCode": "10247",
@@ -16,10 +17,16 @@
     },
     "profiles": [
       {
+        "network": "LinkedIn",
+        "username": "NkitTaneja",
+        "url": "https://www.linkedin.com/in/ankit-taneja-68229128/",
+        "icon": "linkedin",
+        "package": "fab"
+      },
+      {
         "network": "Twitter",
         "username": "NkitTaneja",
         "url": "http://twitter.com/NkitTaneja",
-        "icon": "linkedin",
         "package": "fab"
       },
       {
@@ -28,18 +35,56 @@
         "url": "https://github.com/ankittaneja",
         "icon": "github",
         "package": "fab"
+      },
+      {
+        "network": "Xing",
+        "username": "NkitTaneja",
+        "url": "https://www.xing.com/profile/Ankit_Taneja/cv",
+        "icon": "xing",
+        "package": "fab"
       }
     ]
   },
   "work": [
     {
-      "company": "Company",
-      "position": "President",
-      "website": "http://company.com",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
+      "company": "Self-employed",
+      "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
+      "website": "http://ankittaneja.net",
+      "location": "Berlin, Germany",
+      "startDate": "01/2015",
+      "endDate": "till date",
       "summary": "Description...",
-      "highlights": ["Started the company"]
+      "highlights": ["Analyze client’s business requirements and processes through interviews, workshops and document analysis.", "Create user stories, then split them into features and sub-tasks. Hence, crafting a roadmap.", "Planning and executing feature sprints with internal and / or external teams. Also participating as a developer as and when need arises.", "Conduct 5+ levels of testing including functional, regression, user acceptance, security and performance to verify the client’s needs are met.", "Helping clients with security reviews before listing apps on Salesforce AppExchange.", "Prepare documentation: Training presentation, User handbook, Code documentation, etc."]
+    },
+    {
+      "company": "MRM - MobileResourceManagement GmbH",
+      "position": "Technical Co-founder",
+      "website": "http://company.com",
+      "location": "Darmstadt / Berlin, Germany",
+      "startDate": "04/2012",
+      "endDate": "12/2014",
+      "summary": "Description...",
+      "highlights": ["Led teams across broad technical and business disciplines. Focused technical teams on business objectives and tracked progress to ensure project milestones were completed on time, on budget and with the desired results.", "Mitigated risk factors through careful analysis of statistical data. Anticipated and managed change effectively in rapidly evolving global business environments.", "Defined processes and tools best suited to each project after careful analysis of available technologies.", "Created detailed project road maps, release schedules, etc.", "Managing the IT Budget and resource planning. Negotiating deals with vendors.", "Contributed to the development team by writing code in Apex, Visualforce and JavaScript."]
+    },
+    {
+      "company": "Fraunhofer Institut für Sichere Informationstechnologie",
+      "position": "Research Assistent",
+      "website": "https://www.sit.fraunhofer.de/en/",
+      "location": "Darmstadt, Germany",
+      "startDate": "05/2011",
+      "endDate": "03/2012",
+      "summary": "Description...",
+      "highlights": ["Architected and developed a Multimedia Forensic Tool, capable of recovering files from a disk image and perform further analysis.", "Prepared IT security challenges and respective documentation for Cloud Security Lab contest & successfully organized 6th European Trusted Infrastructure Summer School with other members of my team.", "Published the research work at 46th AES Conference on Audio Forensics."]
+    },
+    {
+      "company": "iYogi Technical Services",
+      "position": "Team Lead - Operations",
+      "website": "https://www.google.com",
+      "location": "Gurgaon (now Gurugram), India",
+      "startDate": "05/2009",
+      "endDate": "03/2011",
+      "summary": "Description...",
+      "highlights": ["Managed call center operations of various clients (Computer Associates (CA), McAfee, AVAST).", "Supervised a team of technical specialists/consultants, ensuring delivery, meeting all parameters, within the boundaries of the Service Level Agreement.", "Helping the client improve IT security products by providing constant feedback.", "Organizing IT Security workshops for employees along with client and external partners." ]
     }
   ],
   "volunteer": [
@@ -59,14 +104,14 @@
       "area": "Commerce",
       "studyType": "Bachelor",
       "startDate": "2006-04-01",
-      "endDate": "2009-03-31"
+      "endDate": "03/2009"
     },
     {
       "institution": "Sikkim Manipal University",
       "area": "Information Technology",
       "studyType": "Masters",
       "startDate": "2009-04-01",
-      "endDate": "2011-03-31"
+      "endDate": "03/2011"
     }
   ],
   "awards": [
@@ -89,6 +134,33 @@
       "publisher": "Company",
       "releaseDate": "2014-10-01",
       "website": "http://publication.com",
+      "summary": "Description..."
+    }
+  ],
+  "talks": [
+    {
+      "title": "Level up your Salesforce CLI with Gulp",
+      "location": "Virtual",
+      "conference": "Londons Calling 2020",
+      "coSpeaker": "Sebastian Bresin",
+      "date": "18/03/2020",
+      "link": "https://www.londonscalling.net/sessions/level-up-your-salesforce-cli-with-gulp/",
+      "summary": "If you are an automation junkie like us and are looking for ways to boost your productivity, in this talk we will show you how to create an SFDX plugin with Gulp in it."
+    },
+    {
+      "title": "Publicatio1n",
+      "location": "Company",
+      "conference": "",
+      "date": "2014-10-01",
+      "link": "http://publication.com",
+      "summary": "Description..."
+    },
+    {
+      "title": "Publication",
+      "location": "Company",
+      "conference": "",
+      "date": "2014-10-01",
+      "link": "http://publication.com",
       "summary": "Description..."
     }
   ],

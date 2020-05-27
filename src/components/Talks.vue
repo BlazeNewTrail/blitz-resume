@@ -3,7 +3,7 @@
     <div class="slds-card__header slds-grid">
       <header class="slds-media slds-media_center slds-has-flexi-truncate">
         <div class="slds-media__figure">
-          <slds-icon icon-name="standard:reward" size="small" />
+          <slds-icon icon-name="standard:rtc_presence" size="small" />
         </div>
         <div class="slds-media__body">
           <h2 class="slds-card__header-title">
@@ -12,7 +12,7 @@
               class="slds-card__header-link slds-truncate"
               title="Accounts"
             >
-              <span>Awards</span>
+              <span>Talks and Presentations</span>
             </a>
           </h2>
         </div>
@@ -20,18 +20,18 @@
     </div>
     <div class="slds-card__body slds-card__body_inner">
       <ol>
-        <li v-for="award in $static.metadata.resume.awards" :key="award.title">
+        <li v-for="talk in $static.metadata.resume.talks" :key="talk.title">
           <div
             class="slds-grid slds-wrap slds-border_bottom slds-p-around_medium"
           >
             <div class="">
-              <font-awesome class="icon" :icon="['fas', 'award']" />
+              <font-awesome class="icon" :icon="['fas', 'chalkboard-teacher']" />
             </div>
             <div class="slds-col slds-size_11-of-12">
-              {{ award.awarder }} <br />
-              {{ award.title }} <br />
-              {{ award.date }} <br />
-              {{ award.summary }}
+              <a :href="talk.link" target="_blank"> {{ talk.title }} </a> <br />
+              {{ talk.conference }}, {{ talk.location }} - {{ talk.date }} <br />
+              {{ talk.summary }}
+              <div v-if="talk.coSpeaker.length > 0">Co-speaker: {{ talk.coSpeaker }}</div>
             </div>
           </div>
         </li>
@@ -45,11 +45,14 @@
   query {
     metadata {
       resume {
-        awards {
+        talks {
           title
           date
-          awarder
           summary
+          link
+          location
+          conference
+          coSpeaker
         }
       }
     }
@@ -64,6 +67,6 @@ export default {};
 .icon {
   height: 4.5em;
   width: 4.5em;
-  color: goldenrod;
+  color: lightblue;
 }
 </style>

@@ -22,11 +22,11 @@
       <div class="slds-progress slds-progress_vertical">
         <ol class="slds-progress__list">
           <li
-            v-for="work in works"
+            v-for="work in $static.metadata.resume.work"
             :key="work.company"
-            class="slds-progress__item"
+            class="slds-progress__item slds-is-completed"
           >
-            <!-- Apply slds-is-active to first element -->
+            <!-- Apply slds-is-active to first element class="" -->
 
             <div class="slds-progress__marker"></div>
             <div class="slds-progress__item_content slds-border_bottom">
@@ -37,10 +37,17 @@
                   </div>
                   <div>
                     <!-- Add Salesforce icons -->
-                    <font-awesome class="icon" :icon="['fab', 'html5']" />
+                    <slds-icon icon-name="utility:company" size="x-small" variant="base" class="icon"/>
+                    <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
                     {{ work.company }}
                   </div>
-                  <ol class="slds-list_ordered">
+                  <div>
+                    <!-- Add Salesforce icons -->
+                    <slds-icon icon-name="utility:location" size="x-small" variant="inverse" />
+                    <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
+                    {{ work.location }}
+                  </div>
+                  <ol class="slds-list_dotted">
                     <li v-for="(point, index) in work.highlights" :key="index">
                       {{ point }}
                     </li>
@@ -104,59 +111,33 @@
     </div>
   </article>
 </template>
+<static-query>
+  query {
+    metadata {
+      resume {
+        work {
+          company
+          position
+          location
+          startDate
+          endDate
+          highlights
+        }
+      }
+    }
+  }
+</static-query>
 
 <script>
 export default {
-  data() {
-    return {
-      works: [
-        {
-          company: 'Company',
-          position: 'President',
-          website: 'http://company.com',
-          startDate: '2013-01-01',
-          endDate: '2014-01-01',
-          summary: 'Description...',
-          highlights: [
-            'Started the company',
-            'Grown to 20 people',
-            'Had an exit',
-          ],
-        },
-        {
-          company: 'Company1',
-          position: 'President',
-          website: 'http://company.com',
-          startDate: '2013-01-01',
-          endDate: '2014-01-01',
-          summary: 'Description...',
-          highlights: [
-            'Started the company',
-            'Grown to 20 people',
-            'Had an exit',
-          ],
-        },
-        {
-          company: 'Company2',
-          position: 'President',
-          website: 'http://company.com',
-          startDate: '2013-01-01',
-          endDate: '2014-01-01',
-          summary: 'Description...',
-          highlights: [
-            'Started the company',
-            'Grown to 20 people',
-            'Had an exit',
-          ],
-        },
-      ],
-    };
-  },
 };
 </script>
 
 <style scoped>
 .title {
   font-weight: bold;
+}
+.icon {
+  color: black;
 }
 </style>
