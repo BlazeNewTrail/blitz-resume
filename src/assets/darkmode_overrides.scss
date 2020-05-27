@@ -1,0 +1,1316 @@
+/* override styles */
+
+/*
+*   LIGHTNING LABS
+*/
+
+/* launcher */
+#lcli-wrapper #lcli-glass {
+  opacity: 1;
+}
+#lcli-wrapper #lcli-input {
+  background-color: transparent !important;
+}
+/* compnent-manager */
+.cmp-mgr-personalization-overlay {
+  background-color: #ffffff33 !important;
+}
+.cmp-mgr-personalization-overlay:hover {
+  background-color: #1b529744 !important;
+}
+.cmp-mgr-personalization-configuration-panel--visible {
+  background-color: var(--darkmode-primary-background) !important;
+  border-left-color: var(--darkmode-default-border-color) !important;
+}
+.cmp-mgr-personalization-configuration-panel--visible img[src$='svg'] {
+  opacity: 0.5;
+}
+/* themes plugin */
+.lightning-themes-ohana .slds-feed__item-comments {
+  background-color: var(--darkmode-active-background) !important;
+}
+.lightning-themes-ohana .slds-comment .slds-media__body {
+  background-color: var(--darkmode-primary-background) !important;
+}
+
+/*
+*   Glossary hub extension
+*/
+#sfdcGlossaryBubble {
+  background: var(--darkmode-form-section-title-background);
+  box-shadow: var(--darkmode-verydark-background) 0px 0px 6px;
+}
+#sfdcGlossaryBubble.sfdcglossary-bubble::before {
+  background: var(--darkmode-form-section-title-background);
+  box-shadow: var(--darkmode-verydark-background) -2px 2px 2px 0px;
+}
+#sfdcGlossaryBubble a {
+  color: var(--darkmode-link-text-color);
+}
+
+/*
+*   BRANDBAND
+*/
+.slds-brand-band:before,
+.slds-brand-band.slds-brand-band_user:before,
+#brandBand_1.slds-brand-band::before {
+  filter: grayscale(1) brightness(0.5);
+}
+.slds-brand-band:after,
+.slds-brand-band.slds-brand-band_user:after,
+#brandBand_1.slds-brand-band::after {
+  filter: grayscale(1) brightness(0.5) contrast(350%);
+}
+/* hide brandband image except for groups and userProfile */
+.slds-brand-band:not(.slds-template_profile):before,
+.slds-brand-band:not(.slds-template_profile):after {
+  display: none;
+}
+
+/*
+*   BRANDING OVERRIDES
+*/
+.slds-button:not(.slds-button_icon-bare):not(.slds-context-bar__label-action):not([disabled]):not(.slds-button--brand):not(.slds-button_brand),
+.branding-actions li.slds-button a > div,
+.branding-actions li.slds-button a > div,
+.branding-actions.forceActionsDropDownMenuList ul li .forceActionLink,
+.branding-actions li.slds-button a > span svg,
+/*.uiTabset--task .tabs__item.active > a,*/
+.uiTabset--default .tabs__item > a:hover,
+.uiTabset--default .tabs__item > a:focus,
+.slds-button_icon-more:hover .slds-button__icon,
+.slds-button_icon-more:focus .slds-button__icon,
+.slds-button--icon-more:hover .slds-button__icon,
+.slds-button--icon-more:focus .slds-button__icon {
+  color: var(--darkmode-default-text-color);
+  fill: var(--darkmode-default-text-color);
+}
+
+.uiButton--brand:not([disabled]),
+.slds-button_brand:not([disabled]),
+.slds-button--brand:not([disabled]) {
+  color: var(--darkmode-active-text-color) !important;
+  fill: var(--darkmode-active-text-color) !important;
+}
+
+a[role='button'] svg,
+button.slds-button_icon:not([disabled]),
+button.slds-button__icon:not([disabled]),
+button.slds-button--icon:not([disabled]),
+.branding-header .slds-global-actions__task .slds-icon:not([disabled]),
+.onesetupSetupMenuItem .all-icon:not([disabled]) svg,
+.onesetupSetupMenuItem .focus-icon:not([disabled]) svg,
+.slds-global-actions__item-action svg {
+  color: var(--darkmode-default-icon-color);
+  fill: var(--darkmode-default-icon-color);
+}
+
+.branding-actions li.slds-button a:hover {
+  color: var(--darkmode-default-text-color);
+  fill: var(--darkmode-default-text-color);
+}
+
+.slds-tree__item a:hover,
+.slds-tree__item a:active,
+.slds-tree__item a:focus {
+  color: var(--darkmode-active-text-color);
+}
+.slds-tree [role='treeitem'][aria-selected='true'] > .slds-tree__item,
+.slds-navigation-list-vertical
+  .slds-is-active
+  .slds-navigation-list-vertical__action,
+.slds-navigation-list-vertical
+  .slds-is-active
+  .slds-navigation-list--vertical__action,
+.slds-navigation-list--vertical
+  .slds-is-active
+  .slds-navigation-list-vertical__action,
+.slds-navigation-list--vertical
+  .slds-is-active
+  .slds-navigation-list--vertical__action,
+.slds-navigation-list--vertical .slds-is-active .slds-nav-vertical__action {
+  background-color: var(--darkmode-active-background);
+  box-shadow: var(--darkmode-primary-highlight) 4px 0px 0px inset;
+  border: none;
+}
+.slds-navigation-list--vertical
+  .slds-nav-vertical__item:hover
+  .slds-nav-vertical__action {
+  background-color: var(--darkmode-active-background);
+}
+.slds-nav-vertical__action:hover {
+  box-shadow: none;
+}
+.slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action {
+  box-shadow: var(--darkmode-primary-highlight) 0.25rem 0px 0px inset;
+}
+.slds-nav-vertical__item:hover::before,
+.slds-nav-vertical__item.slds-is-active::before {
+  background-color: var(--darkmode-primary-highlight);
+  opacity: 0.2;
+}
+
+.oneActionsDropDown:hover,
+.slds-button_icon-container.slds-is-selected,
+.slds-button--icon-container.slds-is-selected,
+.slds-button_icon-border.slds-is-selected,
+.slds-button--icon-border.slds-is-selected,
+.slds-button_icon-border-filled.slds-is-selected,
+.slds-button_icon-border-inverse.slds-is-selected {
+  background-color: var(--darkmode-active-background);
+}
+button.slds-button_icon:hover,
+button.slds-button_icon:focus,
+a[role='button']:hover:not([one-appnavbarmenubutton_appnavbarmenubutton]):not(.slds-global-actions__item-action),
+a[role='button']:focus:not([one-appnavbarmenubutton_appnavbarmenubutton]),
+.slds-button_icon-container:hover,
+.slds-button_icon-container:focus,
+.slds-button--icon-container:hover:not(.globalCreateButton):not(.slds-global-header__button--icon),
+.slds-button--icon-container:focus,
+.slds-button_icon-border:hover,
+.slds-button_icon-border:focus,
+.slds-button--icon-border:hover,
+.slds-button--icon-border:focus,
+.slds-button_icon-border-filled:hover,
+.slds-button_icon-border-filled:focus,
+.slds-button_icon-border-inverse:hover,
+.slds-button_icon-border-inverse:focus {
+  background-color: var(--darkmode-active-background) !important;
+}
+.slds-button_icon-border-filled,
+.slds-button--icon-border-filled,
+.slds-button_icon-border,
+.slds-button--icon-border {
+  background-color: var(--darkmode-primary-background);
+}
+.branding-setup .branding-primary-background {
+  background-color: var(--darkmode-primary-highlight);
+}
+.slds-checkbox [type='checkbox'] + .slds-checkbox_faux,
+.slds-checkbox [type='checkbox'] + .slds-checkbox--faux,
+.slds-checkbox [type='checkbox'] ~ .slds-checkbox_faux,
+.slds-checkbox [type='checkbox'] ~ .slds-checkbox--faux,
+.slds-checkbox [type='checkbox'] + .slds-checkbox__label .slds-checkbox_faux,
+.slds-checkbox [type='checkbox'] + .slds-checkbox__label .slds-checkbox--faux {
+  border-color: var(--darkmode-checkbox-border-color) !important;
+}
+.slds-checkbox [type='checkbox']:checked + .slds-checkbox_faux::after,
+.slds-checkbox [type='checkbox']:checked + .slds-checkbox--faux::after,
+.slds-checkbox [type='checkbox']:checked ~ .slds-checkbox_faux::after,
+.slds-checkbox [type='checkbox']:checked ~ .slds-checkbox--faux::after,
+.slds-checkbox
+  [type='checkbox']:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux::after,
+.slds-checkbox
+  [type='checkbox']:checked
+  + .slds-checkbox__label
+  .slds-checkbox--faux::after {
+  border-bottom-color: var(--darkmode-active-text-color) !important;
+  border-left-color: var(--darkmode-active-text-color) !important;
+}
+.slds-radio [type='radio']:checked + .slds-radio_faux::after,
+.slds-radio [type='radio']:checked + .slds-radio--faux::after,
+.slds-radio [type='radio']:checked ~ .slds-radio_faux::after,
+.slds-radio [type='radio']:checked ~ .slds-radio--faux::after,
+.slds-radio [type='radio']:checked + .slds-radio__label .slds-radio_faux::after,
+.slds-radio
+  [type='radio']:checked
+  + .slds-radio__label
+  .slds-radio--faux::after {
+  background-color: var(--darkmode-active-text-color) !important;
+}
+
+/*
+*   ANCHORS
+*/
+a,
+a:hover,
+a:active,
+a:focus,
+.slds-text-link,
+.forceChatterStyle .cuf-ftcLink,
+.forcePageBlockItemView .slds-form-element .slds-button_icon:hover,
+.forceRelatedListQuickLinksContainer
+  force-quick-link-container
+  a.rlql-relatedListLink:hover,
+.salesforceIdentityAppLauncherDesktopInternal .dragArea:hover,
+.salesforceIdentityAppLauncherDesktopInternal .dragArea:focus {
+  color: var(--darkmode-link-text-color);
+}
+
+.dep-trigger button.slds-button {
+  color: var(--darkmode-link-text-color) !important;
+}
+
+/*
+*   SPINNER
+*/
+.slds-spinner_brand.slds-spinner::before,
+.slds-spinner_brand.slds-spinner::after,
+.slds-spinner_brand .slds-spinner__dot-a::before,
+.slds-spinner_brand .slds-spinner__dot-b::before,
+.slds-spinner_brand .slds-spinner__dot-a::after,
+.slds-spinner_brand .slds-spinner__dot-b::after,
+.slds-spinner--brand.slds-spinner::before,
+.slds-spinner--brand.slds-spinner::after,
+.slds-spinner--brand .slds-spinner__dot-a::before,
+.slds-spinner--brand .slds-spinner__dot-b::before,
+.slds-spinner--brand .slds-spinner__dot-a::after,
+.slds-spinner--brand .slds-spinner__dot-b::after {
+  background-color: var(--darkmode-default-text-color);
+}
+
+/*
+*   BUTTONS
+*/
+.slds-button:hover {
+  color: var(--darkmode-active-text);
+}
+.slds-button_neutral:hover,
+.slds-button_neutral:focus,
+.slds-button--neutral:hover,
+.slds-button--neutral:focus {
+  background-color: var(--darkmode-active-background) !important;
+}
+.uiButton--brand,
+.uiButton--brand:hover,
+.uiButton--brand:focus,
+.slds-button_brand,
+.slds-button--brand,
+.slds-button_brand:hover,
+.slds-button_brand:focus,
+.slds-button--brand:hover,
+.slds-button--brand:focus {
+  background-color: var(--darkmode-primary-highlight) !important;
+  border-color: var(--darkmode-primary-highlight) !important;
+}
+
+/* close button on temp tab */
+one-app-nav-bar-item-dropdown + button.slds-button:hover {
+  background-color: transparent !important;
+}
+
+/*
+*   WALKTHROUGHS
+*/
+.flexipageEditorLeftPanel .walkthroughLauncher {
+  background-color: var(--darkmode-tooltip-background) !important;
+}
+.flexipageEditorLeftPanel a.walkthroughLauncherLink {
+  color: var(--darkmode-link-text-color) !important;
+}
+.flexipageEditorLeftPanel .walkthroughLauncherArrow {
+  border-right-color: var(--darkmode-primary-highlight) !important;
+}
+
+/*
+*   NUBBINS
+*/
+.uiMenuList--default.menu--nubbin-top:after,
+.slds-nubbin_top:after,
+.slds-nubbin--top:after {
+  box-shadow: -1px -1px 0 0 var(--darkmode-default-border-color);
+}
+
+/*
+*   DROPDOWNS
+*/
+.slds-dropdown__item > a {
+  color: var(--darkmode-default-text-color);
+}
+.slds-dropdown__item > a:hover,
+.slds-dropdown__item > a:focus {
+  color: var(--darkmode-active-text-color);
+}
+.slds-dropdown__header {
+  color: var(--darkmode-weak-text-color);
+}
+.slds-dropdown__item > a[aria-disabled='true'] {
+  color: var(--darkmode-weak-text-color);
+}
+.actionMenu .actionMenuItem {
+  color: var(--darkmode-default-text-color);
+}
+
+/*
+*   HEADER
+*/
+.slds-global-header {
+  background-color: var(--darkmode-primary-background);
+}
+.slds-icon-waffle [class*='slds-r'] {
+  background-color: var(--darkmode-default-text-color);
+}
+.slds-page-header,
+.slds .slds-page-header {
+  background-color: var(--darkmode-active-background);
+}
+.slds-button.slds-button_icon-bare:hover svg,
+.slds-button.slds-button_icon-bare:active svg,
+.branding-favorites-list-button:hover svg,
+.branding-favorites-list-button:active svg {
+  fill: var(--darkmode-active-icon-color) !important;
+  color: var(--darkmode-active-icon-color) !important;
+}
+
+.branding-header .branding-favorites-star-button.slds-is-selected,
+.branding-header .branding-favorites-star-button.slds-is-selected:focus {
+  background-color: var(--darkmode-primary-highlight) !important;
+}
+.branding-header .branding-favorites-star-button.slds-is-selected svg,
+.branding-header .branding-favorites-star-button.slds-is-selected:focus svg {
+  stroke: var(--darkmode-active-text-color);
+  fill: var(--darkmode-active-text-color);
+}
+.branding-header .branding-favorites-star-button.slds-is-disabled:hover,
+.branding-header .branding-favorites-star-button.slds-is-disabled:focus {
+  background-color: var(--darkmode-primary-background) !important;
+}
+.branding-header .branding-favorites-star-button.slds-is-disabled svg,
+.branding-header .branding-favorites-star-button.slds-is-disabled:focus svg {
+  stroke: var(--darkmode-weak-icon-color);
+  fill: var(--darkmode-weak-icon-color);
+}
+
+/*
+*   GLOBAL CREATE BUTTON
+*/
+.slds-button--icon-container.globalCreateButton,
+.globalCreateTrigger:hover .slds-button--icon-container.globalCreateButton {
+  background: var(--darkmode-primary-background);
+  margin-top: 1px;
+}
+.oneGlobalCreate svg.slds-icon {
+  fill: var(--darkmode-default-icon-color);
+}
+
+/*
+*   GLOBAL NAV 
+*/
+.slds-context-bar {
+  background-color: var(--darkmode-primary-background);
+  color: var(--darkmode-default-text-color);
+}
+.slds-context-bar__item:not(.slds-no-hover):hover:not(.slds-has-notification),
+.slds-context-bar__item.slds-is-active:not(.slds-has-notification) {
+  background-color: var(--darkmode-active-background) !important;
+  color: var(--darkmode-active-text-color);
+  animation: none;
+}
+.slds-context-bar__item.slds-is-active {
+  font-weight: bold;
+}
+.slds-context-bar__label-action.slds-context-bar__app-name {
+  color: var(--darkmode-active-text-color) !important;
+}
+.slds-context-bar__label-action:hover,
+.slds-context-bar__label-action:focus {
+  color: var(--darkmode-active-text-color);
+}
+
+.slds-button_icon.slds-global-actions__item-action:hover {
+  background-color: var(--darkmode-primary-background) !important;
+}
+.slds-global-header__button--icon:hover svg,
+.slds-global-actions__item-action:hover svg {
+  color: var(--darkmode-active-icon-color) !important;
+  fill: var(--darkmode-active-icon-color) !important;
+}
+.slds-dropdown-trigger_click.slds-is-open .slds-dropdown,
+.slds-dropdown-trigger--click.slds-is-open .slds-dropdown {
+  box-shadow: 0 0 15px var(--darkmode-verydark-background);
+}
+
+/*
+*   FOOTERS
+*/
+.slds-docked-form-footer,
+.slds-modal__footer,
+.slds-docked-composer__footer,
+.forceRecordEditActions.button-container,
+.forceChangeRecordTypeFooter,
+.slds-filters__footer[lst-quickFilterPanel_quickFilterPanel],
+.assistantFrameworkWizardNavigator {
+  background: var(--darkmode-primary-background) !important;
+}
+.forceRecordEditActions.button-container,
+.forceChangeRecordTypeFooter,
+.assistantFrameworkWizardNavigator {
+  border-top: none !important;
+}
+
+/*
+*   DOCKED COMPOSER, ETC
+*/
+.uiPanel,
+.uiMenuList,
+.slds-docked-composer,
+.slds-utility-panel.slds-is-open {
+  border-color: var(--darkmode-default-border-color);
+  box-shadow: 0 0 15px var(--darkmode-verydark-background) !important;
+}
+.slds-docked-composer__body .bottomBar {
+  background: var(--darkmode-primary-background) !important;
+}
+
+/*
+*   GENERIC SLDS STUFF
+*/
+.slds-card,
+.slds-card-wrapper {
+  background: var(--darkmode-primary-background);
+  border-color: var(--darkmode-default-border-color);
+}
+.slds-cell-fixed {
+  background-color: var(--darkmode-active-background);
+}
+
+/*
+*   TABS
+*/
+.uiTabset--default .tabs__item.active > a,
+.uiTabset--default .tabs__item > a:focus,
+.uiTabset--default .tabs__item > a:hover {
+  border-bottom-color: var(--darkmode-primary-highlight);
+  box-shadow: none;
+}
+.uiTabset--default .tabs__item.uiTabOverflowMenuItem a:hover,
+.uiTabset--default .tabs__item.uiTabOverflowMenuItem a:focus {
+  color: inherit;
+}
+.slds-tabs_default__item.slds-is-active {
+  color: var(--darkmode-active-text-color);
+}
+.uiTabset .uiTabBar ul.tabs__nav {
+  background-color: var(--darkmode-primary-background);
+  border-color: var(--darkmode-default-border-color);
+}
+.uiTabset--task .uiTab.active {
+  background-color: var(--darkmode-active-tab-background);
+  border-color: var(--darkmode-default-border-color);
+  border-top: none;
+}
+.uiTabset .uiTabBar .uiTabItem.active > a {
+  font-weight: bold;
+  color: var(--darkmode-active-text-color);
+}
+.uiTabset--task .uiTabBar .uiTabItem.active > a,
+.forceChatterMessageBodyInputRichTextEditor {
+  background-color: var(--darkmode-active-tab-background);
+}
+.oneActionsComposer.uiTabset .tabs__item.active:before {
+  background-color: var(--darkmode-active-tab-background);
+}
+.dummyButtonCallToAction {
+  background-color: var(--darkmode-input-background);
+}
+
+.slds-tabs_default__item.slds-active::after,
+.slds-tabs_default__item.slds-is-active::after,
+.slds-tabs--default__item.slds-active::after,
+.slds-tabs--default__item.slds-is-active::after {
+  background-color: var(--darkmode-primary-highlight);
+}
+
+/*
+*   FEEDS
+*/
+.slds-feed__item-comments {
+  background-color: var(--darkmode-primary-background-soft) !important;
+  border-color: var(--darkmode-default-border-color) !important;
+}
+
+/*
+*   RECORDS / FORMS
+*/
+.forceDetailPanelDesktop .risen,
+.test-id__record-layout-container.risen,
+[force-detailPanel2_detailPanel2-host]
+  .footer-visible[force-detailPanel2_detailPanel2]
+  .record-layout-container[force-detailPanel2_detailPanel2] {
+  box-shadow: var(--darkmode-verydark-background) 0 0 10px 1px;
+}
+
+.forcePageBlockItemEdit.undo,
+force-record-layout-item.slds-is-editing.undo {
+  background-color: var(--darkmode-inline-edit-undo-background);
+}
+.forceChatterUserProfileHighlightsStencilDesktop .container {
+  background-color: var(--darkmode-active-background);
+}
+
+.forcePageError.inlineEdit {
+  border-bottom-color: transparent;
+}
+
+select,
+input:not([type='button']):not([type='submit']),
+.inputWrapper,
+.slds-input,
+.slds-input:focus,
+.slds-input:active,
+.uiInput--input .input,
+.uiInput--input.input,
+textarea,
+.slds-textarea,
+.uiInput textarea,
+.uiInput--textarea .textarea,
+.slds-rich-text-area__content,
+.slds-textarea:focus,
+.slds-textarea:active,
+.uiInput--input.input:focus,
+.uiInput--input .input:focus,
+.uiInput--input.input:active,
+.uiInput--input .input:active,
+.uiInput--checkbox input,
+input.uiInput--checkbox,
+.uiInput--checkbox input[type='checkbox']:checked,
+input.uiInput--checkbox[type='checkbox']:checked,
+.slds-checkbox .slds-checkbox_faux,
+.slds-checkbox .slds-checkbox--faux,
+[role='combobox'] input[readonly],
+.forceInputPicklist a.select[role='button'],
+.pillContainerWrapper a.uiPill,
+.onesetupNavTreeFilter input.filter-box {
+  color: var(--darkmode-default-text-color);
+  background-color: var(--darkmode-input-background) !important;
+  border-color: var(--darkmode-default-border-color);
+  box-shadow: none;
+}
+input[disabled],
+.uiInput--input .input[disabled],
+.uiInput--checkbox input[disabled],
+.uiInput--textarea .textarea[disabled],
+textarea[disabled] {
+  background-color: var(--darkmode-primary-background);
+}
+.uiOutputCheckbox img.checked,
+.uiOutputCheckbox img.unchecked {
+  filter: brightness(0.8);
+}
+
+.fade-text:after {
+  filter: invert(0.8);
+}
+.slds-page-header .fade-text:after {
+  filter: invert(0.9);
+}
+
+.slds-select_container::after {
+  border-top-color: var(--darkmode-default-border-color);
+}
+.slds-select_container::before {
+  border-bottom-color: var(--darkmode-default-border-color);
+}
+
+.slds-form .inline-edit-trigger:focus,
+.slds-form .inline-edit-trigger:hover,
+.slds-form .changeOwnerLink:focus,
+.slds-form .changeOwnerLink:hover {
+  background-color: var(--darkmode-primary-background) !important;
+}
+.slds-form .inline-edit-trigger svg,
+.slds-form .changeOwnerLink svg,
+.slds-form .change-owner-trigger svg {
+  color: var(--darkmode-weak-icon-color) !important;
+  fill: var(--darkmode-weak-icon-color) !important;
+}
+.slds-page-header__detail-row.slds-form .changeOwnerLink svg, /* <-- highlights panel */
+.slds-form .slds-form-element__control:hover .inline-edit-trigger svg,
+.slds-form .slds-form-element__control:hover .changeOwnerLink svg,
+.slds-form .slds-form-element__control:hover .change-owner-trigger svg,
+.slds-form .slds-form-element__control .inline-edit-trigger:focus svg,
+.slds-form .slds-form-element__control .changeOwnerLink:focus svg {
+  color: var(--darkmode-default-icon-color) !important;
+  fill: var(--darkmode-default-icon-color) !important;
+}
+
+/* hack for non-svg inline edit icons */
+.slds-form
+  .slds-form-element__control
+  .inline-edit-trigger
+  span.inline-edit-trigger-icon {
+  opacity: var(--darkmode-weak-icon-opacity);
+}
+.slds-form
+  .slds-form-element__control:hover
+  .inline-edit-trigger
+  span.inline-edit-trigger-icon {
+  background-position: unset;
+  opacity: var(--darkmode-default-icon-opacity);
+}
+
+.forceFilterPanelMultiPicklistCriterionEditor a.selected {
+  background: var(--darkmode-primary-highlight);
+}
+
+.slds-form-element__static {
+  color: var(--darkmode-default-text-color);
+}
+
+.forcePageBlockSection .slds-section__title,
+.slds-section__title-action {
+  background-color: var(--darkmode-form-section-title-background);
+}
+.slds-section__title-action:hover,
+.slds-section__title-action:focus,
+.slds-section__title-action:active {
+  background-color: var(--darkmode-form-section-title-background);
+  color: var(--darkmode-active-text-color) !important;
+}
+/* override dropdown arrow icon (hardcoded to blue-ish in uiInput */
+a.uiInput--select.select:not([multiple]),
+.uiInput--select a.select:not([multiple]),
+.uiInput--select .uiPopupTrigger a {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI3LjYgMjEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI3LjYgMjEiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8Zz4NCiAgICA8ZGVmcz4NCiAgICAgIDxwYXRoIGlkPSJTVkdJRF8xXyIgZD0iTTUuNiA1aDE2LjRjMC40IDAgMC44IDAuNiAwLjQgMWwtOCA5LjhjLTAuMyAwLjMtMC45IDAuMy0xLjIgMGwtOC05LjhDNC44IDUuNiA1LjEgNSA1LjYgNXoiLz4NCiAgICA8L2RlZnM+DQogICAgPGNsaXBQYXRoIGlkPSJTVkdJRF8yXyI+DQogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNTVkdJRF8xXyIgb3ZlcmZsb3c9InZpc2libGUiLz4NCiAgICA8L2NsaXBQYXRoPg0KICAgIDxyZWN0IHg9IjAiIHk9IjAiIGNsaXAtcGF0aD0idXJsKCNTVkdJRF8yXykiIGZpbGw9IiNmZmZmZmY4OCIgd2lkdGg9IjI3LjYiIGhlaWdodD0iMjEiLz4NCiAgPC9nPg0KPC9zdmc+);
+}
+
+/*
+*   INPUT TOGGLES
+*/
+div.toggle input[type='checkbox'] + label div.switch {
+  background: var(--darkmode-input-background) !important;
+  border-color: var(--darkmode-input-background) !important;
+}
+div.toggle input:checked ~ label div.switch:after {
+  background: var(--darkmode-primary-highlight);
+}
+div.toggle input:not(:checked) ~ label .switch:after {
+  background: var(--darkmode-primary-background);
+}
+.slds-checkbox_toggle
+  [type='checkbox']
+  + .slds-checkbox_faux_container
+  .slds-checkbox_faux {
+  background: var(--darkmode-input-background);
+  border-color: var(--darkmode-input-background);
+}
+.slds-checkbox_toggle
+  [type='checkbox']:checked
+  + .slds-checkbox_faux_container
+  .slds-checkbox_faux {
+  background: var(--darkmode-primary-highlight);
+  border-color: var(--darkmode-primary-highlight);
+}
+.slds-checkbox_toggle
+  [type='checkbox']:checked
+  + .slds-checkbox_faux_container
+  .slds-checkbox_faux:after {
+  border-color: var(--darkmode-active-icon-color);
+}
+
+/*
+*   LISTS
+*/
+/* sort arrows */
+.forceListViewManagerGrid th a.toggle:hover:after,
+.forceListViewManagerGrid th a.toggle:focus:after,
+.forceListViewManagerGrid th a.toggle:active:after,
+.forceListViewManagerGrid th a.toggle:after {
+  filter: grayscale(1);
+}
+.forceListViewManagerGrid tbody > tr:hover > th .slds-truncate:after,
+.forceListViewManagerGrid tbody > tr:hover > td .slds-truncate:after {
+  filter: invert(0.885);
+}
+.forceListViewManagerGrid tbody > tr > th .slds-truncate:after,
+.forceListViewManagerGrid tbody > tr > td .slds-truncate:after,
+.forceListViewManagerGrid tbody > tr > th:hover .slds-truncate:after,
+.forceListViewManagerGrid tbody > tr > td:hover .slds-truncate:after,
+.forceListViewManagerGrid tbody > tr:hover > th:hover .slds-truncate:after,
+.forceListViewManagerGrid tbody > tr:hover > td:hover .slds-truncate:after {
+  filter: invert(0.8);
+}
+.slds-table thead th,
+.forceBaseListView tbody tr:hover td,
+.slds-table:not(.slds-no-row-hover) tbody tr:hover > td,
+.slds-table:not(.slds-no-row-hover) tbody tr:hover > th,
+.slds-table:not(.slds-no-row-hover) tbody tr:focus > td,
+.slds-table:not(.slds-no-row-hover) tbody tr:focus > th {
+  background-color: var(--darkmode-active-background);
+}
+
+.slds-navigation-list--vertical {
+  color: var(--darkmode-default-text-color);
+}
+.slds-navigation-list--vertical h2 a {
+  color: var(--darkmode-weak-text-color);
+}
+.slds-navigation-list--vertical .slds-is-active a {
+  color: var(--darkmode-active-text-color);
+  font-weight: bold;
+}
+
+.slds-table .slds-cell-edit.slds-is-edited,
+.slds-table .slds-cell-edit.slds-is-edited:hover,
+.slds-table_edit.slds-table tbody tr:hover > .slds-cell-edit.slds-is-edited,
+.slds-table--edit.slds-table tbody tr:hover > .slds-cell-edit.slds-is-edited {
+  background-color: var(--darkmode-inline-edit-undo-background);
+}
+.slds-table .slds-cell-edit.slds-has-focus {
+  box-shadow: var(--darkmode-bright-highlight) 0px 0px 0px 1px inset !important;
+}
+
+.lvmTooltipButton.pinnedListTooltipButton
+  .slds-form-element__icon
+  svg[data-key='pinned'] {
+  fill: var(--darkmode-active-icon-color);
+  color: var(--darkmode-active-icon-color);
+}
+.forceFilterPanelScope.hasBeenEdited,
+.forceFilterPanelFilterCriterion .hasBeenEdited {
+  background-color: var(--darkmode-inline-edit-undo-background) !important;
+}
+
+/*
+*   BORDERS
+*/
+.slds-border_bottom,
+.slds-border--bottom,
+.slds-border_top,
+.slds-border--top,
+.slds-border_left,
+.slds-border--left,
+.slds-border_right,
+.slds-border--right,
+.slds-button_icon-container.slds-is-selected,
+.slds-button--icon-container.slds-is-selected,
+.slds-button_icon-border.slds-is-selected,
+.slds-button--icon-border.slds-is-selected,
+.slds-button_icon-border-filled.slds-is-selected,
+.slds-button_icon-border-inverse.slds-is-selected {
+  border-color: var(--darkmode-default-border-color) !important;
+}
+
+.slds-input,
+[role='combobox'] input[readonly],
+.slds-card,
+.slds-tabs_card,
+.slds-tabs_card.slds-tabs_card,
+.forceChatterFeedAuxBody .cuf-auxBody,
+.forceChatterClumpItem .cuf-clumpSummary {
+  border-color: var(--darkmode-default-border-color);
+}
+.slds-button_neutral,
+.slds-button--neutral,
+.slds-button_icon-border-filled,
+.slds-button--icon-border-filled,
+.slds-button_icon-border,
+.slds-button--icon-border,
+.slds-button_icon-more,
+.slds-button--icon-more,
+.slds-button-group .slds-button:first-child,
+.slds-select {
+  border-color: var(--darkmode-default-border-color) !important;
+}
+.slds-form-element_readonly {
+  border-bottom-color: var(--darkmode-default-border-color);
+}
+
+.forceHighlightsStencilDesktop.s1FixedTop {
+  border-top: 1px solid var(--darkmode-default-border-color);
+}
+.uiPanel--default.positioned {
+  border-color: var(--darkmode-default-border-color);
+}
+
+/*
+*   SALES PATH
+*/
+.slds-path__nav .slds-is-active:first-child:before,
+.slds-path__nav .slds-is-active:first-child:after,
+.slds-path__nav .slds-is-active:hover:first-child:before,
+.slds-path__nav .slds-is-active:hover:first-child:after,
+.slds-path__nav .slds-is-active:before,
+.slds-path__nav .slds-is-active:after,
+.slds-path__nav .slds-is-active:hover:before,
+.slds-path__nav .slds-is-active:hover:after {
+  background-color: var(--darkmode-primary-highlight);
+}
+.slds-path__nav .slds-is-active,
+.slds-path__nav .slds-is-active:hover {
+  background-color: var(--darkmode-primary-background);
+}
+.slds-path__nav .slds-is-complete,
+.slds-path__nav .slds-is-complete:before,
+.slds-path__nav .slds-is-complete:after,
+.slds-path__nav .slds-is-complete:hover,
+.slds-path__nav .slds-is-complete:hover:before,
+.slds-path__nav .slds-is-complete:hover:after {
+  background-color: var(--darkmode-sales-path-complete);
+}
+.slds-path__nav .slds-is-current:first-child:hover {
+  border-color: var(--darkmode-active-background) !important;
+}
+
+/*
+*   TOOLTIPS
+*/
+.uiTooltipAdvanced .tooltip-body {
+  background-color: var(--darkmode-tooltip-background) !important;
+}
+.slds-popover_tooltip,
+.slds-popover--tooltip {
+  background-color: var(--darkmode-tooltip-background);
+}
+.slds-nubbin_bottom-left::after,
+.slds-nubbin--bottom-left::after,
+.slds-nubbin_bottom-left-corner::after {
+  box-shadow: var(--darkmode-tooltip-background) 2px 2px 4px 0px;
+}
+.runtime_sales_pathassistantPathAssistantTabSet .tooltip .wrapper {
+  background-color: var(--darkmode-tooltip-background);
+}
+.runtime_sales_pathassistantPathAssistantTabSet .tooltip::before {
+  border-bottom-color: var(--darkmode-tooltip-background);
+}
+.uiTooltipAdvanced .south .pointer {
+  border-bottom-color: var(--darkmode-primary-highlight) !important;
+}
+.slds-nubbin_bottom-left::after,
+.slds-nubbin--bottom-left::after,
+.slds-nubbin_bottom-left-corner::after {
+  box-shadow: none;
+}
+.uiPanel > .pointer {
+  border-top-color: var(--darkmode-default-border-color);
+  border-left-color: var(--darkmode-default-border-color);
+}
+.uiPanel.west > .pointer {
+  border-right-color: var(--darkmode-default-border-color);
+  border-top-color: var(--darkmode-default-border-color);
+}
+
+/*
+*   ILLUSTRATIONS
+*/
+img[src^='/_slds/images/illustrations/empty-states/'],
+img[src='/img/search/no-results.png'],
+.slds-illustration img[src$='svg'],
+div.empty-state-container img[src$='svg'],
+.slds-chat .emptyPastChatsImage,
+img[feeds_placeholding-emptyfeed_emptyfeed] {
+  opacity: 0.5;
+}
+
+/*
+*   CANVAS
+*/
+/* invert dashboard <canvas> styles */
+.dashGridItem:not(.dark) .canvas-wrapper canvas,
+.dashboard-grid-container
+  .widget-container:not(.widget-container_welcome_pic_widget)
+  canvas,
+.eclair-component-chart canvas,
+.cADM_Sidebar canvas {
+  filter: invert(1) hue-rotate(180deg) brightness(0.95) !important;
+}
+/* override inline style in canvas container */
+.dashboard-grid-container .widget-container .container-widget {
+  background-color: var(--darkmode-primary-background) !important;
+}
+
+/*
+*   WAVE.APP
+*/
+/* hide highlight arrow which uses white in it's bg image */
+div.widgets
+  > div.widget-container[class*='widget-container_arrow']
+  div.widget:not(.contained-widget)
+  div.imageWidget,
+div.widgets
+  > div.widget-container[class*='widget-container_image_']
+  div.widget:not(.contained-widget)
+  div.imageWidget {
+  background-image: none !important;
+}
+
+/*
+*   SETUP
+*/
+.onesetupSetupAlohaPage .oneAlohaPage {
+  background-color: var(--darkmode-primary-background);
+}
+
+.setupnavAppLauncherPreview.appPlaceholder {
+  opacity: 0.5;
+}
+
+/* inputs used as buttons that have textual content */
+body.vf-body input[type='button'][value],
+body.vf-body input[type='submit'][value],
+body.sfdcBody input[type='button'][value],
+body.sfdcBody input[type='submit'][value],
+body.setupTab input[type='button'][value],
+body.setupTab input[type='submit'][value] {
+  background-image: none !important;
+  background-color: var(--darkmode-primary-background);
+}
+
+/* bg images */
+body.setupTab .bEditBlock .pbBody .pbSubheader,
+body.setupTab .bWizardBlock .pbBody .pbSubheader,
+body.setupTab button,
+body.setupTab .x-btn,
+body.setupTab div.btn:not(:empty),
+body.setupTab a.btn:not(:empty),
+body.setupTab form#editPage .pbBody .pbSubheader,
+body.setupTab #troughSelectorWrapper.selector,
+body.setupTab #troughPanel,
+body.setupTab .trough .special,
+body.setupTab .trough .unused,
+.trough .previouslyUsed,
+body.setupTab .trough .x-border-layout-ct,
+body.setupTab .toolsInner,
+body.setupTab .tools,
+body.setupTab .x-theme-aloha-esque .x-btn,
+body.setupTab .x-toolbar,
+body.setupTab div.toolbar,
+body.setupTab .x-list-header,
+body.setupTab .x-grid3-header,
+body.setupTab .pc_toolbar,
+body.setupTab .target-bwrap,
+body.setupTab .overlayDialog .topLeft,
+body.setupTab
+  .overlayDialog
+  .topRight
+  .dataImporterDiLanding.landing-help-banner,
+.dataImporterDiLanding.landing-help-banner.hide {
+  background-image: none !important;
+}
+body.setupTab .slds-scope .slds-button_neutral,
+body.setupTab .slds-scope .slds-button--neutral,
+body.setupTab input[type='submit'],
+body.setupTab .bPageBlock,
+body.setupTab #bodyCell .bResource .secondaryPalette,
+body.setupTab .secondaryPalette.bPageBlock,
+body.setupTab .individualPalette .secondaryPalette.bPageBlock,
+body.setupTab .bodyDiv .genericTable,
+body.setupTab .genericPageBlockTable,
+body.setupTab .bodyDiv .bSubBlock,
+body.setupTab .bComponentBlock .bPageBlock,
+body.setupTab .bMyDashboard .bPageBlock,
+body.rlHoverFrame .bPageBlock,
+body.subjectSelectionPopup div.choicesBox,
+body.lookupTab .secondaryPalette.bPageBlock,
+body.popupTab .secondaryPalette.bPageBlock,
+body.UserTagStatsPage .secondaryPalette.bPageBlock,
+body.setupTab .overlayDialog .middle,
+body.setupTab .overlayDialog .bottomLeft,
+body.setupTab .overlayDialog .bottomRight {
+  background-color: var(--darkmode-primary-background);
+  background-image: none;
+}
+body.setupTab .bPageBlock .pbHeader,
+body.setupTab .overlayDialog .topLeft,
+body.setupTab .overlayDialog .topRight {
+  background: var(--darkmode-active-background);
+}
+/* separator elements */
+body.setupTab .pbBody .pbSubheader,
+body.setupTab .relatedList .handle,
+body .rich-tabhdr-cell-active > table[id$='shifted'] td.rich-tabhdr-side-cell,
+body .rich-tabhdr-cell-inactive > table[id$='shifted'] td.rich-tabhdr-side-cell,
+body
+  .rich-tabhdr-cell-active
+  > table[id$='shifted']
+  td.rich-tabhdr-side-cell
+  td.rich-tab-active,
+body
+  .rich-tabhdr-cell-inactive
+  > table[id$='shifted']
+  td.rich-tabhdr-side-cell
+  td.rich-tab-inactive {
+  background: var(--darkmode-form-section-title-background) !important;
+}
+.x-form-text,
+textarea.x-form-field {
+  background: var(--darkmode-input-background);
+}
+
+body.setupTab div.inheritSettingsText,
+.slds-scope {
+  color: var(--darkmode-default-text-color);
+}
+img[src='/img/role_hierarchy_territory.gif'] {
+  background-color: #ffffff;
+}
+.onesetupNavTreeNode mark.highlight {
+  color: var(--darkmode-active-text-color);
+  background-color: var(--darkmode-primary-highlight);
+}
+
+/*
+*   CONSOLE
+*/
+.slds-split-view {
+  background: var(--darkmode-primary-background);
+}
+.slds-split-view__list-header,
+.slds-split-view__list-item:hover a,
+.slds-split-view__list-item:focus a {
+  background: var(--darkmode-active-background);
+}
+
+/*
+*   MISC
+*/
+.slds-backdrop {
+  opacity: 0.85;
+  background: var(--darkmode-verydark-background);
+}
+
+.oneDragAndDropEditItem.added .slds-lookup__item-action,
+.oneDragAndDropEditList .added-items-msg {
+  background-color: var(--darkmode-inline-edit-undo-background) !important;
+}
+a.onesetupBreadcrumb.breadcrumb {
+  color: var(--darkmode-link-text-color);
+}
+.slds-is-sortable a {
+  color: inherit;
+}
+.tree-node[aria-selected='true'] .slds-tree__item a {
+  color: var(--darkmode-active-text-color);
+  font-weight: bold;
+}
+.onesetupSetupNavTree .tree-node[aria-selected='true'] .slds-tree__item {
+  background-color: var(--darkmode-active-background) !important;
+  box-shadow: var(--darkmode-primary-highlight) 4px 0 0 inset !important;
+}
+.uiInput--datetime .datePicker-openIcon {
+  filter: grayscale(1) brightness(1.2);
+}
+.uiPill--default .deleteIcon:hover,
+.uiPill--default .deleteIcon:focus {
+  color: var(--darkmode-active-icon-color);
+}
+/* NPS! */
+.carousel[one-nps_nps] {
+  background-image: none;
+}
+.carousel[one-nps_nps]:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1) brightness(0.3);
+}
+.slds-scoped-notification_light {
+  background-color: var(--darkmode-inline-edit-undo-background);
+}
+.processuiLayout.wrapper {
+  background-color: var(--darkmode-form-section-title-background);
+}
+
+/* liveAgent */
+.slds-chat-message__text_outbound {
+  background-color: var(--darkmode-primary-highlight);
+  color: var(--darkmode-default-text-color);
+}
+.slds-progress-ring,
+.slds-progress_vertical .slds-progress__item:before,
+.slds-progress_vertical .slds-progress__item:after,
+.slds-progress__marker {
+  background-color: var(--darkmode-default-icon-color);
+}
+.slds-radio_button__label:focus,
+.slds-radio_button__label:hover {
+  background-color: var(--darkmode-active-background) !important;
+}
+.slds-notification__target {
+  background-color: var(--darkmode-notification-popup-background);
+}
+.slds-notify_alert.level-warning,
+.slds-notify_alert.level-warning * {
+  color: black !important;
+}
+
+/*
+*   CHATTER
+*/
+/* new comment fade animation */
+@keyframes forceChatter-feedback-new-live-comment-in-view-highlight {
+  50% {
+    background-color: var(--darkmode-inline-edit-undo-background);
+  }
+}
+@keyframes forceChatter-feedback-new-live-comment-out-of-view-highlight {
+  10% {
+    background-color: var(--darkmode-inline-edit-undo-background);
+  }
+  90% {
+    background-color: var(--darkmode-inline-edit-undo-background);
+  }
+}
+@keyframes forceChatter-feedItemFullView-threaded-comment-initially-focused {
+  50% {
+    background-color: var(--darkmode-inline-edit-undo-background);
+  }
+}
+/* ohana theme override */
+.cuf-commentItem .slds-media__body {
+  background-color: transparent;
+}
+/* chatter polls */
+.forceChatterFeedAuxBodyPollPostResults .bar-pct {
+  background-color: var(--darkmode-primary-highlight);
+}
+
+/* chatter bg images */
+.slds-einstein-header,
+.einstein-header-wrapper.runtime_sales_insightsEinsteinHeader,
+.forceChatterRecommendationListCard .forceChatterRecommendationBase,
+.forceChatterRecommendations .rec-widget .einstein-header {
+  background-image: none !important;
+  background-color: var(--darkmode-primary-background);
+  border-bottom-color: var(--darkmode-default-border-color);
+}
+
+/*
+*   DATA IMPORTER
+*/
+.dataImporterDiSfdcObjectSelectionActivity .lv-tab:hover,
+.dataImporterDiSfdcObjectSelectionActivity .lv-tab-active,
+.dataImporterDiSfdcObjectSelectionActivity .lv-tab-active:hover {
+  background: var(--darkmode-active-background);
+}
+.dataImporterDiSfdcObjectSelectionActivity .lv-tabs {
+  background: var(--darkmode-primary-background);
+}
+
+/*
+*   DEV CONSOLE
+*/
+#devTools,
+.x-body .x-toolbar .x-toolbar-item,
+.x-body .x-toolbar-default,
+.x-body .x-panel-header-default,
+.x-body .x-grid-header-ct,
+.x-body .x-btn-default-toolbar-small-over,
+.x-body .x-tab-bar,
+.x-body .x-menu-item-active .x-menu-item-link,
+.x-body .x-tab-default-top,
+.x-body .x-column-header,
+.x-body textarea.x-form-field,
+.x-body .x-form-text,
+textarea.x-form-field,
+.x-column-header-over,
+.x-column-header-sort-ASC,
+.x-column-header-sort-DESC {
+  background-image: none;
+}
+.x-body .x-panel-body-default {
+  background: var(--darkmode-verydark-background);
+}
+#devTools #devToolsPanelContent input[type='button'] {
+  /* 
+    these are raw input elements that, once given a background color and border, reflow obnoxiously.
+    the styles here make the buttons usable
+    */
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+/* W-6368781 */
+.x-body .cm-matchhighlight {
+  background-color: var(--darkmode-code-highlight-background);
+}
+.x-body .CodeMirror-selected {
+  background-color: var(--darkmode-active-background) !important;
+}
+/* W-6574673; search results */
+.x-grid-row-selected .x-grid-cell,
+.x-grid-row-selected .x-grid-rowwrap-div {
+  background-color: var(--darkmode-code-highlight-background) !important;
+}
+/* W-6574673; cursor */
+.CodeMirror div.CodeMirror-cursor {
+  border-left-color: var(--darkmode-code-cursor) !important;
+}
+/* W-6574673; code coverage highlights */
+.CodeMirror pre.CodeMirror-line-highlight-covered {
+  background: var(--darkmode-code-coverage-covered);
+}
+.CodeMirror pre.CodeMirror-line-highlight-notcovered {
+  background: var(--darkmode-code-coverage-not-covered);
+}
+
+/*
+*   GUS
+*/
+
+/* sprint wall does not use slds appropriately */
+.cADM_Sprint_Work_Row:hover {
+  background-color: var(--darkmode-active-background) !important;
+}
+.cADM_WorkLightning .adm-text-overridden {
+  background: var(--darkmode-primary-highlight);
+}
+.cADM_WorkLightning .adm-work-form {
+  background: var(--darkmode-primary-background) !important;
+}
+.cADM_Sprint_VirtualWall_Header .sprint-button-selected svg {
+  fill: var(--darkmode-default-icon-color);
+}
+/* Team Picker */
+body[class*='slds'] .slds > .slds-modal > .slds-modal__container > div {
+  background-color: var(--darkmode-active-background) !important;
+}
+
+.slds-dropdown-trigger.slds-is-open
+  .slds-dropdown
+  .slds-dropdown__item
+  .slds-button {
+  border: none;
+}
+.slds .slds-button--neutral,
+.slds .slds-button--icon-border-filled,
+.slds .slds-button--icon-border {
+  border-color: var(--darkmode-default-border-color);
+  background: var(--darkmode-primary-background);
+}
+.slds .slds-button-group .slds-button:first-child {
+  border-left-color: var(--darkmode-default-border-color);
+  background: var(--darkmode-primary-background);
+}
+
+/*
+*   EMAIL overrides
+*   We intentionally don't apply darkmode to email composers or preview frames
+*   because there are too many negative side effects (see W-6359252).
+*   Below are two cases where the iframe holding the email preview
+*   has a dark background and it bleeds through to the email content (which has
+*   a transparent background).  We don't want that to happen so here we force the
+*   background to a light color
+*/
+.emailuiPreviewModal iframe.emailuiFrame {
+  background: var(--darkmode-email-background);
+}
+
+/*
+*   disabled buttons
+*/
+button[disabled],
+button[disabled]:hover,
+.slds-button[disabled],
+.slds-button[disabled]:hover,
+.uiButton[disabled],
+.uiButton[disabled]:hover,
+.slds-button_icon-border-filled[disabled],
+.uiButton[disabled]:hover,
+.slds-button_icon-border-filled:disabled,
+.slds-button_icon-border-filled:disabled:hover,
+.slds-button--icon-border-filled[disabled],
+.slds-button--icon-border-filled[disabled]:hover,
+.slds-button--icon-border-filled:disabled,
+.slds-button--icon-border-filled:disabled {
+  color: var(--darkmode-weak-text-color);
+  fill: var(--darkmode-weak-icon-color);
+  background-color: var(--darkmode-primary-background) !important;
+  border-color: var(--darkmode-default-border-color) !important;
+}
+.slds-button[disabled] svg,
+.slds-button[disabled]:hover svg {
+  color: var(--darkmode-weak-icon-color);
+}

@@ -1,0 +1,72 @@
+<template>
+  <article class="slds-card">
+    <div class="slds-card__header slds-grid">
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__figure">
+          <slds-icon icon-name="standard:rtc_presence" size="small" />
+        </div>
+        <div class="slds-media__body">
+          <h2 class="slds-card__header-title">
+            <a
+              href="javascript:void(0);"
+              class="slds-card__header-link slds-truncate"
+              title="Accounts"
+            >
+              <span>Talks and Presentations</span>
+            </a>
+          </h2>
+        </div>
+      </header>
+    </div>
+    <div class="slds-card__body slds-card__body_inner">
+      <ol>
+        <li v-for="talk in $static.metadata.resume.talks" :key="talk.title">
+          <div
+            class="slds-grid slds-wrap slds-border_bottom slds-p-around_medium"
+          >
+            <div class="">
+              <font-awesome class="icon" :icon="['fas', 'chalkboard-teacher']" />
+            </div>
+            <div class="slds-col slds-size_11-of-12">
+              <a :href="talk.link" target="_blank"> {{ talk.title }} </a> <br />
+              {{ talk.conference }}, {{ talk.location }} - {{ talk.date }} <br />
+              {{ talk.summary }}
+              <div v-if="talk.coSpeaker.length > 0">Co-speaker: {{ talk.coSpeaker }}</div>
+            </div>
+          </div>
+        </li>
+        <br />
+      </ol>
+    </div>
+  </article>
+</template>
+
+<static-query>
+  query {
+    metadata {
+      resume {
+        talks {
+          title
+          date
+          summary
+          link
+          location
+          conference
+          coSpeaker
+        }
+      }
+    }
+  }
+</static-query>
+
+<script>
+export default {};
+</script>
+
+<style scoped>
+.icon {
+  height: 4.5em;
+  width: 4.5em;
+  color: lightblue;
+}
+</style>
