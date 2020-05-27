@@ -55,23 +55,6 @@
           </div>
         </div>
       </div>
-      <p>{{ $static.metadata.resume.basics.summary }}</p>
-      <div class="slds-grid slds-wrap slds-m-top_x-small">
-        <div
-          v-for="social in $static.metadata.resume.basics.profiles"
-          :key="social.network"
-          class="social-icons slds-p-around_xx-small"
-        >
-          <a
-            :href="social.url"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="slds-cols"
-          >
-            <font-awesome :icon="[social.package, social.icon]" />
-          </a>
-        </div>
-      </div>
     </div>
   </article>
 </template>
