@@ -8,7 +8,7 @@
         <div class="slds-media__body">
           <h2 class="slds-card__header-title">
             <span class="slds-card__header-link slds-truncate">
-              {{ $static.metadata.resume.basics.name }}
+              {{ $resume.basics.name }}
             </span>
           </h2>
         </div>
@@ -31,13 +31,13 @@
       >
         <div class="slds-text-longform">
           <h3 class="slds-text-heading_small">
-            {{ $static.metadata.resume.basics.label }}
+            {{ $resume.basics.label }}
           </h3>
-          <p>{{ $static.metadata.resume.basics.summary }}</p>
+          <p>{{ $resume.basics.summary }}</p>
         </div>
         <div class="slds-grid slds-wrap slds-m-top_xx-small">
           <div
-            v-for="social in $static.metadata.resume.basics.profiles"
+            v-for="social in $resume.basics.profiles"
             :key="social.network"
             class="social-icons slds-p-around_xx-small"
           >
@@ -55,25 +55,6 @@
     </div>
   </article>
 </template>
-
-<static-query>
-  query {
-    metadata {
-      resume {
-        basics {
-          name
-          label
-          summary
-          profiles {
-            url
-            icon
-            package
-          }
-        }
-      }
-    }
-  }
-</static-query>
 
 <script>
 export default {};

@@ -17,7 +17,7 @@
     <div class="slds-card__body slds-card__body_inner">
       <ol class="slds-has-dividers_bottom">
         <li
-          v-for="award in $static.metadata.resume.awards"
+          v-for="award in $resume.awards"
           :key="award.title"
           class="slds-item"
         >
@@ -30,7 +30,7 @@
               <div class="slds-text-title_bold">
                 {{ award.title }}
               </div>
-              {{ award.date }} <br />
+              {{ award.date | date({day: undefined}) }} <br />
               {{ award.summary }}
             </div>
           </div>
@@ -39,21 +39,6 @@
     </div>
   </article>
 </template>
-
-<static-query>
-  query {
-    metadata {
-      resume {
-        awards {
-          title
-          date
-          awarder
-          summary
-        }
-      }
-    }
-  }
-</static-query>
 
 <script>
 export default {};
