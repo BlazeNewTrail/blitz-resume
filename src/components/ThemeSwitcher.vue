@@ -1,24 +1,15 @@
 <template>
-  <div class="slds-form-element theme-switcher">
-    <label class="slds-checkbox_toggle slds-grid">
-      <input
-        type="checkbox"
-        name="checkbox-toggle-17"
-        value="checkbox-toggle-17"
-        aria-describedby="checkbox-toggle-17"
-        checked
-        @click="toggleDarkMode"
-      />
-      <span
-        id="checkbox-toggle-17"
-        class="slds-checkbox_faux_container"
-        aria-live="assertive"
-      >
-        <span class="slds-checkbox_faux"></span>
-        <span class="slds-checkbox_on">Light Mode</span>
-        <span class="slds-checkbox_off">Dark Mode</span>
-      </span>
-    </label>
+  <div class="theme-switcher" title="Switch Theme" @click="toggleDarkMode">
+    <span
+      class="slds-icon_container slds-icon_container_circle slds-icon-standard-rtc-presence"
+    >
+      <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+        <use
+          xlink:href="/assets/img/slds-icons/utility/symbols.svg#light_bulb"
+        />
+      </svg>
+      <span class="slds-assistive-text">switch theme</span>
+    </span>
   </div>
 </template>
 
@@ -30,7 +21,6 @@ export default {
   methods: {
     toggleDarkMode() {
       this.darkMode = !this.darkMode;
-
       document.documentElement.classList.toggle('dark-mode');
     },
   },
