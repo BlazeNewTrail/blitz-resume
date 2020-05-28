@@ -12,6 +12,10 @@ $font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
 html.dark-mode {
   @import './darkmode_overrides.scss';
   background: #2d2e2f;
+
+  .slds-icon-text-default {
+    fill: var(--darkmode-default-icon-color);
+  }
 }
 
 // extra big avatar for sidebar
@@ -28,6 +32,7 @@ html {
 html,
 body {
   height: 100%;
+  transition:background-color .25s, color .25s;
 }
 
 .site-page-wrapper {
@@ -150,6 +155,19 @@ body {
 
 .site-main:focus {
   outline: none;
+}
+
+.theme-switcher .slds-icon_container {
+  background-color: $brand-primary;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.theme-switcher svg{
+  fill: white;
+}
+
+.dark-mode .theme-switcher svg{
+  fill: darkslategray;
 }
 
 // remove border from last item in lists

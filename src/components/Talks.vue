@@ -17,7 +17,7 @@
     <div class="slds-card__body slds-card__body_inner">
       <ol class="slds-has-dividers_bottom">
         <li
-          v-for="talk in $static.metadata.resume.talks"
+          v-for="talk in $resume.talks"
           :key="talk.title"
           class="slds-item"
         >
@@ -33,10 +33,10 @@
                 {{ talk.title }}
               </a>
               <br />
-              {{ talk.conference }}, {{ talk.location }} - {{ talk.date }}
+              {{ talk.conference }}, {{ talk.location }} - {{ talk.date | date({day: undefined}) }}
               <br />
               {{ talk.summary }}
-              <div v-if="talk.coSpeaker.length > 0">
+              <div v-if="talk.coSpeaker && talk.coSpeaker.length > 0">
                 Co-speaker: {{ talk.coSpeaker }}
               </div>
             </div>
@@ -46,24 +46,6 @@
     </div>
   </article>
 </template>
-
-<static-query>
-  query {
-    metadata {
-      resume {
-        talks {
-          title
-          date
-          summary
-          link
-          location
-          conference
-          coSpeaker
-        }
-      }
-    }
-  }
-</static-query>
 
 <script>
 export default {};

@@ -17,7 +17,7 @@
     <div class="slds-card__body slds-card__body_inner">
       <ol class="slds-has-dividers_bottom">
         <li
-          v-for="education in $static.metadata.resume.education"
+          v-for="education in $resume.education"
           :key="education.title"
           class="slds-item"
         >
@@ -31,7 +31,7 @@
               </div>
               {{ education.institution }}
               <br />
-              {{ education.endDate }}
+              {{ education.endDate | date({day: undefined}) }}
               <br />
             </div>
           </div>
@@ -40,22 +40,6 @@
     </div>
   </article>
 </template>
-
-<static-query>
-  query {
-    metadata {
-      resume {
-        education {
-          institution
-          area
-          studyType
-          startDate
-          endDate
-        }
-      }
-    }
-  }
-</static-query>
 
 <script>
 export default {};

@@ -18,13 +18,18 @@
       <div class="slds-progress slds-progress_vertical">
         <ol class="slds-progress__list slds-has-dividers_bottom">
           <li
-            v-for="work in $static.metadata.resume.work"
+            v-for="work in $resume.work"
             :key="work.company"
             class="slds-progress__item slds-is-completed"
           >
-            <!-- Apply slds-is-active to first element class="" -->
-
-            <div class="slds-progress__marker"></div>
+            <slds-icon
+              v-if="isPast(work.endDate)"
+              class="slds-progress__marker slds-progress__marker_icon"
+              icon-name="utility:success"
+              size="xx-small"
+              title="Complete"
+            />
+            <div v-else class="slds-progress__marker"></div>
             <div class="slds-progress__item_content">
               <div class="slds-grid">
                 <div class="slds-col slds-size_3-of-4">
@@ -55,7 +60,10 @@
                   </ol>
                 </div>
                 <div class="slds-col slds-size_1-of-4">
-                  <div>{{ work.startDate }} - {{ work.endDate }}</div>
+                  <div>
+                    {{ work.startDate | date({ day: undefined }) }} -
+                    {{ work.endDate | date({ day: undefined }) }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -66,29 +74,20 @@
   </article>
 </template>
 
-<static-query>
-  query {
-    metadata {
-      resume {
-        work {
-          company
-          position
-          location
-          startDate
-          endDate
-          highlights
-        }
-      }
-    }
-  }
-</static-query>
-
 <script>
-export default {};
+export default {
+  methods: {
+    isPast(dateStrOrDate) {
+      try {
+        const date =
+          typeof dateStrOrDate === 'string'
+            ? new Date(dateStrOrDate)
+            : dateStrOrDate;
+        return dateStrOrDate && date < Date.now();
+      } catch (e) {
+        return false;
+      }
+    },
+  },
+};
 </script>
-
-<style scoped>
-.icon {
-  color: black;
-}
-</style>

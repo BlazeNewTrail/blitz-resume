@@ -21,7 +21,7 @@
       <intersect @enter="animate">
         <div class="slds-grid slds-wrap">
           <div
-            v-for="tool in $static.metadata.resume.skills.tools"
+            v-for="tool in $resume.skills.tools"
             :key="tool.title"
             class="card"
           >
@@ -35,7 +35,7 @@
         Workflow
       </div>
       <div
-        v-for="tool in $static.metadata.resume.skills.workflow"
+        v-for="tool in $resume.skills.workflow"
         :key="tool"
         class="sld-col"
       >
@@ -45,23 +45,6 @@
     </div>
   </article>
 </template>
-
-<static-query>
-  query {
-    metadata {
-      resume {
-        skills {
-          tools {
-            title
-            package
-            icon
-          }
-          workflow
-        }
-      }
-    }
-  }
-</static-query>
 
 <script>
 import gsap from 'gsap';

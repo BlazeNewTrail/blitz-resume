@@ -38,6 +38,7 @@ import {
 import DefaultLayout from '@/layouts/Default.vue';
 
 import SldsIcon from '@/components/slds-icon.vue';
+import jsonresume from '../resume.json';
 
 library.add(
   faGithub,
@@ -62,11 +63,31 @@ library.add(
   faChalkboardTeacher,
 );
 
-VueC.prototype.$sidebar = false;
+VueC.prototype.$sidebar = true;
+VueC.prototype.$resume = jsonresume;
 
 export default function (Vue, { head }) {
   Vue.use(VueScrollTo, {
     container: 'main',
+  });
+
+  Vue.filter('date', (dateStrOrDate, opt) => {
+    if (!dateStrOrDate) return '';
+    try {
+      const date =
+        typeof dateStrOrDate === 'string'
+          ? new Date(dateStrOrDate)
+          : dateStrOrDate;
+      const dateformat = new Intl.DateTimeFormat(undefined, {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        ...opt,
+      });
+      return dateformat.format(date);
+    } catch (e) {
+      return dateStrOrDate;
+    }
   });
 
   // add slds-icon component

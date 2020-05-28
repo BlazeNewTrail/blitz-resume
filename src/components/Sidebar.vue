@@ -1,30 +1,17 @@
 <template>
   <section
-    class="site-sidebar slds-grid slds-grid_vertical slds-grid_align-center"
+    class="site-sidebar slds-border_right slds-grid slds-grid_vertical slds-grid_align-spread"
   >
-    <div class="slds-grid slds-grid_align-center">
-      <div class="site-skip-content">
-        <a
-          href="#site-main-content"
-          class="slds-assistive-text slds-assistive-text_focus"
-        >
-          Skip to Content
-        </a>
-      </div>
-      <!-- <div class="site-logo">
-        <a href="/">
-          <span class="site-logo__graphic">
-            <span class="slds-assistive-text">Salesforce</span>
-          </span>Jon Snow
-        </a>
-      </div>-->
+    <div class="slds-grow"></div>
+    <div class="slds-grow-none slds-grid slds-grid_vertical slds-grid_vertical-align-center slds-grid_align-center">
       <span
-        class="slds-avatar slds-avatar_circle slds-avatar_xlarge slds-avatar_profile-image-large"
+        class="slds-m-bottom_medium slds-avatar slds-avatar_circle slds-avatar_xlarge slds-avatar_profile-image-large"
       >
         <span class="slds-assistive-text">Person name</span>
       </span>
+      <span class="slds-text-heading_medium">{{ $resume.basics.name }}</span>
     </div>
-    <div class="site-navigation">
+    <div class="site-navigation slds-grow-none">
       <scroll-active-nav class="slds-nav-vertical">
         <div class="slds-nav-vertical__section">
           <ul>
@@ -83,13 +70,12 @@
                 Talks
               </a>
             </li>
-            <li class="slds-nav-vertical__item theme-switcher">
-              <theme-switcher />
-            </li>
           </ul>
         </div>
       </scroll-active-nav>
     </div>
+    <div class="slds-grow"></div>
+    <theme-switcher class="slds-m-left_medium slds-m-bottom_medium" />
   </section>
 </template>
 
