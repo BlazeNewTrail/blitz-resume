@@ -7,35 +7,41 @@
         </div>
         <div class="slds-media__body">
           <h2 class="slds-card__header-title">
-            <a
-              href="javascript:void(0);"
-              class="slds-card__header-link slds-truncate"
-              title="Accounts"
-            >
-              <span>Talks and Presentations</span>
-            </a>
+            <span class="slds-card__header-link slds-truncate">
+              Talks and Presentations
+            </span>
           </h2>
         </div>
       </header>
     </div>
     <div class="slds-card__body slds-card__body_inner">
-      <ol>
-        <li v-for="talk in $static.metadata.resume.talks" :key="talk.title">
-          <div
-            class="slds-grid slds-wrap slds-border_bottom slds-p-around_medium"
-          >
-            <div class="">
-              <font-awesome class="icon" :icon="['fas', 'chalkboard-teacher']" />
+      <ol class="slds-has-dividers_bottom">
+        <li
+          v-for="talk in $static.metadata.resume.talks"
+          :key="talk.title"
+          class="slds-item"
+        >
+          <div class="slds-grid slds-wrap slds-p-around_medium">
+            <div>
+              <font-awesome
+                class="icon"
+                :icon="['fas', 'chalkboard-teacher']"
+              />
             </div>
             <div class="slds-col slds-size_11-of-12">
-              <a :href="talk.link" target="_blank"> {{ talk.title }} </a> <br />
-              {{ talk.conference }}, {{ talk.location }} - {{ talk.date }} <br />
+              <a :href="talk.link" target="_blank" class="slds-text-title_bold">
+                {{ talk.title }}
+              </a>
+              <br />
+              {{ talk.conference }}, {{ talk.location }} - {{ talk.date }}
+              <br />
               {{ talk.summary }}
-              <div v-if="talk.coSpeaker.length > 0">Co-speaker: {{ talk.coSpeaker }}</div>
+              <div v-if="talk.coSpeaker.length > 0">
+                Co-speaker: {{ talk.coSpeaker }}
+              </div>
             </div>
           </div>
         </li>
-        <br />
       </ol>
     </div>
   </article>

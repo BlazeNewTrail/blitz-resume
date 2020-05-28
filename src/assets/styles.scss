@@ -148,12 +148,27 @@ body {
   overflow-y: auto;
 }
 
-.site-main,
-.site-main_inner {
-  background: #fff;
-}
-
 .site-main:focus {
   outline: none;
-  // box-shadow: inset 0 0 2px #0070d2
+}
+
+// remove border from last item in lists
+slds-has-dividers_bottom > .slds-list__item:last-child,
+.slds-has-dividers_bottom > .slds-item:last-child,
+.slds-has-dividers--bottom > .slds-list__item:last-child,
+.slds-has-dividers--bottom > .slds-item:last-child {
+  border-bottom: 0;
+}
+
+// border for progress list
+.slds-has-dividers_bottom
+  > .slds-progress__item
+  > .slds-progress__item_content {
+  border-bottom: 1px solid #dddbda;
+}
+
+.slds-has-dividers_bottom
+  > .slds-progress__item:last-child
+  > .slds-progress__item_content {
+  border-bottom: 0;
 }
