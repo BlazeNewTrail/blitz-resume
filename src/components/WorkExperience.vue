@@ -7,20 +7,16 @@
         </div>
         <div class="slds-media__body">
           <h2 class="slds-card__header-title">
-            <a
-              href="javascript:void(0);"
-              class="slds-card__header-link slds-truncate"
-              title="Accounts"
-            >
-              <span>Work</span>
-            </a>
+            <span class="slds-card__header-link slds-truncate">
+              Work
+            </span>
           </h2>
         </div>
       </header>
     </div>
     <div class="slds-card__body slds-card__body_inner">
       <div class="slds-progress slds-progress_vertical">
-        <ol class="slds-progress__list">
+        <ol class="slds-progress__list slds-has-dividers_bottom">
           <li
             v-for="work in $static.metadata.resume.work"
             :key="work.company"
@@ -29,21 +25,26 @@
             <!-- Apply slds-is-active to first element class="" -->
 
             <div class="slds-progress__marker"></div>
-            <div class="slds-progress__item_content slds-border_bottom">
+            <div class="slds-progress__item_content">
               <div class="slds-grid">
                 <div class="slds-col slds-size_3-of-4">
-                  <div class="title">
+                  <div class="slds-text-title_bold">
                     {{ work.position }}
                   </div>
                   <div>
                     <!-- Add Salesforce icons -->
-                    <slds-icon icon-name="utility:company" size="x-small" variant="base" class="icon"/>
+                    <slds-icon
+                      icon-name="utility:company"
+                      size="x-small"
+                      variant="base"
+                      class="icon"
+                    />
                     <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
                     {{ work.company }}
                   </div>
                   <div>
                     <!-- Add Salesforce icons -->
-                    <slds-icon icon-name="utility:location" size="x-small" variant="inverse" />
+                    <slds-icon icon-name="utility:location" size="x-small" />
                     <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
                     {{ work.location }}
                   </div>
@@ -59,58 +60,12 @@
               </div>
             </div>
           </li>
-          <!-- <li class="slds-progress__item slds-is-completed">
-              <span
-                class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon"
-                title="Complete"
-              >
-                <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
-                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success" />
-                </svg>
-                <span class="slds-assistive-text">Complete</span>
-              </span>
-              <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Step 1</div>
-            </li>
-            <li class="slds-progress__item">
-              <div class="slds-progress__marker"></div>
-              <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Step 3</div>
-            </li>
-            <li class="slds-progress__item slds-is-active">
-              <div class="slds-progress__marker">
-                <span class="slds-assistive-text">Active</span>
-              </div>
-              <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Step 2</div>
-            </li>
-
-            <li class="slds-progress__item">
-              <div class="slds-progress__marker"></div>
-              <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Step 4</div>
-            </li>
-            <li class="slds-progress__item">
-              <div class="slds-progress__marker"></div>
-              <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Step 5</div>
-            </li>
-            <li class="slds-progress__item">
-              <div class="slds-progress__marker"></div>
-              <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Step 5</div>
-            </li>
-            <li class="slds-progress__item">
-              <div class="slds-progress__marker"></div>
-              <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Step 5</div>
-          </li>-->
         </ol>
-        <div
-          aria-valuemin="0"
-          aria-valuemax="100"
-          aria-valuenow="25"
-          role="progressbar"
-        >
-          <span class="slds-assistive-text">Progress: 75%</span>
-        </div>
       </div>
     </div>
   </article>
 </template>
+
 <static-query>
   query {
     metadata {
@@ -129,14 +84,10 @@
 </static-query>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style scoped>
-.title {
-  font-weight: bold;
-}
 .icon {
   color: black;
 }

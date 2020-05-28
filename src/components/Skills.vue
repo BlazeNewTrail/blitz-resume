@@ -7,19 +7,15 @@
         </div>
         <div class="slds-media__body">
           <h2 class="slds-card__header-title">
-            <a
-              href="javascript:void(0);"
-              class="slds-card__header-link slds-truncate"
-              title="Accounts"
-            >
-              <span>Skills</span>
-            </a>
+            <span class="slds-card__header-link slds-truncate">
+              Skills
+            </span>
           </h2>
         </div>
       </header>
     </div>
     <div class="slds-card__body slds-card__body_inner">
-      <div class="slds-text-heading_small slds-p-bottom_xx-small">
+      <div class="slds-text-title_bold slds-p-bottom_xx-small">
         Programming Languages & Tools
       </div>
       <intersect @enter="animate">
@@ -35,7 +31,7 @@
           </div>
         </div>
       </intersect>
-      <div class="slds-text-heading_small slds-p-vertical_small">
+      <div class="slds-text-title_bold slds-p-vertical_small">
         Workflow
       </div>
       <div
@@ -114,7 +110,6 @@ export default {
   height: 6.5em;
   width: 5.5em;
   border-radius: 1%;
-  background-color: white;
   /* background-color: #16c0b0; */
   /* box-shadow: 0.08em 0.03em 0.4em #ababab; */
   padding-top: 0.5em;
@@ -127,6 +122,11 @@ export default {
   color: teal;
   margin-left: 0.5em;
 }
+
+.dark-mode .skillIcon {
+  color: white;
+}
+
 .checkIcon {
   height: 0.9rem;
   width: 0.9rem;

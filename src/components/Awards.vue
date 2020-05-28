@@ -7,35 +7,34 @@
         </div>
         <div class="slds-media__body">
           <h2 class="slds-card__header-title">
-            <a
-              href="javascript:void(0);"
-              class="slds-card__header-link slds-truncate"
-              title="Accounts"
-            >
-              <span>Awards</span>
-            </a>
+            <span class="slds-card__header-link slds-truncate">
+              Awards
+            </span>
           </h2>
         </div>
       </header>
     </div>
     <div class="slds-card__body slds-card__body_inner">
-      <ol>
-        <li v-for="award in $static.metadata.resume.awards" :key="award.title">
-          <div
-            class="slds-grid slds-wrap slds-border_bottom slds-p-around_medium"
-          >
+      <ol class="slds-has-dividers_bottom">
+        <li
+          v-for="award in $static.metadata.resume.awards"
+          :key="award.title"
+          class="slds-item"
+        >
+          <div class="slds-grid slds-wrap slds-p-around_medium">
             <div class="">
               <font-awesome class="icon" :icon="['fas', 'award']" />
             </div>
             <div class="slds-col slds-size_11-of-12">
               {{ award.awarder }} <br />
-              <div class="title"> {{ award.title }} </div>
+              <div class="slds-text-title_bold">
+                {{ award.title }}
+              </div>
               {{ award.date }} <br />
               {{ award.summary }}
             </div>
           </div>
         </li>
-        <br />
       </ol>
     </div>
   </article>
@@ -66,8 +65,4 @@ export default {};
   width: 4.5em;
   color: goldenrod;
 }
-.title {
-  font-weight: bold;
-}
-
 </style>
