@@ -69,4 +69,5 @@ export default {};
 .title {
   font-weight: bold;
 }
+
 </style>
