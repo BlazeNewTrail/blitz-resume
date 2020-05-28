@@ -52,7 +52,6 @@
             </div>
           </div>
         </li>
-        <br />
       </ol>
     </div>
   </article>
