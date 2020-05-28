@@ -29,7 +29,7 @@
             </div>
             <div class="slds-col slds-size_11-of-12">
               {{ award.awarder }} <br />
-              {{ award.title }} <br />
+              <div class="title"> {{ award.title }} </div>
               {{ award.date }} <br />
               {{ award.summary }}
             </div>
@@ -66,4 +66,8 @@ export default {};
   width: 4.5em;
   color: goldenrod;
 }
+.title {
+  font-weight: bold;
+}
+
 </style>
