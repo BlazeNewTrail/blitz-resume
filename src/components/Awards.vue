@@ -50,4 +50,8 @@ export default {};
   width: 4.5em;
   color: goldenrod;
 }
+.title {
+  font-weight: bold;
+}
+
 </style>
