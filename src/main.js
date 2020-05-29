@@ -20,7 +20,7 @@ import {
   faVuejs,
   faNodeJs,
   faSass,
-  faLess,
+  faYarn,
   faWordpress,
   faGulp,
   faGrunt,
@@ -33,6 +33,8 @@ import {
   faPeopleCarry,
   faCheck,
   faChalkboardTeacher,
+  faCogs,
+  faLaptopCode,
 } from '@fortawesome/free-solid-svg-icons';
 
 import DefaultLayout from '@/layouts/Default.vue';
@@ -51,7 +53,7 @@ library.add(
   faVuejs,
   faNodeJs,
   faSass,
-  faLess,
+  faYarn,
   faWordpress,
   faGulp,
   faGrunt,
@@ -61,6 +63,8 @@ library.add(
   faPeopleCarry,
   faCheck,
   faChalkboardTeacher,
+  faCogs,
+  faLaptopCode,
 );
 
 VueC.prototype.$sidebar = true;

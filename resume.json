@@ -184,6 +184,18 @@
   "skills": {
     "tools" : [
       {
+        "title": "Apex",
+        "package" : "fas",
+        "icon": "cogs"
+
+      },
+      {
+        "title": "Visulforce",
+        "package" : "fas",
+        "icon": "laptop-code"
+
+      },
+      {
         "title": "Javascript",
         "package" : "fab",
         "icon": "js-square"
@@ -196,9 +208,21 @@
 
       },
       {
+        "title": "Yarn",
+        "package" : "fab",
+        "icon": "yarn"
+
+      },
+      {
         "title": "VueJs 💛",
         "package" : "fab",
         "icon": "vuejs"
+
+      },
+      {
+        "title": "Gulp",
+        "package" : "fab",
+        "icon": "gulp"
 
       },
       {
@@ -211,12 +235,6 @@
         "title": "CSS 3",
         "package" : "fab",
         "icon": "css3-alt"
-
-      },
-      {
-        "title": "NPM",
-        "package" : "fab",
-        "icon": "npm"
 
       }
     ],
