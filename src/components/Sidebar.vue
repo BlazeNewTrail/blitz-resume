@@ -52,6 +52,15 @@
                 Skills
               </a>
             </li>
+            <li data-navkey="projects" class="slds-nav-vertical__item">
+              <a
+                v-scroll-to="'#projects'"
+                href="#"
+                class="slds-nav-vertical__action"
+              >
+                Projects
+              </a>
+            </li>
             <li data-navkey="awards" class="slds-nav-vertical__item">
               <a
                 v-scroll-to="'#awards'"

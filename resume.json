@@ -88,6 +88,30 @@
       "highlights": ["Managed call center operations of various clients (Computer Associates (CA), McAfee, AVAST).", "Supervised a team of technical specialists/consultants, ensuring delivery, meeting all parameters, within the boundaries of the Service Level Agreement.", "Helping the client improve IT security products by providing constant feedback.", "Organizing IT Security workshops for employees along with client and external partners." ]
     }
   ],
+  "projects" : [
+    {
+      "company": "Smaato Inc.",
+      "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
+      "website": "http://ankittaneja.net",
+      "location": "Hamburg, Germany",
+      "startDate": "2014-05",
+      "endDate": "2018-12",
+      "summary": "Smaato is a Mobile Advertising company using Salesforce in all major business units namely, Sales, Service and Marketing (Formely Hubspot now Pardot). My role was to assist the client in getting the most of the system. Over many years, several improvements and additions were made to business process' / integrations to ensure smooth flow of work for employees",
+      "highlights": ["Analyzing business needs by organizing recurring meetings with stakeholders/C-Level. Consulting the client on best available solution. Prepare Quarterly/Half-yearly roadmap.", "Leveraged Salesforce API's to connect it to various other systems.", "Used a combination of programmatic and declarative solutions.", "Prepared detailed user manuals and support documentation in Confluence.", "Training users before a release and also supporting them after." ],
+      "keywords": ["Sales Cloud", "Service Cloud", "Hubspot Integration", "REST API", "Automated Email Responses"]
+    },
+    {
+      "company": "Alfred H. Schütte GmbH & Co. KG",
+      "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
+      "website": "http://ankittaneja.net",
+      "location": "Cologne, Germany",
+      "startDate": "2013-05",
+      "endDate": "2014-12",
+      "summary": "The client is a major player in custom machines built for manufacturing companies all across the world. They implemented Salesforce for their Field Service team who were now equipped with a tablet (previously they carried pen / paper). My task to enable all offline process' to online.",
+      "highlights": ["Setting up and implementing the Salesforce.com CRM for client’s technical support system. Migrating it completely from SAP.", "Leveraged Salesforce API's to connect it to various other systems.", "Designed a Real Time Display Console that shows current status of cases and technicians working on them.", "Architected a custom Salesforce Mobile App for field technicians with features such as, maps, directions to client, capturing notes, pictures, client signatures, offline access.", "Provided technical guidance / training to client’s user’s on how-to use the new app and Salesforce system." ],
+      "keywords": ["Service Cloud", "Integration with SAP", "Mobile App"]
+    }
+  ],
   "volunteer": [
     {
       "organization": "Organization",

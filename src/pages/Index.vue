@@ -17,6 +17,9 @@
         <skills id="skills" />
       </div>
       <div class="slds-col slds-p-bottom_small">
+        <projects id="projects" />
+      </div>
+      <div class="slds-col slds-p-bottom_small">
         <awards id="awards" />
       </div>
       <div class="slds-col slds-p-bottom_small">
@@ -33,6 +36,7 @@ import Skills from '@/components/Skills.vue';
 import Work from '@/components/WorkExperience.vue';
 import Awards from '@/components/Awards.vue';
 import Talks from '@/components/Talks.vue';
+import Projects from '@/components/Projects.vue';
 import ScrollActiveNavContainer from '@/directives/scroll-active-nav-container';
 
 export default {
@@ -43,6 +47,7 @@ export default {
     Work,
     Awards,
     Talks,
+    Projects,
   },
   directives: {
     ScrollActiveNavContainer,
