@@ -62,7 +62,10 @@ export default {
       return this.iconName.split(':')[1];
     },
     containerClass() {
-      return [`slds-icon-${this.iconCategory}-${this.icon.replace(/_/g, '-')}`, this.circle ? 'slds-icon_container_circle' : ''];
+      return [
+        `slds-icon-${this.iconCategory}-${this.icon.replace(/_/g, '-')}`,
+        this.circle ? 'slds-icon_container_circle' : '',
+      ];
     },
     iconLink() {
       return (
@@ -71,7 +74,11 @@ export default {
       );
     },
     svgClass() {
-      return [`slds-icon_${this.size}`, `slds-icon-text-${this.variant}`];
+      return [
+        `slds-icon_${this.size}`,
+        `slds-icon-text-${this.variant}`,
+        this.iconCategory === 'utility' ? 'slds-icon-text-default' : '',
+      ];
     },
     altText() {
       return this.alternativeText || this.icon;

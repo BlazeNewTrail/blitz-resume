@@ -1,18 +1,6 @@
 <template>
   <header>
-    <a
-      href="javascript:void(0);"
-      class="slds-assistive-text slds-assistive-text_focus"
-    >
-      Skip to Navigation
-    </a>
-    <a
-      href="javascript:void(0);"
-      class="slds-assistive-text slds-assistive-text_focus"
-    >
-      Skip to Main Content
-    </a>
-    <div class="slds-context-bar">
+    <div class="slds-context-bar slds-grid">
       <div class="slds-context-bar__primary">
         <div
           class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover"
@@ -36,13 +24,13 @@
               <span class="slds-assistive-text">Can be removed</span>
             </button>
           </div>
-          <!-- <span
+          <span
             class="slds-context-bar__label-action slds-context-bar__app-name"
           >
             <span class="slds-truncate" title="App Name">{{
-              $static.metadata.resume.basics.name
+              $resume.basics.name
             }}</span>
-          </span> -->
+          </span>
         </div>
       </div>
       <scroll-active-nav class="slds-context-bar__secondary slds-show_medium">
@@ -107,27 +95,13 @@
               <span class="slds-truncate" title="Talks">Talks</span>
             </a>
           </li>
-          <li class="slds-context-bar__item">
-            <theme-switcher />
-          </li>
         </ul>
         <!-- </nav> -->
       </scroll-active-nav>
+      <theme-switcher class="slds-col_bump-left slds-align-middle slds-p-right_medium" />
     </div>
   </header>
 </template>
-
-<static-query>
-  query {
-    metadata {
-      resume {
-        basics {
-          name
-        }
-      }
-    }
-  }
-</static-query>
 
 <script>
 import ScrollActiveNav from '@/components/scroll-active-nav';

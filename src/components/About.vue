@@ -7,38 +7,37 @@
         </div>
         <div class="slds-media__body">
           <h2 class="slds-card__header-title">
-            <a
-              href="javascript:void(0);"
-              class="slds-card__header-link slds-truncate"
-              title="Accounts"
-            >
-              <span>{{ $static.metadata.resume.basics.name }}</span>
-            </a>
+            <span class="slds-card__header-link slds-truncate">
+              {{ $resume.basics.name }}
+            </span>
           </h2>
         </div>
       </header>
     </div>
     <div class="slds-card__body slds-card__body_inner slds-grid slds-wrap">
-      <div class="slds-grid slds-grid_align-center slds-size_1-of-1 slds-medium-size_3-of-12" :class="[$sidebar ? 'slds-hide_medium' : '']">
+      <div
+        class="slds-grid slds-grid_align-center slds-size_1-of-1 slds-medium-size_3-of-12"
+        :class="[$sidebar ? 'slds-hide_medium' : '']"
+      >
         <span
           class="slds-avatar slds-avatar_circle slds-avatar_xlarge slds-avatar_profile-image-large"
         >
           <span class="slds-assistive-text">Person name</span>
         </span>
       </div>
-      <div class="slds-text-longform slds-size_1-of-1" :class="[$sidebar ? '' : 'slds-medium-size_9-of-12']">
+      <div
+        class="slds-text-longform slds-size_1-of-1"
+        :class="[$sidebar ? '' : 'slds-medium-size_9-of-12']"
+      >
         <div class="slds-text-longform">
-          <!-- <h3 class="slds-text-heading_medium">
-            {{ $static.metadata.resume.basics.name }}
-          </h3> -->
           <h3 class="slds-text-heading_small">
-            {{ $static.metadata.resume.basics.label }}
+            {{ $resume.basics.label }}
           </h3>
-          <p>{{ $static.metadata.resume.basics.summary }}</p>
+          <p>{{ $resume.basics.summary }}</p>
         </div>
         <div class="slds-grid slds-wrap slds-m-top_xx-small">
           <div
-            v-for="social in $static.metadata.resume.basics.profiles"
+            v-for="social in $resume.basics.profiles"
             :key="social.network"
             class="social-icons slds-p-around_xx-small"
           >
@@ -48,9 +47,7 @@
               rel="noopener noreferrer"
               class="slds-cols"
             >
-              <font-awesome
-                :icon="[social.package, social.icon]"
-              />
+              <font-awesome :icon="[social.package, social.icon]" />
             </a>
           </div>
         </div>
@@ -59,28 +56,10 @@
   </article>
 </template>
 
-<static-query>
-  query {
-    metadata {
-      resume {
-        basics {
-          name
-          label
-          summary
-          profiles {
-            url
-            icon
-            package
-          }
-        }
-      }
-    }
-  }
-</static-query>
-
 <script>
 export default {};
 </script>
+
 <style lang="scss" scoped>
 .social-icons a {
   cursor: pointer;
@@ -108,5 +87,4 @@ export default {};
   //Here the background color should come
   background-color: lightskyblue;
 }
-
 </style>
