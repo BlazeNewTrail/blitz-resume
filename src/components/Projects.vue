@@ -39,21 +39,23 @@
               <div class="slds-text-font_monospace slds-p-vertical_xx-small">
                 {{ project.summary }}
               </div>
+              <div>
               <ol class="slds-list_horizontal">
                 <li
                   v-for="(topic, index) in project.keywords"
                   :key="index"
                   class="slds-p-around_xx-small"
                 >
-                  <span class="slds-badge slds-theme_success">{{ topic }}</span>
+                  <div class="slds-badge slds-theme_success">{{ topic }}</div>
                 </li>
               </ol>
-              <div class="slds-text-heading_small slds-p-vertical_xx-small">Key Takeaways: </div>
+              </div>
+              <!-- <div class="slds-text-heading_small slds-p-vertical_xx-small">Key Takeaways: </div>
               <ol class="slds-list_dotted">
                 <li v-for="(point, index) in project.highlights" :key="index">
                   {{ point }}
                 </li>
-              </ol>
+              </ol> -->
             </div>
             <div class="slds-col slds-size_1-of-4">
               <div>

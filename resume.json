@@ -92,7 +92,7 @@
     {
       "company": "Smaato Inc.",
       "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
-      "website": "http://ankittaneja.net",
+      "website": "https://www.smaato.com",
       "location": "Hamburg, Germany",
       "startDate": "2014-05",
       "endDate": "2018-12",
@@ -103,13 +103,35 @@
     {
       "company": "Alfred H. Schütte GmbH & Co. KG",
       "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
-      "website": "http://ankittaneja.net",
+      "website": "https://www.schuette.de",
       "location": "Cologne, Germany",
       "startDate": "2013-05",
       "endDate": "2014-12",
-      "summary": "The client is a major player in custom machines built for manufacturing companies all across the world. They implemented Salesforce for their Field Service team who were now equipped with a tablet (previously they carried pen / paper). My task to enable all offline process' to online.",
+      "summary": "The client is a major player in custom machines built for manufacturing companies all across the world. They implemented Salesforce for their Field Service team who were now equipped with a tablet (previously they carried pen / paper). My task was to migrate all offline process' to online and integrate Service cloud with SAP for fast and efficient invoice generation.",
       "highlights": ["Setting up and implementing the Salesforce.com CRM for client’s technical support system. Migrating it completely from SAP.", "Leveraged Salesforce API's to connect it to various other systems.", "Designed a Real Time Display Console that shows current status of cases and technicians working on them.", "Architected a custom Salesforce Mobile App for field technicians with features such as, maps, directions to client, capturing notes, pictures, client signatures, offline access.", "Provided technical guidance / training to client’s user’s on how-to use the new app and Salesforce system." ],
       "keywords": ["Service Cloud", "Integration with SAP", "Mobile App"]
+    },
+    {
+      "company": "Solvemate GmbH",
+      "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
+      "website": "https://www.schuette.de",
+      "location": "Berlin, Germany",
+      "startDate": "2013-05",
+      "endDate": "2014-12",
+      "summary": "Solvemate are a pioneers in offering chatbots which use machine learning to assist with advanced customer service. I created an app to connect a customers Salesforce and Solvemate systems to enable better sharing of data. The app is pending security review but can be used as an un-managed package.",
+      "highlights": ["Setting up and implementing the Salesforce.com CRM for client’s technical support system. Migrating it completely from SAP.", "Leveraged Salesforce API's to connect it to various other systems.", "Designed a Real Time Display Console that shows current status of cases and technicians working on them.", "Architected a custom Salesforce Mobile App for field technicians with features such as, maps, directions to client, capturing notes, pictures, client signatures, offline access.", "Provided technical guidance / training to client’s user’s on how-to use the new app and Salesforce system." ],
+      "keywords": ["Service Cloud", "Salesforce App", "AppExchange"]
+    }, 
+    {
+      "company": "General Salesforce Implementations",
+      "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
+      "website": "https://www.schuette.de",
+      "location": "Berlin, Germany",
+      "startDate": "2013-05",
+      "endDate": "2014-12",
+      "summary": "Over the years, I have helped many customers get the best out of their Salesforce system. I sometimes worked in a team, but most of the time it was just me. My tasks usually revolved around gathering requirements, write Apex classes, creating Lightning Web Components, improving existing code, testing, releasing. The concerned products were mostly Service Cloud, Sales Cloud, Marketing Cloud and Pardot. It will be not possible to write them all but here are some honorable mentions.",
+      "highlights": ["Setting up and implementing the Salesforce.com CRM for client’s technical support system. Migrating it completely from SAP.", "Leveraged Salesforce API's to connect it to various other systems.", "Designed a Real Time Display Console that shows current status of cases and technicians working on them.", "Architected a custom Salesforce Mobile App for field technicians with features such as, maps, directions to client, capturing notes, pictures, client signatures, offline access.", "Provided technical guidance / training to client’s user’s on how-to use the new app and Salesforce system." ],
+      "keywords": ["DHL Express Germany GmbH", "Coca-Cola Deutschland", "Zalando AG", "eBay Deutschland(Mobile.de)", "KitchenAdvisor GmbH"]
     }
   ],
   "volunteer": [
@@ -165,7 +187,7 @@
   "talks": [
     {
       "title": "Level up your Salesforce CLI with Gulp",
-      "location": "Virtual",
+      "location": "Virtual / London, United Kingdom",
       "conference": "Londons Calling 2020",
       "coSpeaker": "Sebastian Bresin",
       "date": "2020-03-18",
@@ -178,7 +200,15 @@
       "conference": "YeurDreamin 2019",
       "date": "2019-06",
       "link": "https://www.youtube.com/watch?v=UBU9NYzePR4",
-      "summary": "IoT provides an opportunity for businesses of all sizes to add value to their bottom line, improve customer satisfaction and other KPIs. Click the title and watch the video."
+      "summary": "IoT provides an opportunity for businesses of all sizes to add value to their bottom line, improve customer satisfaction and other KPIs. Click the title and watch the video to learn more about how to connect IoT devices to Salesforce."
+    },
+    {
+      "title": "Time Out – A Lightning component that gives you a break and makes you a Coffee!",
+      "location": "Paris, France",
+      "conference": "FrenchTouchDreamin 2018",
+      "date": "2018-11",
+      "link": "http://frenchtouchdreamin.com/index.php/french-touch-dreamin-2018/",
+      "summary": "In this talk, I talked about Time Out, a Lightning Component which helps you in keeping healthy by reminding to take breaks at regular intervals.  That’s not all, when connected to your coffee machine, you can order your coffee from your seat and enjoy it with some fresh air. This was a Proof of Concept talk to demonstrate the various possibilities of Utility Bar and IoT cloud."
     }
   ],
   "skills": {
