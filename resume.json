@@ -109,12 +109,12 @@
       "endDate": "2014-12",
       "summary": "The client is a major player in custom machines built for manufacturing companies all across the world. They implemented Salesforce for their Field Service team who were now equipped with a tablet (previously they carried pen / paper). My task was to migrate all offline process' to online and integrate Service cloud with SAP for fast and efficient invoice generation.",
       "highlights": ["Setting up and implementing the Salesforce.com CRM for client’s technical support system. Migrating it completely from SAP.", "Leveraged Salesforce API's to connect it to various other systems.", "Designed a Real Time Display Console that shows current status of cases and technicians working on them.", "Architected a custom Salesforce Mobile App for field technicians with features such as, maps, directions to client, capturing notes, pictures, client signatures, offline access.", "Provided technical guidance / training to client’s user’s on how-to use the new app and Salesforce system." ],
-      "keywords": ["Service Cloud", "Integration with SAP", "Mobile App"]
+      "keywords": ["Service Cloud", "SAP Integration", "Mobile App", "Functional Offline App"]
     },
     {
       "company": "Solvemate GmbH",
       "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
-      "website": "https://www.schuette.de",
+      "website": "https://www.solvemate.com/en/",
       "location": "Berlin, Germany",
       "startDate": "2013-05",
       "endDate": "2014-12",
@@ -125,10 +125,10 @@
     {
       "company": "General Salesforce Implementations",
       "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
-      "website": "https://www.schuette.de",
-      "location": "Berlin, Germany",
-      "startDate": "2013-05",
-      "endDate": "2014-12",
+      "website": "https://www.salesforce.de",
+      "location": "Berlin / Hamburg, Germany",
+      "startDate": "2012-05",
+      "endDate": "Present",
       "summary": "Over the years, I have helped many customers get the best out of their Salesforce system. I sometimes worked in a team, but most of the time it was just me. My tasks usually revolved around gathering requirements, write Apex classes, creating Lightning Web Components, improving existing code, testing, releasing. The concerned products were mostly Service Cloud, Sales Cloud, Marketing Cloud and Pardot. It will be not possible to write them all but here are some honorable mentions.",
       "highlights": ["Setting up and implementing the Salesforce.com CRM for client’s technical support system. Migrating it completely from SAP.", "Leveraged Salesforce API's to connect it to various other systems.", "Designed a Real Time Display Console that shows current status of cases and technicians working on them.", "Architected a custom Salesforce Mobile App for field technicians with features such as, maps, directions to client, capturing notes, pictures, client signatures, offline access.", "Provided technical guidance / training to client’s user’s on how-to use the new app and Salesforce system." ],
       "keywords": ["DHL Express Germany GmbH", "Coca-Cola Deutschland", "Zalando AG", "eBay Deutschland(Mobile.de)", "KitchenAdvisor GmbH"]
