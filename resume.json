@@ -17,6 +17,13 @@
     },
     "profiles": [
       {
+        "network": "Email",
+        "username": "NkitTaneja",
+        "url": "mailto:info@ankittaneja.net",
+        "icon": "envelope",
+        "package": "fas"
+      },
+      {
         "network": "LinkedIn",
         "username": "NkitTaneja",
         "url": "https://www.linkedin.com/in/ankit-taneja-68229128/",
@@ -88,6 +95,52 @@
       "highlights": ["Managed call center operations of various clients (Computer Associates (CA), McAfee, AVAST).", "Supervised a team of technical specialists/consultants, ensuring delivery, meeting all parameters, within the boundaries of the Service Level Agreement.", "Helping the client improve IT security products by providing constant feedback.", "Organizing IT Security workshops for employees along with client and external partners." ]
     }
   ],
+  "projects" : [
+    {
+      "company": "Smaato Inc.",
+      "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
+      "website": "https://www.smaato.com",
+      "location": "Hamburg, Germany",
+      "startDate": "2014-05",
+      "endDate": "2018-12",
+      "summary": "Smaato is a Mobile Advertising company using Salesforce in all major business units namely, Sales, Service and Marketing (Formely Hubspot now Pardot). My role was to assist the client in getting the most of the system. Over many years, several improvements and additions were made to business process' / integrations to ensure smooth flow of work for employees",
+      "highlights": ["Analyzing business needs by organizing recurring meetings with stakeholders/C-Level. Consulting the client on best available solution. Prepare Quarterly/Half-yearly roadmap.", "Leveraged Salesforce API's to connect it to various other systems.", "Used a combination of programmatic and declarative solutions.", "Prepared detailed user manuals and support documentation in Confluence.", "Training users before a release and also supporting them after." ],
+      "keywords": ["Sales Cloud", "Service Cloud", "Hubspot Integration", "REST API", "Automated Email Responses"]
+    },
+    {
+      "company": "Alfred H. Schütte GmbH & Co. KG",
+      "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
+      "website": "https://www.schuette.de",
+      "location": "Cologne, Germany",
+      "startDate": "2013-05",
+      "endDate": "2014-12",
+      "summary": "The client is a major player in custom machines built for manufacturing companies all across the world. They implemented Salesforce for their Field Service team who were now equipped with a tablet (previously they carried pen / paper). My task was to migrate all offline process' to online and integrate Service cloud with SAP for fast and efficient invoice generation.",
+      "highlights": ["Setting up and implementing the Salesforce.com CRM for client’s technical support system. Migrating it completely from SAP.", "Leveraged Salesforce API's to connect it to various other systems.", "Designed a Real Time Display Console that shows current status of cases and technicians working on them.", "Architected a custom Salesforce Mobile App for field technicians with features such as, maps, directions to client, capturing notes, pictures, client signatures, offline access.", "Provided technical guidance / training to client’s user’s on how-to use the new app and Salesforce system." ],
+      "keywords": ["Service Cloud", "SAP Integration", "Mobile App", "Functional Offline App"]
+    },
+    {
+      "company": "Solvemate GmbH",
+      "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
+      "website": "https://www.solvemate.com/en/",
+      "location": "Berlin, Germany",
+      "startDate": "2013-05",
+      "endDate": "2014-12",
+      "summary": "Solvemate are a pioneers in offering chatbots which use machine learning to assist with advanced customer service. I created an app to connect a customers Salesforce and Solvemate systems to enable better sharing of data. The app is pending security review but can be used as an un-managed package.",
+      "highlights": ["Setting up and implementing the Salesforce.com CRM for client’s technical support system. Migrating it completely from SAP.", "Leveraged Salesforce API's to connect it to various other systems.", "Designed a Real Time Display Console that shows current status of cases and technicians working on them.", "Architected a custom Salesforce Mobile App for field technicians with features such as, maps, directions to client, capturing notes, pictures, client signatures, offline access.", "Provided technical guidance / training to client’s user’s on how-to use the new app and Salesforce system." ],
+      "keywords": ["Service Cloud", "Salesforce App", "AppExchange"]
+    }, 
+    {
+      "company": "General Salesforce Implementations",
+      "position": "Freelance Salesforce Developer / Business Analyst / Project Manager",
+      "website": "https://www.salesforce.de",
+      "location": "Berlin / Hamburg, Germany",
+      "startDate": "2012-05",
+      "endDate": "Present",
+      "summary": "Over the years, I have helped many customers get the best out of their Salesforce system. I sometimes worked in a team, but most of the time it was just me. My tasks usually revolved around gathering requirements, write Apex classes, creating Lightning Web Components, improving existing code, testing, releasing. The concerned products were mostly Service Cloud, Sales Cloud, Marketing Cloud and Pardot. It will be not possible to write them all but here are some honorable mentions.",
+      "highlights": ["Setting up and implementing the Salesforce.com CRM for client’s technical support system. Migrating it completely from SAP.", "Leveraged Salesforce API's to connect it to various other systems.", "Designed a Real Time Display Console that shows current status of cases and technicians working on them.", "Architected a custom Salesforce Mobile App for field technicians with features such as, maps, directions to client, capturing notes, pictures, client signatures, offline access.", "Provided technical guidance / training to client’s user’s on how-to use the new app and Salesforce system." ],
+      "keywords": ["DHL Express Germany GmbH", "Coca-Cola Deutschland", "Zalando AG", "eBay Deutschland(Mobile.de)", "KitchenAdvisor GmbH"]
+    }
+  ],
   "volunteer": [
     {
       "organization": "Organization",
@@ -141,7 +194,7 @@
   "talks": [
     {
       "title": "Level up your Salesforce CLI with Gulp",
-      "location": "Virtual",
+      "location": "Virtual / London, United Kingdom",
       "conference": "Londons Calling 2020",
       "coSpeaker": "Sebastian Bresin",
       "date": "2020-03-18",
@@ -154,11 +207,37 @@
       "conference": "YeurDreamin 2019",
       "date": "2019-06",
       "link": "https://www.youtube.com/watch?v=UBU9NYzePR4",
-      "summary": "IoT provides an opportunity for businesses of all sizes to add value to their bottom line, improve customer satisfaction and other KPIs. Click the title and watch the video."
+      "summary": "IoT provides an opportunity for businesses of all sizes to add value to their bottom line, improve customer satisfaction and other KPIs. Click the title and watch the video to learn more about how to connect IoT devices to Salesforce."
+    },
+    {
+      "title": "Time Out – A Lightning component that gives you a break and makes you a Coffee!",
+      "location": "Paris, France",
+      "conference": "FrenchTouchDreamin 2018",
+      "date": "2018-11",
+      "link": "http://frenchtouchdreamin.com/index.php/french-touch-dreamin-2018/",
+      "summary": "In this talk, I talked about Time Out, a Lightning Component which helps you in keeping healthy by reminding to take breaks at regular intervals.  That’s not all, when connected to your coffee machine, you can order your coffee from your seat and enjoy it with some fresh air. This was a Proof of Concept talk to demonstrate the various possibilities of Utility Bar and IoT cloud."
     }
   ],
   "skills": {
     "tools" : [
+      {
+        "title": "Apex",
+        "package" : "fas",
+        "icon": "cogs"
+
+      },
+      {
+        "title": "Visulforce",
+        "package" : "fas",
+        "icon": "laptop-code"
+
+      },
+      {
+        "title": "LWC",
+        "package" : "fas",
+        "icon": "cubes"
+
+      },
       {
         "title": "Javascript",
         "package" : "fab",
@@ -172,9 +251,21 @@
 
       },
       {
+        "title": "Yarn",
+        "package" : "fab",
+        "icon": "yarn"
+
+      },
+      {
         "title": "VueJs 💛",
         "package" : "fab",
         "icon": "vuejs"
+
+      },
+      {
+        "title": "Gulp",
+        "package" : "fab",
+        "icon": "gulp"
 
       },
       {
@@ -187,12 +278,6 @@
         "title": "CSS 3",
         "package" : "fab",
         "icon": "css3-alt"
-
-      },
-      {
-        "title": "NPM",
-        "package" : "fab",
-        "icon": "npm"
 
       }
     ],

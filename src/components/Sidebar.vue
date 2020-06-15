@@ -25,15 +25,6 @@
                 About
               </a>
             </li>
-            <li data-navkey="education" class="slds-nav-vertical__item">
-              <a
-                v-scroll-to="'#education'"
-                href="#"
-                class="slds-nav-vertical__action"
-              >
-                Education
-              </a>
-            </li>
             <li data-navkey="work" class="slds-nav-vertical__item">
               <a
                 v-scroll-to="'#work'"
@@ -52,13 +43,31 @@
                 Skills
               </a>
             </li>
+            <li data-navkey="projects" class="slds-nav-vertical__item">
+              <a
+                v-scroll-to="'#projects'"
+                href="#"
+                class="slds-nav-vertical__action"
+              >
+                Projects
+              </a>
+            </li>
+            <li data-navkey="education" class="slds-nav-vertical__item">
+              <a
+                v-scroll-to="'#education'"
+                href="#"
+                class="slds-nav-vertical__action"
+              >
+                Education
+              </a>
+            </li>
             <li data-navkey="awards" class="slds-nav-vertical__item">
               <a
                 v-scroll-to="'#awards'"
                 href="#"
                 class="slds-nav-vertical__action"
               >
-                Awards
+                Certifications
               </a>
             </li>
             <li data-navkey="talks" class="slds-nav-vertical__item">

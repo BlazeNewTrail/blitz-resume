@@ -8,7 +8,7 @@
         <div class="slds-media__body">
           <h2 class="slds-card__header-title">
             <span class="slds-card__header-link slds-truncate">
-              Awards
+              Certifications
             </span>
           </h2>
         </div>
@@ -49,5 +49,8 @@ export default {};
   height: 4.5em;
   width: 4.5em;
   color: goldenrod;
+}
+.dark-mode .icon {
+  color: white;
 }
 </style>
