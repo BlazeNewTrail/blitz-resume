@@ -17,6 +17,13 @@
     },
     "profiles": [
       {
+        "network": "Email",
+        "username": "NkitTaneja",
+        "url": "mailto:info@ankittaneja.net",
+        "icon": "envelope",
+        "package": "fas"
+      },
+      {
         "network": "LinkedIn",
         "username": "NkitTaneja",
         "url": "https://www.linkedin.com/in/ankit-taneja-68229128/",
@@ -223,6 +230,12 @@
         "title": "Visulforce",
         "package" : "fas",
         "icon": "laptop-code"
+
+      },
+      {
+        "title": "LWC",
+        "package" : "fas",
+        "icon": "cubes"
 
       },
       {

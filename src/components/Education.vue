@@ -49,6 +49,10 @@ export default {};
 .icon {
   height: 4.5em;
   width: 4.5em;
-  color: goldenrod;
+  color:silver;
+}
+
+.dark-mode .icon {
+  color: white;
 }
 </style>

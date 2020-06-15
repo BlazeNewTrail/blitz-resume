@@ -50,4 +50,7 @@ export default {};
   width: 4.5em;
   color: goldenrod;
 }
+.dark-mode .icon {
+  color: white;
+}
 </style>

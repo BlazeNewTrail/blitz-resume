@@ -35,6 +35,8 @@ import {
   faChalkboardTeacher,
   faCogs,
   faLaptopCode,
+  faCubes,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 
 import DefaultLayout from '@/layouts/Default.vue';
@@ -65,6 +67,8 @@ library.add(
   faChalkboardTeacher,
   faCogs,
   faLaptopCode,
+  faCubes,
+  faEnvelope,
 );
 
 VueC.prototype.$sidebar = true;
