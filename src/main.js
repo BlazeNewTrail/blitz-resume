@@ -67,7 +67,7 @@ library.add(
   faLaptopCode,
 );
 
-VueC.prototype.$sidebar = false;
+VueC.prototype.$sidebar = true;
 VueC.prototype.$resume = jsonresume;
 
 export default function (Vue, { head }) {

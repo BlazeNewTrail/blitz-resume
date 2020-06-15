@@ -67,7 +67,7 @@
                 href="#"
                 class="slds-nav-vertical__action"
               >
-                Awards
+                Certifications
               </a>
             </li>
             <li data-navkey="talks" class="slds-nav-vertical__item">

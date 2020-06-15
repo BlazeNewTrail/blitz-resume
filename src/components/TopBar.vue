@@ -92,7 +92,7 @@
               class="slds-context-bar__label-action"
               title="Awards"
             >
-              <span class="slds-truncate" title="Awards">Awards</span>
+              <span class="slds-truncate" title="Awards">Certifications</span>
             </a>
           </li>
           <li data-navkey="talks" class="slds-context-bar__item">
