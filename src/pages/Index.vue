@@ -8,9 +8,6 @@
         <about id="about" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <education id="education" />
-      </div>
-      <div class="slds-col slds-p-bottom_small">
         <work id="work" />
       </div>
       <div class="slds-col slds-p-bottom_small">
@@ -18,6 +15,9 @@
       </div>
       <div class="slds-col slds-p-bottom_small">
         <projects id="projects" />
+      </div>
+      <div class="slds-col slds-p-bottom_small">
+        <education id="education" />
       </div>
       <div class="slds-col slds-p-bottom_small">
         <awards id="awards" />

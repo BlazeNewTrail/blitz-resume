@@ -45,16 +45,6 @@
               <span class="slds-truncate" title="About">About</span>
             </a>
           </li>
-          <li data-navkey="education" class="slds-context-bar__item">
-            <a
-              v-scroll-to="'#education'"
-              href="#"
-              class="slds-context-bar__label-action"
-              title="Education"
-            >
-              <span class="slds-truncate" title="Education">Education</span>
-            </a>
-          </li>
           <li data-navkey="work" class="slds-context-bar__item">
             <a
               v-scroll-to="'#work'"
@@ -73,6 +63,26 @@
               title="Skills"
             >
               <span class="slds-truncate" title="Skills">Skills</span>
+            </a>
+          </li>
+          <li data-navkey="projects" class="slds-context-bar__item">
+            <a
+              v-scroll-to="'#projects'"
+              href="#"
+              class="slds-context-bar__label-action"
+              title="Projects"
+            >
+              <span class="slds-truncate" title="Projects">Projects</span>
+            </a>
+          </li>
+          <li data-navkey="education" class="slds-context-bar__item">
+            <a
+              v-scroll-to="'#education'"
+              href="#"
+              class="slds-context-bar__label-action"
+              title="Education"
+            >
+              <span class="slds-truncate" title="Education">Education</span>
             </a>
           </li>
           <li data-navkey="awards" class="slds-context-bar__item">
