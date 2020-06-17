@@ -2,7 +2,7 @@
   "basics": {
     "name": "Ankit Taneja",
     "label": "Freelance Salesforce Consultant",
-    "picture": "",
+    "picture": "/ankit.jpg",
     "email": "info@ankittaneja.net",
     "phone": "+49 151 6102 6618",
     "website": "http://forcepreneur.com",
@@ -227,7 +227,7 @@
 
       },
       {
-        "title": "Visulforce",
+        "title": "Visualforce",
         "package" : "fas",
         "icon": "laptop-code"
 

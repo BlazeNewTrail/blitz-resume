@@ -19,27 +19,31 @@
         Programming Languages & Tools
       </div>
       <intersect @enter="animate">
-        <div class="slds-grid slds-wrap">
+        <div class="slds-grid slds-gutters_x-small slds-wrap">
           <div
             v-for="tool in $resume.skills.tools"
             :key="tool.title"
-            class="card"
+            class="skillCard slds-col slds-grow-none slds-grid slds-grid_vertical slds-grid_vertical-align-center slds-p-bottom_x-small"
           >
-            <!-- TODO: Need to add slds-col above -->
-            <span class="title">{{ tool.title }}</span>
-            <font-awesome class="skillIcon" :icon="[tool.package, tool.icon]" />
+            <span class="slds-p-bottom_xx-small">{{ tool.title }}</span>
+            <font-awesome
+              class="skillIcon fa-icon fa-icon-teal"
+              :icon="[tool.package, tool.icon]"
+              size="3x"
+            />
           </div>
         </div>
       </intersect>
-      <div class="slds-text-title_bold slds-p-vertical_small">
+      <div class="slds-text-title_bold slds-p-bottom_small">
         Workflow
       </div>
-      <div
-        v-for="tool in $resume.skills.workflow"
-        :key="tool"
-        class="sld-col"
-      >
-        <font-awesome class="checkIcon" :icon="['fas', 'check']" />
+      <div v-for="tool in $resume.skills.workflow" :key="tool">
+        <slds-icon
+          icon-name="utility:check"
+          size="x-small"
+          variant="success"
+          class="slds-m-right_x-small"
+        />
         <span>{{ tool }}</span>
       </div>
     </div>
@@ -61,17 +65,7 @@ export default {
   methods: {
     animate: throttle(
       () => {
-        gsap.from('.card', {
-          // duration: 0.5,
-          // opacity: 0,
-          // scale: 0,
-          // y: 200,
-          // ease: "power1",
-          // stagger: {
-          //   each: 0.1,
-          //   from: "center"
-          // }
-          /** Another Stagger */
+        gsap.from('.skillCard', {
           duration: 2,
           scale: 0.5,
           opacity: 0,
@@ -88,38 +82,9 @@ export default {
 };
 </script>
 
-<style scoped>
-.card {
-  height: 6.5em;
-  width: 5.5em;
-  border-radius: 1%;
-  /* background-color: #16c0b0; */
-  /* box-shadow: 0.08em 0.03em 0.4em #ababab; */
-  padding-top: 0.5em;
-  margin-top: 0.5em;
-  margin-right: 0.5em;
-}
-.skillIcon {
-  height: 3rem;
-  width: 3rem;
-  color: teal;
-  margin-left: 0.5em;
-}
-
-.dark-mode .skillIcon {
-  color: white;
-}
-
-.checkIcon {
-  height: 0.9rem;
-  width: 0.9rem;
-  color: lightgreen;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-.title {
-  text-align: center;
-  height: 0.5em;
-  margin-left: 0.5em;
+<style>
+.skillCard {
+  width: 80px;
+  white-space: nowrap;
 }
 </style>

@@ -3,84 +3,38 @@
     class="site-sidebar slds-border_right slds-grid slds-grid_vertical slds-grid_align-spread"
   >
     <div class="slds-grow"></div>
-    <div class="slds-grow-none slds-grid slds-grid_vertical slds-grid_vertical-align-center slds-grid_align-center">
+    <div
+      class="slds-grow-none slds-grid slds-grid_vertical slds-grid_vertical-align-center slds-grid_align-center"
+    >
       <span
         class="slds-m-bottom_medium slds-avatar slds-avatar_circle slds-avatar_xlarge slds-avatar_profile-image-large"
       >
-        <span class="slds-assistive-text">Person name</span>
+        <img v-if="$resume.basics.picture" :src="$resume.basics.picture" />
       </span>
       <span class="slds-text-heading_medium">{{ $resume.basics.name }}</span>
     </div>
     <div class="site-navigation slds-grow-none">
-      <scroll-active-nav class="slds-nav-vertical">
-        <div class="slds-nav-vertical__section">
-          <ul>
-            <li data-navkey="about" class="slds-nav-vertical__item">
-              <a
-                v-scroll-to="'#about'"
-                href="#"
-                class="slds-nav-vertical__action"
-                aria-current="true"
+      <scroll-active-nav>
+        <nav slot-scope="{ activeKey, sections }" class="slds-nav-vertical">
+          <div class="slds-nav-vertical__section">
+            <ul>
+              <li
+                v-for="section in sections"
+                :key="section.id"
+                class="slds-nav-vertical__item"
+                :class="{ 'slds-is-active': activeKey === section.id }"
               >
-                About
-              </a>
-            </li>
-            <li data-navkey="work" class="slds-nav-vertical__item">
-              <a
-                v-scroll-to="'#work'"
-                href="#"
-                class="slds-nav-vertical__action"
-              >
-                Work
-              </a>
-            </li>
-            <li data-navkey="skills" class="slds-nav-vertical__item">
-              <a
-                v-scroll-to="'#skills'"
-                href="#"
-                class="slds-nav-vertical__action"
-              >
-                Skills
-              </a>
-            </li>
-            <li data-navkey="projects" class="slds-nav-vertical__item">
-              <a
-                v-scroll-to="'#projects'"
-                href="#"
-                class="slds-nav-vertical__action"
-              >
-                Projects
-              </a>
-            </li>
-            <li data-navkey="education" class="slds-nav-vertical__item">
-              <a
-                v-scroll-to="'#education'"
-                href="#"
-                class="slds-nav-vertical__action"
-              >
-                Education
-              </a>
-            </li>
-            <li data-navkey="awards" class="slds-nav-vertical__item">
-              <a
-                v-scroll-to="'#awards'"
-                href="#"
-                class="slds-nav-vertical__action"
-              >
-                Certifications
-              </a>
-            </li>
-            <li data-navkey="talks" class="slds-nav-vertical__item">
-              <a
-                v-scroll-to="'#talks'"
-                href="#"
-                class="slds-nav-vertical__action"
-              >
-                Talks
-              </a>
-            </li>
-          </ul>
-        </div>
+                <a
+                  v-scroll-to="`#${section.id}`"
+                  href="#"
+                  class="slds-nav-vertical__action"
+                >
+                  {{ section.label }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </scroll-active-nav>
     </div>
     <div class="slds-grow"></div>
@@ -89,7 +43,7 @@
 </template>
 
 <script>
-import ScrollActiveNav from '@/components/scroll-active-nav';
+import ScrollActiveNav from '@/components/ScrollActiveNav';
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 
 export default {

@@ -41,7 +41,7 @@ import {
 
 import DefaultLayout from '@/layouts/Default.vue';
 
-import SldsIcon from '@/components/slds-icon.vue';
+import SldsIcon from '@/components/SldsIcon.vue';
 import jsonresume from '../resume.json';
 
 library.add(
@@ -74,7 +74,7 @@ library.add(
 VueC.prototype.$sidebar = true;
 VueC.prototype.$resume = jsonresume;
 
-export default function (Vue, { head }) {
+export default (Vue, { head }) => {
   Vue.use(VueScrollTo, {
     container: 'main',
   });
@@ -100,11 +100,12 @@ export default function (Vue, { head }) {
 
   // add slds-icon component
   Vue.component('slds-icon', SldsIcon);
+  Vue.component('font-awesome', FontAwesomeIcon);
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
-  Vue.component('font-awesome', FontAwesomeIcon);
+
   // Add attributes to BODY tag
   // slds darkmode looks better with this
   head.bodyAttrs = { class: 'setupTab' };
-}
+};

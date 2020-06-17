@@ -15,6 +15,7 @@ export default class ScrollActiveNav {
      * @type {HTMLElement[]}
      */
     this.sectionElements = [];
+
     /**
      * @type {Function[]}
      */
@@ -43,19 +44,20 @@ export default class ScrollActiveNav {
   }
 
   calcActiveEntry() {
-    this.sectionElements.sort((a, b) => {
+    const sortedElements = [...this.sectionElements];
+    sortedElements.sort((a, b) => {
       const ratioA = this.elementRatio(a);
       const ratioB = this.elementRatio(b);
       return ratioB - ratioA;
     });
 
-    const maxRatio = this.elementRatio(this.sectionElements[0]);
+    const maxRatio = this.elementRatio(sortedElements[0]);
 
     if (maxRatio === 0) {
       return;
     }
 
-    const maxItems = this.sectionElements.filter(
+    const maxItems = sortedElements.filter(
       (el) => this.elementRatio(el) === maxRatio,
     );
 
@@ -80,17 +82,27 @@ export default class ScrollActiveNav {
 
     if (this.activeElement !== active) {
       this.activeElement = active;
-      const returnValue = this.options.sectionKeyAttribute
+      this.executeCallbacks();
+    }
+  }
+
+  executeCallbacks() {
+    if (this.callbacks.length > 0) {
+      const returnValue = this.activeElement && this.options.sectionKeyAttribute
         ? this.activeElement.getAttribute(this.options.sectionKeyAttribute)
         : this.activeElement;
-      if (this.callbacks.length > 0) {
-        this.callbacks.forEach((fn) => fn(returnValue));
-      }
+
+      const sections = this.sectionElements.map((el) => ({
+        id: el.getAttribute('id'),
+        label: el.dataset.navlabel || el.getAttribute('id'),
+      }));
+      this.callbacks.forEach((fn) => fn(returnValue, sections));
     }
   }
 
   createObserver(options) {
     this.options = Object.assign(defaultOptions, options);
+    this.sectionElements = [];
 
     if (this.observer) {
       this.destroyObserver();
@@ -110,6 +122,7 @@ export default class ScrollActiveNav {
   registerSection(el) {
     this.sectionElements.push(el);
     this.observer.observe(el);
+    this.executeCallbacks();
   }
 
   unregisterSection(el) {
@@ -121,5 +134,6 @@ export default class ScrollActiveNav {
 
   registerCallback(fn) {
     this.callbacks.push(fn);
+    this.executeCallbacks();
   }
 }
