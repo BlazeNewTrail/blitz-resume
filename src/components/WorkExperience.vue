@@ -37,20 +37,16 @@
                     {{ work.position }}
                   </div>
                   <div>
-                    <!-- Add Salesforce icons -->
                     <slds-icon
                       icon-name="utility:company"
                       size="x-small"
                       variant="base"
                       class="icon"
                     />
-                    <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
                     {{ work.company }}
                   </div>
                   <div>
-                    <!-- Add Salesforce icons -->
                     <slds-icon icon-name="utility:location" size="x-small" />
-                    <!-- <font-awesome class="icon" :icon="['fab', 'html5']" /> -->
                     {{ work.location }}
                   </div>
                   <ol class="slds-list_dotted">
@@ -59,7 +55,7 @@
                     </li>
                   </ol>
                 </div>
-                <div class="slds-col slds-size_1-of-4">
+                <div class="slds-col slds-size_1-of-4 slds-p-left_small slds-text-align_right">
                   <div>
                     {{ work.startDate | date({ day: undefined }) }} -
                     {{ work.endDate | date({ day: undefined }) }}

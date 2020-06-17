@@ -19,42 +19,37 @@
         <li
           v-for="talk in $resume.talks"
           :key="talk.title"
-          class="slds-item"
+          class="slds-item slds-p-vertical_medium"
         >
-          <div class="slds-grid slds-wrap slds-p-around_medium">
-            <div>
-              <font-awesome
-                class="icon"
-                :icon="['fas', 'chalkboard-teacher']"
-              />
+          <article class="slds-tile slds-media">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container">
+                <font-awesome
+                  class="fa-icon fa-icon-lightblue"
+                  :icon="['fas', 'chalkboard-teacher']"
+                  size="3x"
+                />
+              </span>
             </div>
-            <div class="slds-col slds-size_11-of-12">
-              <a :href="talk.link" target="_blank" class="slds-text-title_bold">
-                {{ talk.title }}
-              </a>
-              <br />
-              {{ talk.conference }}, {{ talk.location }} - {{ talk.date | date({day: undefined}) }}
-              <br />
-              {{ talk.summary }}
-              <div v-if="talk.coSpeaker && talk.coSpeaker.length > 0">
-                Co-speaker: {{ talk.coSpeaker }}
+            <div class="slds-media__body">
+              <h3 class="slds-tile__title slds-text-title_bold slds-truncate">
+                <a :href="talk.link" target="_blank">
+                  {{ talk.title }}
+                </a>
+              </h3>
+              <div class="slds-tile__detail">
+                {{ talk.conference }}, {{ talk.location }} -
+                {{ talk.date | date({ day: undefined }) }}
+                <br />
+                {{ talk.summary }}
+                <span v-if="talk.coSpeaker && talk.coSpeaker.length > 0">
+                  Co-speaker: {{ talk.coSpeaker }}
+                </span>
               </div>
             </div>
-          </div>
+          </article>
         </li>
       </ol>
     </div>
   </article>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style scoped>
-.icon {
-  height: 4.5em;
-  width: 4.5em;
-  color: lightblue;
-}
-</style>

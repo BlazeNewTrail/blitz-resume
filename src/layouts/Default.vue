@@ -6,14 +6,8 @@
       :class="[$sidebar ? 'slds-hide_medium' : '']"
     />
     <div class="site-main-wrapper">
-      <sidebar
-        :class="[$sidebar ? 'slds-show_medium' : 'slds-hide']"
-      />
-      <main
-        class="site-main slds-scrollable_y"
-        role="main"
-        tabindex="-1"
-      >
+      <sidebar :class="[$sidebar ? 'slds-show_medium' : 'slds-hide']" />
+      <main class="site-main slds-scrollable_y" role="main" tabindex="-1">
         <!-- slds-brand-band slds-brand-band_cover slds-brand-band_medium  -->
         <div class="slds-template_default">
           <div class="slds-template__container">
@@ -24,14 +18,6 @@
     </div>
   </div>
 </template>
-
-<static-query>
-  query {
-    metadata {
-      siteName
-    }
-  }
-</static-query>
 
 <script>
 import TopBar from '@/components/TopBar.vue';

@@ -19,40 +19,31 @@
         <li
           v-for="education in $resume.education"
           :key="education.title"
-          class="slds-item"
+          class="slds-item slds-p-vertical_medium"
         >
-          <div class="slds-grid slds-p-around_medium">
-            <div>
-              <font-awesome class="icon" :icon="['fas', 'university']" />
+          <article class="slds-tile slds-media">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container">
+                <font-awesome
+                  class="fa-icon fa-icon-silver"
+                  :icon="['fas', 'university']"
+                  size="3x"
+                />
+              </span>
             </div>
-            <div class="slds-col slds-size_3-of-4">
-              <div class="slds-text-title_bold">
+            <div class="slds-media__body">
+              <h3 class="slds-tile__title slds-text-title_bold slds-truncate">
                 {{ education.studyType }} In {{ education.area }}
+              </h3>
+              <div class="slds-tile__detail">
+                {{ education.institution }}
+                <br />
+                {{ education.endDate | date({ day: undefined }) }}
               </div>
-              {{ education.institution }}
-              <br />
-              {{ education.endDate | date({day: undefined}) }}
-              <br />
             </div>
-          </div>
+          </article>
         </li>
       </ol>
     </div>
   </article>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style scoped>
-.icon {
-  height: 4.5em;
-  width: 4.5em;
-  color:silver;
-}
-
-.dark-mode .icon {
-  color: white;
-}
-</style>

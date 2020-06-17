@@ -19,38 +19,31 @@
         <li
           v-for="award in $resume.awards"
           :key="award.title"
-          class="slds-item"
+          class="slds-item slds-p-vertical_medium"
         >
-          <div class="slds-grid slds-wrap slds-p-around_medium">
-            <div class="">
-              <font-awesome class="icon" :icon="['fas', 'award']" />
+          <article class="slds-tile slds-media">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container">
+                <font-awesome
+                  class="fa-icon fa-icon-goldenrod"
+                  :icon="['fas', 'award']"
+                  size="3x"
+                />
+              </span>
             </div>
-            <div class="slds-col slds-size_11-of-12">
-              {{ award.awarder }} <br />
-              <div class="slds-text-title_bold">
+            <div class="slds-media__body">
+              <h3 class="slds-tile__title slds-text-title_bold slds-truncate">
                 {{ award.title }}
+              </h3>
+              <div class="slds-tile__detail">
+                {{ award.awarder }} <br />
+                {{ award.date | date({ day: undefined }) }} <br />
+                {{ award.summary }}
               </div>
-              {{ award.date | date({day: undefined}) }} <br />
-              {{ award.summary }}
             </div>
-          </div>
+          </article>
         </li>
       </ol>
     </div>
   </article>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style scoped>
-.icon {
-  height: 4.5em;
-  width: 4.5em;
-  color: goldenrod;
-}
-.dark-mode .icon {
-  color: white;
-}
-</style>

@@ -35,17 +35,15 @@
           </h3>
           <p>{{ $resume.basics.summary }}</p>
         </div>
-        <div class="slds-grid slds-wrap slds-gutters_direct-x-small slds-m-top_xx-small">
+        <div
+          class="slds-grid slds-wrap slds-gutters_direct-x-small slds-m-top_xx-small"
+        >
           <div
             v-for="social in $resume.basics.profiles"
             :key="social.network"
             class="slds-col slds-no-flex social-icons"
           >
-            <a
-              :href="social.url"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a :href="social.url" target="_blank" rel="noopener noreferrer">
               <font-awesome :icon="[social.package, social.icon]" size="lg" />
             </a>
           </div>

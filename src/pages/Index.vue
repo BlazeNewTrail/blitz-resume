@@ -2,28 +2,28 @@
   <Layout>
     <div
       v-scroll-active-nav-container
-      class="slds-grid slds-grid_vertical slds-gutters"
+      class="slds-grid slds-grid_vertical slds-gutters_direct"
     >
       <div class="slds-col slds-p-bottom_small">
-        <about id="about" />
+        <about id="about" data-navlabel="About" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <work id="work" />
+        <work id="work" data-navlabel="Work" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <skills id="skills" />
+        <skills id="skills" data-navlabel="Skills" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <projects id="projects" />
+        <projects id="projects" data-navlabel="Projects" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <education id="education" />
+        <education id="education" data-navlabel="Education" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <awards id="awards" />
+        <awards id="awards" data-navlabel="Awards" />
       </div>
       <div class="slds-col slds-p-bottom_small">
-        <talks id="talks" />
+        <component :is="'talks'" id="talks" data-navlabel="Talks" />
       </div>
     </div>
   </Layout>

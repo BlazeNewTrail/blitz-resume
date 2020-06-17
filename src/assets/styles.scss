@@ -16,6 +16,27 @@ html.dark-mode {
   .slds-icon-text-default {
     fill: var(--darkmode-default-icon-color);
   }
+
+  .fa-icon {
+    color: white;
+  }
+}
+
+// icon colors
+.fa-icon-silver {
+  color: silver;
+}
+
+.fa-icon-goldenrod {
+  color: goldenrod;
+}
+
+.fa-icon-teal {
+  color: teal;
+}
+
+.fa-icon-lightblue {
+  color: lightblue;
 }
 
 // extra big avatar for sidebar
@@ -58,11 +79,7 @@ body {
 
 .site-sidebar a,
 .site-sidebar button {
-  // display: block;
   padding: 0.875rem 2rem 0.8125rem;
-  // line-height: 1.25;
-  // color: #4f6a92;
-  // width: 100%
 }
 
 .site-sidebar a:focus,
@@ -70,81 +87,6 @@ body {
 .site-sidebar button:focus,
 .site-sidebar button:hover {
   text-decoration: none;
-}
-
-.site-skip-content {
-  position: relative;
-  z-index: 10001;
-}
-
-.site-skip-content a {
-  display: block;
-  background: #fff;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  text-align: center;
-}
-
-.site-skip-content.site-skip-content a {
-  padding-top: 0.75rem !important;
-  padding-bottom: 0.75rem !important;
-  width: 100% !important;
-}
-
-.site-skip-content_navigation {
-  display: none;
-}
-
-@media (max-width: 47.9375em) {
-  .site-skip-content_navigation {
-    margin-top: 6rem;
-    display: block;
-  }
-}
-
-.site-logo {
-  text-align: center;
-  font-size: 1.125rem;
-  margin-top: 0.5rem;
-}
-
-.site-logo a {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0;
-  color: #16325c;
-}
-
-.site-logo .site-logo__graphic {
-  display: inline-block;
-  margin-bottom: 0.625rem;
-  width: 100%;
-  height: 3rem;
-  background: url('/assets/images/logo.svg') 50% 50% no-repeat;
-}
-
-@media (min-width: 48em) {
-  .site-logo {
-    margin-top: 0;
-    padding-top: 1.5rem;
-  }
-
-  .site-logo a {
-    margin-bottom: 1.75rem;
-  }
-
-  .site-logo .site-logo__graphic {
-    height: 4.25rem;
-  }
-}
-
-@media (max-width: 47.9375em) {
-  .site-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
 }
 
 .site-navigation {
