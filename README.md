@@ -27,10 +27,13 @@ To get started:
 
 This file contains all the data that is served throughout the pages. Add / modify the data according to your needs.
 
-### 5. Once you are happy with all the changes, stop the localhost and commit your changes (ideally you would be on the master branch). Push them to GitHub. Then click the button below to deploy to Vercel. You can login / connect using GitHub (recommended) and various other ways.
+### 5. Commit your changes
 
-### 6. Follow Vercel's documentation on how to point the deployment to your domain 🚀
+1. Once you are happy with all the changes, stop the localhost and commit your changes (ideally you would be on the master branch). Push them to GitHub. Then click the button below to deploy to Vercel. You can login / connect using GitHub (recommended) and various other ways.
 
+### 6. Add your domain
+
+1. Follow Vercel's documentation on how to point the deployment to your domain 🚀
 
 ## Caveats / Hidden Gems 💎
 
