@@ -16,13 +16,13 @@
     </div>
     <div class="slds-card__body slds-card__body_inner slds-grid slds-wrap">
       <div
-        class="slds-grid slds-grid_align-center slds-size_1-of-1 slds-medium-size_3-of-12"
+        class="slds-grid slds-grid_align-center slds-size_1-of-1 slds-medium-size_3-of-12 slds-p-bottom_small"
         :class="[$sidebar ? 'slds-hide_medium' : '']"
       >
         <span
           class="slds-avatar slds-avatar_circle slds-avatar_xlarge slds-avatar_profile-image-large"
         >
-          <span class="slds-assistive-text">Person name</span>
+          <img v-if="$resume.basics.picture" :src="$resume.basics.picture" />
         </span>
       </div>
       <div
@@ -35,19 +35,18 @@
           </h3>
           <p>{{ $resume.basics.summary }}</p>
         </div>
-        <div class="slds-grid slds-wrap slds-m-top_xx-small">
+        <div class="slds-grid slds-wrap slds-gutters_direct-x-small slds-m-top_xx-small">
           <div
             v-for="social in $resume.basics.profiles"
             :key="social.network"
-            class="social-icons slds-p-around_xx-small"
+            class="slds-col slds-no-flex social-icons"
           >
             <a
               :href="social.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="slds-cols"
             >
-              <font-awesome :icon="[social.package, social.icon]" />
+              <font-awesome :icon="[social.package, social.icon]" size="lg" />
             </a>
           </div>
         </div>
@@ -56,35 +55,20 @@
   </article>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style lang="scss" scoped>
 .social-icons a {
-  cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 2.5rem;
   width: 2.5rem;
   background-color: grey;
-  color: #fff !important;
+  color: white;
   border-radius: 100%;
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 2.5rem;
-  margin-right: 1rem;
-  @media (max-width: 380px) {
-    margin-right: 0.5rem;
-  }
-  @media (max-width: 350px) {
-    margin-right: 0.2rem;
-  }
 }
-.social-icons a:last-child {
-  margin-right: 0;
-}
+
 .social-icons a:hover {
-  //Here the background color should come
+  color: white;
   background-color: lightskyblue;
 }
 </style>
