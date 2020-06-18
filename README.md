@@ -1,5 +1,7 @@
 # Blitz Resumé 
 
+Demo: https://ankittaneja.de
+
 This is a static-site Salesforcy resume for Salesforce professionals who want to have some kind of web presence 👩🏽‍💻👨🏼‍💻.  
 
 It is built using [Gridsome](https://gridsome.org) and [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) 🤝
@@ -14,26 +16,31 @@ To get started:
 1. `mkdir my-resume`
 2. `cd my-resume` 
 3. `git clone repo.git`
+4. Open the project in your favourite code-editor .
 
 ### 2. Next, install all dependencies (we recommend using yarn)
 
-1. `yarn` or `npm install`
+Goto the terminal  and run `yarn` or `npm install`
 
 ### 3. Run on localhost
 
-1. Type `yarn serve` to start the local server. 
+Type `yarn serve` to start the local server. You should see the project on localhost:8080
 
 ### 4. Modify resume.json
 
-This file contains all the data that is served throughout the pages. Add / modify the data according to your needs.
+It contains all the data that is served throughout the pages. Add / modify the data according to your needs.
 
 ### 5. Commit your changes
 
-1. Once you are happy with all the changes, stop the localhost and commit your changes (ideally you would be on the master branch). Push them to GitHub. Then click the button below to deploy to Vercel. You can login / connect using GitHub (recommended) and various other ways.
+Once you are happy with all the changes, stop the localhost and commit your changes (ideally you would be on the master branch). Push them to GitHub. Then click the button below to deploy to Vercel. You can login / connect using GitHub (recommended) and various other ways.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/BlazeNewTrail/blitz-resume)
 
 ### 6. Add your domain
 
-1. Follow Vercel's documentation on how to point the deployment to your domain 🚀
+Follow Vercel's documentation on how to point the deployment to your domain 🚀
+
+You basically need to point your domain nameservers to Vercel, simple as that.
 
 ## Caveats / Hidden Gems 💎
 
